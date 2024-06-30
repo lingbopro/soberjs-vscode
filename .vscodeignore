@@ -1,0 +1,6 @@
+.github/**
+.vscode/**
+.vscode-test/**
+.gitignore
+.gitattributes
+out/**

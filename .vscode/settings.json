@@ -1,0 +1,29 @@
+{
+    "cSpell.words": [
+        "apprat",
+        "horiz",
+        "oninput",
+        "soberjs",
+        "VSIX"
+    ],
+    "editor.wordWrap": "on",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "[json]": {
+        "editor.tabSize": 2,
+        "prettier.tabWidth": 2
+    },
+    "[snippets]": {
+        "editor.tabSize": 2,
+        "prettier.tabWidth": 2
+    },
+    "[markdown]": {
+        "editor.tabSize": 2,
+        "prettier.tabWidth": 2
+    },
+    "files.eol": "\n",
+    "files.autoGuessEncoding": true,
+    "[yaml]": {
+        "editor.tabSize": 2,
+        "prettier.tabWidth": 2
+    }
+}

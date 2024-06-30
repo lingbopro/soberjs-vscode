@@ -1,0 +1,64 @@
+{
+  "name": "soberjs-vscode",
+  "displayName": "Sober.js",
+  "description": "为 Sober.js 组件库提供自动完成、悬停提示、代码片段等功能",
+  "version": "0.1.0",
+  "publisher": "lingbopro",
+  "author": {
+    "name": "lingbopro",
+    "email": "ilovemc@zohomail.cn",
+    "url": "https://github.com/lingbopro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lingbopro/soberjs-vscode.git"
+  },
+  "icon": "icon.png",
+  "keywords": [
+    "vscode",
+    "vscode-extension",
+    "sober",
+    "soberjs",
+    "sober.js",
+    "front-end",
+    "material",
+    "material design",
+    "material you",
+    "components"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lingbopro/soberjs-vscode/issues"
+  },
+  "homepage": "https://github.com/lingbopro/soberjs-vscode#readme",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Snippets",
+    "Other"
+  ],
+  "pricing": "Free",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/html.code-snippets"
+      },
+      {
+        "language": "javascript,typescript",
+        "path": "./snippets/js-ts.code-snippets"
+      }
+    ],
+    "html": {
+      "customData": [
+        "./custom-data/soberjs.html-data.json"
+      ]
+    },
+    "css": {
+      "customData": [
+        "./custom-data/soberjs.css-data.json"
+      ]
+    }
+  }
+}

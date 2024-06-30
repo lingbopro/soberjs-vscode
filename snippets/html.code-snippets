@@ -1,0 +1,9 @@
+{
+  "Sober Import (CDN)": {
+    "prefix": ["sober", "script:sober"],
+    "body": [
+      "<script src=\"https://unpkg.com/sober/dist/sober.min.js\"></script>"
+    ],
+    "description": "通过CDN引入Sober"
+  }
+}
