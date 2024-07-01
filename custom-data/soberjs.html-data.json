@@ -155,27 +155,27 @@
     },
     {
       "name": "s-ripple",
-      "description": "**水波纹 Ripple**\n\n水波纹容器。\n\n可作为容器，自动处理子元素点击效果。\n\n```html\n<s-ripple>\n  <s-button>ripple button</s-button>\n</s-ripple>\n```\n\n**属性:**\n\n- `centered` (`boolean`): 水波纹是否居中\n- `attached` (`boolean`): 水波纹是否附着在子元素上\n\n**CSS 变量:**\n\n- `--ripple-color`: 水波纹颜色\n- `--ripple-opacity`: 水波纹透明度",
+      "description": "**波纹 Ripple**\n\n波纹容器。\n\n可作为容器，自动处理子元素点击效果。\n\n```html\n<s-ripple>\n  <s-button>ripple button</s-button>\n</s-ripple>\n```\n\n**属性:**\n\n- `centered` (`boolean`): 波纹是否居中\n- `attached` (`boolean`): 波纹是否附着在子元素上\n\n**CSS 变量:**\n\n- `--ripple-color`: 波纹颜色\n- `--ripple-opacity`: 波纹透明度",
       "attributes": [
         {
           "name": "centered",
-          "description": "水波纹是否居中",
+          "description": "波纹是否居中",
           "valueSet": "boolean"
         },
         {
           "name": "attached",
-          "description": "水波纹是否附着在子元素上",
+          "description": "波纹是否附着在子元素上",
           "valueSet": "boolean"
         }
       ],
       "cssProperties": [
         {
           "name": "--ripple-color",
-          "description": "水波纹颜色"
+          "description": "波纹颜色"
         },
         {
           "name": "--ripple-opacity",
-          "description": "水波纹透明度"
+          "description": "波纹透明度"
         }
       ],
       "references": [
