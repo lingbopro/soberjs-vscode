@@ -1,15 +1,307 @@
 {
   "version": 1.1,
-  "tags": [
+  "components": [
     {
-      "name": "s-button",
-      "description": "**按钮 Button**\n\n按钮组件\n\n```html\n<s-button>Button</s-button>\n```\n\n**属性:**\n\n- `disabled` (`boolean`): 是否禁用\n- `type` (`string`): 按钮类型 (可选: `primary`, `secondary`, `success`, `danger`)\n- `loading` (`boolean`): 是否显示加载状态\n\n**事件:**\n- `click`: 点击事件\n\n**CSS 变量:**\n\n- `--button-background-color`: 按钮背景色\n- `--button-text-color`: 按钮文字颜色",
+      "name": "s-icon-button",
+      "description": "**图标按钮 Icon Button**\n\n```html\n<s-icon-button>\n  <s-icon type=\"search\"></s-icon>\n</s-icon-button>\n```\n\n**属性:**\n\n- `type`: 按钮样式\n- `disabled` (`boolean`): 是否禁用",
       "attributes": [
+        {
+          "name": "type",
+          "description": "按钮样式。\n\n可选值为:\n- `filled`\n- `elevated`\n- `filled-tonal`\n- `outlined`\n- `text`",
+          "values": [
+            {
+              "name": "filled",
+              "description": "默认值。带有较明显背景色的按钮"
+            },
+            {
+              "name": "elevated",
+              "description": "带有阴影的按钮"
+            },
+            {
+              "name": "filled-tonal",
+              "description": "带有背景色的按钮"
+            },
+            {
+              "name": "outlined",
+              "description": "带有边框的按钮"
+            },
+            {
+              "name": "text",
+              "description": "只包含文字的按钮，没有其他样式"
+            }
+          ]
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "valueSet": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "s-fab",
+      "description": "**浮动操作按钮 Floating Action Button**\n\n```html\n<s-fab>\n  <s-icon type=\"add\"></s-icon>\n</s-fab>\n```\n\n设置 `size` 来设置不同样的尺寸。\n\n设置 `extended` 来开启扩展浮动按钮。\n\n**属性:**\n\n- `size`: 按钮大小\n- `extended` (`boolean`): 是否为扩展按钮\n\n**插槽:**\n\n- `start`: 开始\n- `end`: 结束",
+      "attributes": [
+        {
+          "name": "size",
+          "description": "按钮大小。\n\n可选值为:\n- `medium`\n- `small`\n- `large`",
+          "values": [
+            {
+              "name": "medium",
+              "description": "默认值。中等大小"
+            },
+            {
+              "name": "small",
+              "description": "大小较小"
+            },
+            {
+              "name": "large",
+              "description": "大小较大"
+            }
+          ]
+        },
+        {
+          "name": "extended",
+          "description": "是否为扩展按钮",
+          "valueSet": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "s-segmented-button",
+      "description": "**分组按钮 Segmented Button**\n\n```html\n<s-segmented-button>\n  <s-segmented-button-item selected=\"true\">\n    <s-icon slot=\"start\" type=\"search\"></s-icon>\n    item1\n  </s-segmented-button-item>\n  <s-segmented-button-item disabled=\"true\">\n    item2\n    <s-icon slot=\"end\" type=\"close\"></s-icon>\n  </s-segmented-button-item>\n</s-segmented-button>\n```\n\n**属性:**\n\n- `options` _[只读]_ (`SegmentedButtonItem[]`): 子项目\n- `selectedIndex` _[只读]_ (`number`): 当前选中下标\n\n**事件:**\n- `change`: 选中变化后触发\n\n**插槽:**\n\n- `start`: 开始（不会触发选中）\n- `end`: 结束（不会触发选中）",
+      "attributes": [
+        {
+          "name": "onchange",
+          "description": "选中变化后触发"
+        }
+      ]
+    },
+    {
+      "name": "s-slider",
+      "description": "**滑块 Slider**\n\n```html\n<s-slider></s-slider>\n```\n\n设置 `labeled` 开启文本标签。\n\n设置 `disabled` 来禁用滑块。\n\n自定义颜色\n\n```html\n<s-slider style=\"color: #009688\"></s-slider>\n```\n\n**属性:**\n\n- `labeled` (`boolean`): 是否启用文本标签\n- `disabled` (`boolean`): 是否禁用\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发",
+      "attributes": [
+        {
+          "name": "labeled",
+          "description": "是否启用文本标签",
+          "valueSet": "boolean"
+        },
         {
           "name": "disabled",
           "description": "是否禁用",
           "valueSet": "boolean"
         },
+        {
+          "name": "max",
+          "description": "最大值"
+        },
+        {
+          "name": "min",
+          "description": "最小值"
+        },
+        {
+          "name": "step",
+          "description": "步进值"
+        },
+        {
+          "name": "value",
+          "description": "当前值"
+        },
+        {
+          "name": "onchange",
+          "description": "值变化后触发"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/slider"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/slider.ts"
+        }
+      ]
+    },
+    {
+      "name": "s-linear-progress",
+      "description": "**线性进度 Linear Progress**\n\n```html\n<s-linear-progress value=\"50\"></s-linear-progress>\n```\n\n设置 `indeterminate` 来启用未知进度。\n\n```html\n<s-linear-progress indeterminate=\"true\"></s-linear-progress>\n```\n\n自定义颜色\n\n```html\n<s-linear-progress style=\"color: #009688\" value=\"50\"></s-linear-progress>\n<s-linear-progress style=\"color: #8d711b\" indeterminate=\"true\"></s-linear-progress>\n```\n\n**属性:**\n\n- `indeterminate` (`boolean`): 是否未知\n- `max` (`number`): 最大值\n- `value` (`number`): 当前值",
+      "attributes": [
+        {
+          "name": "indeterminate",
+          "description": "是否未知",
+          "valueSet": "boolean"
+        },
+        {
+          "name": "max",
+          "description": "最大值"
+        },
+        {
+          "name": "value",
+          "description": "当前值"
+        },
+        {
+          "name": "onchange",
+          "description": "选中变化后触发"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/linear-progress"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/linear-progress.ts"
+        }
+      ]
+    },
+    {
+      "name": "s-circular-progress",
+      "description": "**圆形进度 Circular Progress**\n\n```html\n<s-circular-progress value=\"50\"></s-circular-progress>\n```\n\n设置 `indeterminate` 来启用未知进度。\n\n```html\n<s-circular-progress indeterminate=\"true\"></s-circular-progress>\n```\n\n自定义颜色\n\n```html\n<s-circular-progress style=\"color: #009688\" value=\"50\"></s-circular-progress>\n<s-circular-progress style=\"color: #8d711b\" indeterminate=\"true\"></s-circular-progress>\n```\n\n**属性:**\n\n- `indeterminate` (`boolean`): 是否未知\n- `max` (`number`): 最大值\n- `value` (`number`): 当前值",
+      "attributes": [
+        {
+          "name": "indeterminate",
+          "description": "是否未知",
+          "valueSet": "boolean"
+        },
+        {
+          "name": "max",
+          "description": "最大值"
+        },
+        {
+          "name": "value",
+          "description": "当前值"
+        },
+        {
+          "name": "onchange",
+          "description": "选中变化后触发"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/circular-progress"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/circular-progress.ts"
+        }
+      ]
+    },
+    {
+      "name": "s-switch",
+      "description": "**开关 Switch**\n\n```html\n<s-switch></s-switch>\n<s-switch checked=\"true\"></s-switch>\n```\n\n设置 `disabled` 来禁用开关。\n\n自定义颜色\n\n```html\n<s-switch style=\"color: #009688\"></s-switch>\n<s-switch style=\"color: #b54e4e\" checked=\"true\"></s-switch>\n```\n\n> 如果你希望自定义大小，那么请使用 `font-size` 来设置，该组件需要保持宽高比例，单独设置 width 和 height 可能会导致变形。\n\n**属性:**\n\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n\n**事件:**\n- `change`: 选中变化后触发",
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "是否选中",
+          "valueSet": "boolean"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "valueSet": "boolean"
+        },
+        {
+          "name": "onchange",
+          "description": "选中变化后触发"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/switch"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/switch.ts"
+        }
+      ]
+    },
+    {
+      "name": "s-rate",
+      "description": "**评分 Rate**\n\n```html\n<s-rate></s-rate>\n```\n\n设置 `readonly` 启用只读模式。\n\n使用 `unchecked` 和 `checked` 插槽来自定义图标，你可以使用 svg 或者 icon 组件。\n\n```html\n<s-rate>\n  <s-icon slot=\"unchecked\" type=\"favorite\"></s-icon>\n  <s-icon slot=\"checked\" type=\"favorite\"></s-icon>\n</s-rate>\n```\n\n> 如果你希望自定义大小，那么请使用 `font-size` 来设置，该组件需要保持宽高比例，单独设置 width 和 height 可能会导致变形。\n\n**属性:**\n\n- `readonly` (`boolean`): 是否启用只读模式\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发\n- `input`: 值变化时触发\n\n**插槽:**\n- `unchecked`: 未选中\n- `checked`: 已选中",
+      "attributes": [
+        {
+          "name": "readonly",
+          "description": "是否启用只读模式",
+          "valueSet": "boolean"
+        },
+        {
+          "name": "max",
+          "description": "最大值"
+        },
+        {
+          "name": "min",
+          "description": "最小值"
+        },
+        {
+          "name": "step",
+          "description": "步进值"
+        },
+        {
+          "name": "value",
+          "description": "当前值"
+        },
+        {
+          "name": "onchange",
+          "description": "值变化后触发"
+        },
+        {
+          "name": "oninput",
+          "description": "值变化时触发"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/rate"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/rate.ts"
+        }
+      ]
+    },
+    {
+      "name": "s-divider",
+      "description": "**分割线 Divider**\n\n```html\n<s-divider></s-divider>\n```",
+      "attributes": [],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/divider"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/divider.ts"
+        }
+      ]
+    }
+  ],
+  "valueSets": [
+    {
+      "name": "boolean",
+      "values": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "valueSet": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "s-button",
+      "description": "**按钮 Button**\n\n按钮组件",
+      "htmlSnippet": "<s-button>Click me</s-button>",
+      "attributes": [
         {
           "name": "type",
           "description": "按钮类型",
@@ -21,6 +313,15 @@
           ]
         },
         {
+          "name": "disabled",
+          "description": "是否禁用",
+          "valueSet": "boolean"
+        },
+        {
+          "name": "icon",
+          "description": "图标名称"
+        },
+        {
           "name": "loading",
           "description": "是否显示加载状态",
           "valueSet": "boolean"
@@ -30,16 +331,6 @@
         {
           "name": "click",
           "description": "点击事件"
-        }
-      ],
-      "cssProperties": [
-        {
-          "name": "--button-background-color",
-          "description": "按钮背景色"
-        },
-        {
-          "name": "--button-text-color",
-          "description": "按钮文字颜色"
         }
       ],
       "references": [
@@ -54,144 +345,35 @@
       ]
     },
     {
-      "name": "s-icon",
-      "description": "**图标 Icon**\n\n图标组件\n\n```html\n<s-icon type=\"search\"></s-icon>\n```\n\n**属性:**\n\n- `type` (`string`): 图标类型\n- `size` (`string`): 图标尺寸\n- `color` (`string`): 图标颜色",
+      "name": "s-card",
+      "description": "**卡片 Card**\n\n卡片组件",
+      "htmlSnippet": "<s-card>\n  <s-card-header>Title</s-card-header>\n  <s-card-body>Content goes here...</s-card-body>\n</s-card>",
       "attributes": [
         {
-          "name": "type",
-          "description": "图标类型"
-        },
-        {
-          "name": "size",
-          "description": "图标尺寸"
-        },
-        {
-          "name": "color",
-          "description": "图标颜色"
-        }
-      ],
-      "references": [
-        {
-          "name": "文档",
-          "url": "https://soberjs.com/component/icon"
-        },
-        {
-          "name": "源代码",
-          "url": "https://github.com/apprat/sober/blob/main/src/icon.ts"
-        }
-      ]
-    },
-    {
-      "name": "s-segmented-button",
-      "description": "**分组按钮 Segmented Button**\n\n分组按钮组件\n\n```html\n<s-segmented-button>\n  <s-segmented-button-item selected>Item 1</s-segmented-button-item>\n  <s-segmented-button-item>Item 2</s-segmented-button-item>\n</s-segmented-button>\n```\n\n**属性:**\n\n- `disabled` (`boolean`): 是否禁用\n- `outlined` (`boolean`): 是否描边\n- `size` (`string`): 尺寸 (可选: `small`, `medium`, `large`)\n\n**事件:**\n- `change`: 选项变化事件",
-      "attributes": [
-        {
-          "name": "disabled",
-          "description": "是否禁用",
-          "valueSet": "boolean"
+          "name": "elevation",
+          "description": "阴影深度"
         },
         {
           "name": "outlined",
-          "description": "是否描边",
-          "valueSet": "boolean"
-        },
-        {
-          "name": "size",
-          "description": "尺寸",
-          "values": [
-            { "name": "small" },
-            { "name": "medium" },
-            { "name": "large" }
-          ]
-        }
-      ],
-      "events": [
-        {
-          "name": "change",
-          "description": "选项变化事件"
-        }
-      ],
-      "references": [
-        {
-          "name": "文档",
-          "url": "https://soberjs.com/component/segmented-button"
-        },
-        {
-          "name": "源代码",
-          "url": "https://github.com/apprat/sober/blob/main/src/segmented-button.ts"
-        }
-      ]
-    },
-    {
-      "name": "s-segmented-button-item",
-      "description": "**分组按钮子项 Segmented Button Item**\n\n`s-segmented-button` 的子项目\n\n```html\n<s-segmented-button-item disabled=\"true\">\n  <s-icon slot=\"start\" type=\"search\"></s-icon>\n  item1\n</s-segmented-button-item>\n```\n\n**属性:**\n\n- `selected` (`boolean`): 当前是否选中\n- `disabled` (`boolean`): 是否禁用\n- `selectable` (`boolean`): 是否可选中",
-      "attributes": [
-        {
-          "name": "selected",
-          "description": "当前是否选中",
-          "valueSet": "boolean"
-        },
-        {
-          "name": "disabled",
-          "description": "是否禁用",
-          "valueSet": "boolean"
-        },
-        {
-          "name": "selectable",
-          "description": "是否可选中",
+          "description": "是否显示边框",
           "valueSet": "boolean"
         }
       ],
       "references": [
         {
           "name": "文档",
-          "url": "https://soberjs.com/component/segmented-button"
+          "url": "https://soberjs.com/component/card"
         },
         {
           "name": "源代码",
-          "url": "https://github.com/apprat/sober/blob/main/src/segmented-button.ts"
-        }
-      ]
-    },
-    {
-      "name": "s-ripple",
-      "description": "**波纹 Ripple**\n\n波纹容器。\n\n可作为容器，自动处理子元素点击效果。\n\n```html\n<s-ripple>\n  <s-button>ripple button</s-button>\n</s-ripple>\n```\n\n**属性:**\n\n- `centered` (`boolean`): 波纹是否居中\n- `attached` (`boolean`): 波纹是否附着在子元素上\n\n**CSS 变量:**\n\n- `--ripple-color`: 波纹颜色\n- `--ripple-opacity`: 波纹透明度",
-      "attributes": [
-        {
-          "name": "centered",
-          "description": "波纹是否居中",
-          "valueSet": "boolean"
-        },
-        {
-          "name": "attached",
-          "description": "波纹是否附着在子元素上",
-          "valueSet": "boolean"
-        }
-      ],
-      "cssProperties": [
-        {
-          "name": "--ripple-color",
-          "description": "波纹颜色"
-        },
-        {
-          "name": "--ripple-opacity",
-          "description": "波纹透明度"
-        }
-      ],
-      "references": [
-        {
-          "name": "文档",
-          "url": "https://soberjs.com/component/ripple"
-        },
-        {
-          "name": "源代码",
-          "url": "https://github.com/apprat/sober/blob/main/src/ripple.ts"
+          "url": "https://github.com/apprat/sober/blob/main/src/card.ts"
         }
       ]
     },
     {
       "name": "s-checkbox",
-      "description": "**复选框 Checkbox**\n\n复选框\n\n```html\n<s-checkbox checked></s-checkbox>\n```\n\n**属性:**\n\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n- `indeterminate` (`boolean`): 是否为中间状态\n\n**事件:**\n- `change`: 选中变化后触发",
+      "description": "**复选框 Checkbox**\n\n复选框组件",
+      "htmlSnippet": "<s-checkbox checked>Label</s-checkbox>",
       "attributes": [
         {
           "name": "checked",
@@ -201,11 +383,6 @@
         {
           "name": "disabled",
           "description": "是否禁用",
-          "valueSet": "boolean"
-        },
-        {
-          "name": "indeterminate",
-          "description": "是否为中间状态",
           "valueSet": "boolean"
         }
       ],
@@ -228,7 +405,8 @@
     },
     {
       "name": "s-radio-button",
-      "description": "**单选框 Radio Button**\n\n单选框\n\n```html\n<s-radio-button name=\"group1\" checked>Option 1</s-radio-button>\n```\n\n**属性:**\n\n- `name` (`string`): 分组名称\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n\n**事件:**\n- `change`: 选中变化后触发",
+      "description": "**单选按钮 Radio Button**\n\n单选按钮组件",
+      "htmlSnippet": "<s-radio-button name=\"group1\" checked>Option 1</s-radio-button>",
       "attributes": [
         {
           "name": "name",
@@ -264,7 +442,8 @@
     },
     {
       "name": "s-circular-progress",
-      "description": "**圆形进度条 Circular Progress**\n\n圆形进度条\n\n```html\n<s-circular-progress value=\"50\"></s-circular-progress>\n```\n\n**属性:**\n\n- `value` (`number`): 进度值 (0-100)\n- `size` (`string`): 尺寸\n- `thickness` (`string`): 进度条厚度\n\n**CSS 变量:**\n\n- `--progress-color`: 进度条颜色\n- `--track-color`: 背景轨道颜色",
+      "description": "**圆形进度条 Circular Progress**\n\n圆形进度条",
+      "htmlSnippet": "<s-circular-progress value=\"50\"></s-circular-progress>",
       "attributes": [
         {
           "name": "value",
@@ -277,16 +456,6 @@
         {
           "name": "thickness",
           "description": "进度条厚度"
-        }
-      ],
-      "cssProperties": [
-        {
-          "name": "--progress-color",
-          "description": "进度条颜色"
-        },
-        {
-          "name": "--track-color",
-          "description": "背景轨道颜色"
         }
       ],
       "references": [
@@ -302,7 +471,8 @@
     },
     {
       "name": "s-switch",
-      "description": "**开关 Switch**\n\n开关组件\n\n```html\n<s-switch checked></s-switch>\n```\n\n**属性:**\n\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n\n**事件:**\n- `change`: 选中变化后触发",
+      "description": "**开关 Switch**\n\n开关组件",
+      "htmlSnippet": "<s-switch checked></s-switch>",
       "attributes": [
         {
           "name": "checked",
@@ -334,7 +504,8 @@
     },
     {
       "name": "s-tooltip",
-      "description": "**提示 Tooltip**\n\n提示组件\n\n```html\n<s-tooltip message=\"hello\"></s-tooltip>\n```\n\n**属性:**\n\n- `message` (`string`): 提示信息\n- `position` (`string`): 位置\n\n**CSS 变量:**\n\n- `--tooltip-background`: 背景色\n- `--tooltip-color`: 文字颜色",
+      "description": "**提示 Tooltip**\n\n提示组件",
+      "htmlSnippet": "<s-tooltip message=\"hello\"></s-tooltip>",
       "attributes": [
         {
           "name": "message",
@@ -351,16 +522,6 @@
           ]
         }
       ],
-      "cssProperties": [
-        {
-          "name": "--tooltip-background",
-          "description": "背景色"
-        },
-        {
-          "name": "--tooltip-color",
-          "description": "文字颜色"
-        }
-      ],
       "references": [
         {
           "name": "文档",
@@ -374,7 +535,8 @@
     },
     {
       "name": "s-badge",
-      "description": "**徽章 Badge**\n\n徽章组件\n\n```html\n<s-badge content=\"5\"></s-badge>\n```\n\n**属性:**\n\n- `content` (`string | number`): 徽章内容\n- `color` (`string`): 徽章颜色\n- `dot` (`boolean`): 是否为圆点徽章",
+      "description": "**徽章 Badge**\n\n徽章组件",
+      "htmlSnippet": "<s-badge>1</s-badge>",
       "attributes": [
         {
           "name": "content",
@@ -382,12 +544,7 @@
         },
         {
           "name": "color",
-          "description": "徽章颜色"
-        },
-        {
-          "name": "dot",
-          "description": "是否为圆点徽章",
-          "valueSet": "boolean"
+          "description": "颜色"
         }
       ],
       "references": [
@@ -403,19 +560,16 @@
     },
     {
       "name": "s-text-field",
-      "description": "**文本输入框 Text Field**\n\n文本输入框组件\n\n```html\n<s-text-field label=\"Name\"></s-text-field>\n```\n\n**属性:**\n\n- `label` (`string`): 标签文本\n- `value` (`string`): 输入框的值\n- `placeholder` (`string`): 输入框的占位符\n- `disabled` (`boolean`): 是否禁用\n- `readonly` (`boolean`): 是否只读\n- `type` (`string`): 输入框类型 (可选: `text`, `password`, `email`, `number`)\n\n**事件:**\n- `input`: 输入事件\n- `focus`: 获得焦点事件\n- `blur`: 失去焦点事件",
+      "description": "**文本框 Text Field**\n\n文本框组件",
+      "htmlSnippet": "<s-text-field value=\"Hello\"></s-text-field>",
       "attributes": [
-        {
-          "name": "label",
-          "description": "标签文本"
-        },
         {
           "name": "value",
           "description": "输入框的值"
         },
         {
           "name": "placeholder",
-          "description": "输入框的占位符"
+          "description": "占位符"
         },
         {
           "name": "disabled",
@@ -426,16 +580,6 @@
           "name": "readonly",
           "description": "是否只读",
           "valueSet": "boolean"
-        },
-        {
-          "name": "type",
-          "description": "输入框类型",
-          "values": [
-            { "name": "text" },
-            { "name": "password" },
-            { "name": "email" },
-            { "name": "number" }
-          ]
         }
       ],
       "events": [
@@ -444,12 +588,8 @@
           "description": "输入事件"
         },
         {
-          "name": "focus",
-          "description": "获得焦点事件"
-        },
-        {
-          "name": "blur",
-          "description": "失去焦点事件"
+          "name": "change",
+          "description": "变更事件"
         }
       ],
       "references": [
@@ -465,7 +605,8 @@
     },
     {
       "name": "s-dialog",
-      "description": "**对话框 Dialog**\n\n对话框组件\n\n```html\n<s-dialog open>\n  <s-dialog-title>Title</s-dialog-title>\n  <s-dialog-content>Content goes here...</s-dialog-content>\n  <s-dialog-actions>\n    <s-button>Cancel</s-button>\n    <s-button primary>Ok</s-button>\n  </s-dialog-actions>\n</s-dialog>\n```\n\n**属性:**\n\n- `open` (`boolean`): 是否打开\n- `modal` (`boolean`): 是否为模态对话框\n\n**事件:**\n- `close`: 对话框关闭事件",
+      "description": "**对话框 Dialog**\n\n对话框组件",
+      "htmlSnippet": "<s-dialog open modal>\n  <s-dialog-header>Title</s-dialog-header>\n  <s-dialog-body>Content goes here...</s-dialog-body>\n</s-dialog>",
       "attributes": [
         {
           "name": "open",

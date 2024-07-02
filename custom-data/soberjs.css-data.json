@@ -1,0 +1,57 @@
+{
+  "version": 1.1,
+  "cssVariables": [
+    {
+      "component": "s-card",
+      "variables": [
+        {
+          "name": "--card-background",
+          "description": "背景色"
+        },
+        {
+          "name": "--card-color",
+          "description": "文字颜色"
+        }
+      ]
+    },
+    {
+      "component": "s-circular-progress",
+      "variables": [
+        {
+          "name": "--progress-color",
+          "description": "进度条颜色"
+        },
+        {
+          "name": "--track-color",
+          "description": "背景轨道颜色"
+        }
+      ]
+    },
+    {
+      "component": "s-tooltip",
+      "variables": [
+        {
+          "name": "--tooltip-background",
+          "description": "背景色"
+        },
+        {
+          "name": "--tooltip-color",
+          "description": "文字颜色"
+        }
+      ]
+    },
+    {
+      "component": "s-badge",
+      "variables": [
+        {
+          "name": "--badge-background",
+          "description": "背景色"
+        },
+        {
+          "name": "--badge-color",
+          "description": "文字颜色"
+        }
+      ]
+    }
+  ]
+}

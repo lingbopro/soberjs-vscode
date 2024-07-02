@@ -5,6 +5,6 @@
       "import 'sober'"
     ],
     "description": "使用ESM方式引入Sober包",
-    "scope": "typescript,javascript"
+    "scope": "javascript,typescript"
   }
 }
