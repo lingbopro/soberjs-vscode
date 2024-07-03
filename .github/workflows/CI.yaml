@@ -19,38 +19,12 @@ jobs:
         run: |
           echo "Hello World!"
           echo "Running at $(pwd)"
+          
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        
+      - name: Package VS Code extension
+        uses: nhedger/package-vscode-extension@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Set up VSCE
-        shell: bash
-        run: |
-          vsce --version >/dev/null 2>&1 && echo "VSCE Installed" || npm install -g @vscode/vsce
-      - name: Build
-        shell: bash
-        run: |
-          vsce package --out ./out/soberjs-vscode-${{ github.ref_name }}.vsix
-      - name: Login to VSCE
-        shell: bash
-        env:
-          AZURE_TOKEN: ${{ secrets.AZURE_TOKEN }}
-        run: |
-          echo "$AZURE_TOKEN" | vsce login lingbopro || exit 1
-      - name: Publish
-        shell: bash
-        run: |
-          vsce publish --packagePath ./out/soberjs-vscode-${{ github.ref_name }}.vsix || exit 1
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          tag_name: ${{ github.ref_name }}
-          name: ${{ github.ref_name }}
-          body_path: CHANGELOG.md
-          draft: false
-          prerelease: false
-          files: |
-            ./out/soberjs-vscode-${{ github.ref_name }}.vsix
+            extensionPath: $GITHUB_WORKSPACE
+            packagePath: ${extensionPath}/Output/v0.2.0-SoberjsVScode.vsix
