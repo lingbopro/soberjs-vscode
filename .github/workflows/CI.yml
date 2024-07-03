@@ -21,3 +21,9 @@ jobs:
         with:
             extensionPath: $GITHUB_WORKSPACE
             packagePath: ${extensionPath}/Output/v0.2.0-SoberjsVScode.vsix
+
+      - name: Publish VS Code extension artifact
+        uses: actions/upload-artifact@v3
+        with:
+            name: my-extension
+            path: ${{ steps.package.outputs.packagePath }}
