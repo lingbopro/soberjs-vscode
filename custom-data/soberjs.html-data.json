@@ -604,6 +604,28 @@
       ]
     },
     {
+      "name": "s-ripple",
+      "description": "**波纹 Ripple**\n\n波纹容器。\n\n可作为容器，自动处理子元素点击效果。\n\n```html\n<s-ripple>\n <s-button>ripple button</s-button>\n</s-ripple>\n```\n\n**属性:**\n\n- `centered` (`boolean`): 波纹是否居中\n- `attached` (`boolean`): 波纹是否附着在子元素上\n\n**CSS 变量:**\n\n- `--ripple-color`: 波纹颜色\n- `--ripple-opacity`: 波纹透明度",
+      "attributes": [
+        {
+          "name": "centered",
+          "description": "波纹是否居中",
+          "valueSet": "boolean"
+        },
+        {
+          "name": "attached",
+          "description": "是否设置为依附模式",
+          "valueSet": "boolean"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/ripple"
+        }
+      ]
+    },
+    {
       "name": "s-dialog",
       "description": "**对话框 Dialog**\n\n对话框组件",
       "htmlSnippet": "<s-dialog open modal>\n  <s-dialog-header>Title</s-dialog-header>\n  <s-dialog-body>Content goes here...</s-dialog-body>\n</s-dialog>",
