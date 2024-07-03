@@ -2,10 +2,9 @@ name: CI
 
 on:
   push:
-    # Sequence of patterns matched against refs/tags
-    tags:
-      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
-
+    branches:
+    - main
+    - release/
 
 jobs:
   build:
@@ -14,12 +13,6 @@ jobs:
       matrix:
         node-version: ['22.x']
     steps:
-      - name: Set up something
-        shell: bash
-        run: |
-          echo "Hello World!"
-          echo "Running at $(pwd)"
-          
       - name: Checkout
         uses: actions/checkout@v4
         
