@@ -69,7 +69,7 @@
   - [ ] 页面 Page
   - [ ] 抽屉 Drawer
   - [ ] 滚动 Scroll View
-  - [ ] 卡片 Card
+  - [x] 卡片 Card
   - [ ] 搜索栏 Search
   - [ ] 轮播图 Carousel
 - [ ] 导航
@@ -77,12 +77,12 @@
   - [ ] 导航栏 Navigation
   - [ ] 顶部应用栏 Top App Bar
 - [ ] 部件
-  - [ ] 对话框 Dialog
+  - [x] 对话框 Dialog
   - [ ] 下拉框 Dropdown
   - [ ] 菜单 Menu
   - [ ] 提示框 Snackbar
-  - [ ] 工具提示 Tooltip
-  - [ ] 徽章 Badge
+  - [x] 工具提示 Tooltip
+  - [x] 徽章 Badge
   - [ ] 纸片 Chip
 - [ ] 数据
   - [ ] 表格 Table

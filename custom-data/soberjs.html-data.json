@@ -368,39 +368,6 @@
       ]
     },
     {
-      "name": "s-divider",
-      "description": "**分割线 Divider**\n\n```html\n<s-divider></s-divider>\n```",
-      "attributes": [],
-      "references": [
-        {
-          "name": "文档",
-          "url": "https://soberjs.com/component/divider"
-        },
-        {
-          "name": "源代码",
-          "url": "https://github.com/apprat/sober/blob/main/src/divider.ts"
-        }
-      ]
-    }
-  ],
-  "valueSets": [
-    {
-      "name": "boolean",
-      "values": [
-        {
-          "name": "true"
-        },
-        {
-          "name": "false"
-        },
-        {
-          "name": "disabled",
-          "description": "是否禁用",
-          "valueSet": "boolean"
-        }
-      ]
-    },
-    {
       "name": "s-button",
       "description": "**按钮 Button**\n\n按钮组件",
       "htmlSnippet": "<s-button>Click me</s-button>",
@@ -761,6 +728,38 @@
         {
           "name": "源代码",
           "url": "https://github.com/apprat/sober/blob/main/src/dialog.ts"
+        }
+      ]
+    },
+    {
+      "name": "s-divider",
+      "description": "**分割线 Divider**\n\n```html\n<s-divider></s-divider>\n```",
+      "attributes": [
+        {
+          "name": "boolean",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            },
+            {
+              "name": "disabled",
+              "description": "是否禁用",
+              "valueSet": "boolean"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/divider"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/divider.ts"
         }
       ]
     }
