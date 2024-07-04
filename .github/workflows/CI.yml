@@ -26,4 +26,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
             name: my-extension
-            path: ${{ steps.package.outputs.packagePath }}
+            path: $GITHUB_WORKSPACE/Output/v0.2.0-SoberjsVScode.vsix
