@@ -475,7 +475,7 @@
     },
     {
       "name": "s-checkbox",
-      "description": "**复选框 Checkbox**\n\n复选框组件",
+      "description": "**复选框 Checkbox**\n\n```html\n<s-checkbox></s-checkbox>\n<s-checkbox checked=\"true\"></s-checkbox>\n<s-checkbox indeterminate=\"true\"></s-checkbox>\n```\n\n设置 disabled 来禁用复选框。\n\n自定义颜色\n\n```html\n<s-checkbox style=\"color: #009688\"></s-checkbox>\n<s-checkbox style=\"color: #b54e4e\" checked=\"true\"></s-checkbox>\n<s-checkbox style=\"color: #2ca325\" indeterminate=\"true\"></s-checkbox>\n```\n\n**属性:**\n\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n- `indeterminate` (`boolean`): 是否未知\n\n**事件:**\n- `change`: 选中变化后触发",
       "htmlSnippet": "<s-checkbox checked>Label</s-checkbox>",
       "attributes": [
         {
@@ -639,7 +639,7 @@
     {
       "name": "s-badge",
       "description": "**徽章 Badge**\n\n徽章组件",
-      "htmlSnippet": "<s-badge>1</s-badge>",
+      "htmlSnippet": "<s-badge></s-badge>",
       "attributes": [
         {
           "name": "content",
