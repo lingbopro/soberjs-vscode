@@ -26,4 +26,16 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
             name: ${{ github.ref_name }}
-            path: ./output/soberjs-vscode-${{ github.ref_name }}.vsix
+            path: ./out/soberjs-vscode-${{ github.ref_name }}.vsix
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          body_path: CHANGELOG.md
+          draft: false
+          prerelease: false
+          files: |
+            ./out/soberjs-vscode-${{ github.ref_name }}.vsix
