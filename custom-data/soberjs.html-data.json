@@ -1,6 +1,109 @@
 {
   "version": 1.1,
-  "components": [
+  "tags": [
+    {
+      "name": "s-button",
+      "description": "**按钮 Button**\n\n基础按钮，适用于简单的点击操作。\n\n```html\n<s-button>button</s-button>\n```\n\n**属性:**\n\n- `type`: 按钮样式\n- `disabled` (`boolean`): 是否禁用\n\n**插槽:**\n\n- `start`: 开始\n- `end`: 结束",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "按钮样式。\n\n可选值为:\n- `filled`\n- `elevated`\n- `filled-tonal`\n- `outlined`\n- `text`",
+          "values": [
+            {
+              "name": "filled",
+              "description": "默认值。带有较明显背景色的按钮"
+            },
+            {
+              "name": "elevated",
+              "description": "带有阴影的按钮"
+            },
+            {
+              "name": "filled-tonal",
+              "description": "带有背景色的按钮"
+            },
+            {
+              "name": "outlined",
+              "description": "带有边框的按钮"
+            },
+            {
+              "name": "text",
+              "description": "只包含文字的按钮，没有其他样式"
+            }
+          ]
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "valueSet": "boolean"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/button"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/button.ts"
+        }
+      ]
+    },
+    {
+      "name": "s-icon",
+      "description": "**图标 Icon**\n\n图标。\n\n我们推荐你使用 `svg` 作为图标，`icon` 组件作为 `svg` 的容器使用。\n\n```html\n<s-icon>\n  <svg viewBox=\"...\">...</svg>\n</s-icon>\n```\n\n为了方便使用和出于体积考虑，`icon` 自带了一些常用的图标，你可以使用 `type` 指定图标\n\n```html\n<s-icon type=\"home\"></s-icon>\n```\n\n你可以在图标库中获取 SVG 图标，或者使用阿里巴巴矢量图标库。\n\n**属性:**\n\n- `type`: 图标名称",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "图标名称。",
+          "values": [
+            {
+              "name": "none",
+              "description": "不使用内置图标"
+            },
+            { "name": "home" },
+            { "name": "search" },
+            { "name": "menu" },
+            { "name": "arrow_back" },
+            { "name": "arrow_forward" },
+            { "name": "arrow_upward" },
+            { "name": "arrow_downward" },
+            { "name": "arrow_drop_up" },
+            { "name": "arrow_drop_down" },
+            { "name": "arrow_drop_left" },
+            { "name": "arrow_drop_right" },
+            { "name": "more_vert" },
+            { "name": "more_horiz" },
+            { "name": "close" },
+            { "name": "chevron_up" },
+            { "name": "chevron_down" },
+            { "name": "chevron_left" },
+            { "name": "chevron_right" },
+            { "name": "light_mode" },
+            { "name": "dark_mode" },
+            { "name": "star" },
+            { "name": "favorite" }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/icon"
+        },
+        {
+          "name": "图标库",
+          "url": "https://soberjs.com/resource/icon"
+        },
+        {
+          "name": "阿里巴巴矢量图标库",
+          "url": "https://www.iconfont.cn/"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/icon.ts"
+        }
+      ]
+    },
     {
       "name": "s-icon-button",
       "description": "**图标按钮 Icon Button**\n\n```html\n<s-icon-button>\n  <s-icon type=\"search\"></s-icon>\n</s-icon-button>\n```\n\n**属性:**\n\n- `type`: 按钮样式\n- `disabled` (`boolean`): 是否禁用",
