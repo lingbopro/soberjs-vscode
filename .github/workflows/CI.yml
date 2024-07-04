@@ -17,7 +17,7 @@ jobs:
       
       - name: Package VS Code extension
         id: package
-        uses: nhedger/package-vscode-extension@v1
+        uses: nhedger/package-vscode-extension@main
       
       - name: Publish VS Code extension artifact
         uses: actions/upload-artifact@v3
