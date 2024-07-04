@@ -15,14 +15,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
+      - name: Checkout
+        uses: actions/checkout@v3
+      
       - name: Package VS Code extension
+        id: package
         uses: nhedger/package-vscode-extension@v1
-        with:
-            extensionPath: $GITHUB_WORKSPACE
-            packagePath: ${extensionPath}/Output/v0.2.0-SoberjsVScode.vsix
-
+      
       - name: Publish VS Code extension artifact
         uses: actions/upload-artifact@v3
         with:
-            name: my-extension
-            path: $GITHUB_WORKSPACE/Output/v0.2.0-SoberjsVScode.vsix
+            name: ${{ github.ref_name }}
+            path: ./output/soberjs-vscode-${{ github.ref_name }}.vsix
