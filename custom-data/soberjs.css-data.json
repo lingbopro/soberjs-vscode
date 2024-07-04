@@ -1,70 +1,150 @@
 {
   "version": 1.1,
-  "cssVariables": [
+  "properties": [
     {
-      "component": "s-card",
+      "name": "s-card",
       "variables": [
         {
           "name": "--card-background",
-          "description": "背景色"
+          "description": "背景色",
+          "references": [
+            {
+              "name": "GitHub",
+              "url": "https://soberjs.com/component/card"
+            }
+          ]
         },
         {
           "name": "--card-color",
-          "description": "文字颜色"
+          "description": "文字颜色",
+          "references": [
+            {
+              "name": "GitHub",
+              "url": "https://soberjs.com/component/card"
+            }
+          ]
         }
-      ]
+      ],
+      "pseudoClasses": {
+        "name": ":s-card",
+        "description": "卡片组件"
+      }
     },
     {
-      "component": "s-circular-progress",
+      "name": "s-circular-progress",
       "variables": [
         {
           "name": "--progress-color",
-          "description": "进度条颜色"
+          "description": "进度条颜色",
+          "references": [
+            {
+              "name": "GitHub",
+              "url": "https://soberjs.com/component/circular-progress"
+            }
+          ]
         },
         {
           "name": "--track-color",
-          "description": "背景轨道颜色"
+          "description": "背景轨道颜色",
+          "references": [
+            {
+              "name": "GitHub",
+              "url": "https://soberjs.com/component/circular-progress"
+            }
+          ]
         }
-      ]
+      ],
+      "pseudoClasses": {
+        "name": ":s-circular-progress",
+        "description": "圆形进度组件"
+      }
     },
     {
-      "component": "s-tooltip",
+      "name": "s-tooltip",
       "variables": [
         {
           "name": "--tooltip-background",
-          "description": "背景色"
+          "description": "背景色",
+          "references": [
+            {
+              "name": "GitHub",
+              "url": "https://soberjs.com/component/tooltip"
+            }
+          ]
         },
         {
           "name": "--tooltip-color",
-          "description": "文字颜色"
+          "description": "文字颜色",
+          "references": [
+            {
+              "name": "GitHub",
+              "url": "https://soberjs.com/component/tooltip"
+            }
+          ]
         }
-      ]
+      ],
+      "pseudoClasses": {
+        "name": ":s-tooltip",
+        "description": "提示组件"
+      }
     },
     {
-      "component": "s-ripple",
+      "name": "s-ripple",
       "variables": [
         {
           "name": "--ripple-color",
-          "description": "水波纹颜色"
+          "description": "波纹颜色",
+          "references": [
+            {
+              "name": "GitHub",
+              "url": "https://soberjs.com/component/ripple"
+            }
+          ]
         },
         {
           "name": "--ripple-opacity",
-          "description": "水波纹透明度"
+          "description": "波纹透明度",
+          "references": [
+            {
+              "name": "GitHub",
+              "url": "https://soberjs.com/component/ripple"
+            }
+          ]
         }
-      ]
+      ],
+      "pseudoClasses": {
+        "name": ":s-ripple",
+        "description": "波纹组件"
+      }
     },
     {
-      "component": "s-badge",
+      "name": "s-badge",
       "variables": [
         {
           "name": "--badge-background",
-          "description": "背景色"
+          "description": "背景色",
+          "references": [
+            {
+              "name": "GitHub",
+              "url": "https://soberjs.com/component/badge"
+            }
+          ]
         },
         {
           "name": "--badge-color",
-          "description": "文字颜色"
+          "description": "波纹透明度",
+          "references": [
+            {
+              "name": "GitHub",
+              "url": "https://soberjs.com/component/badge"
+            }
+          ]
         }
-      ]
+      ],
+      "pseudoClasses": {
+        "name": ":s-badge",
+        "description": "徽章组件"
+      }
     }
   ]
 }

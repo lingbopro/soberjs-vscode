@@ -664,7 +664,6 @@
     {
       "name": "s-text-field",
       "description": "**文本框 Text Field**\n\n文本框组件",
-      "htmlSnippet": "<s-text-field value=\"Hello\"></s-text-field>",
       "attributes": [
         {
           "name": "value",
