@@ -171,6 +171,32 @@
       ]
     },
     {
+      "name": "s-segmented-button-item",
+      "description": "**分组按钮项目 Segmented Button Item**\n\n作为 `s-segmented-item` 的子项使用。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中。\n- `disabled` (`boolean`): 是否禁用\n- `selectable` (`boolean`): 是否启用选中",
+      "attributes": [
+        {
+          "name": "selected",
+          "description": "是否选中",
+          "valueSet": "boolean"
+        },
+        {
+          "name": "selectable",
+          "description": "是否启用选中",
+          "valueSet": "boolean"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/segmented-button"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/segmented-button.ts"
+        }
+      ]
+    },
+    {
       "name": "s-segmented-button",
       "description": "**分组按钮 Segmented Button**\n\n```html\n<s-segmented-button>\n  <s-segmented-button-item selected=\"true\">\n    <s-icon slot=\"start\" type=\"search\"></s-icon>\n    item1\n  </s-segmented-button-item>\n  <s-segmented-button-item disabled=\"true\">\n    item2\n    <s-icon slot=\"end\" type=\"close\"></s-icon>\n  </s-segmented-button-item>\n</s-segmented-button>\n```\n\n**属性:**\n\n- `options` _[只读]_ (`SegmentedButtonItem[]`): 子项目\n- `selectedIndex` _[只读]_ (`number`): 当前选中下标\n\n**事件:**\n- `change`: 选中变化后触发\n\n**插槽:**\n\n- `start`: 开始（不会触发选中）\n- `end`: 结束（不会触发选中）",
       "attributes": [
