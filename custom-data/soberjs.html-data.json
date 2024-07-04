@@ -707,7 +707,7 @@
     },
     {
       "name": "s-ripple",
-      "description": "**波纹 Ripple**\n\n波纹容器。\n\n可作为容器，自动处理子元素点击效果。\n\n```html\n<s-ripple>\n <s-button>ripple button</s-button>\n</s-ripple>\n```\n\n**属性:**\n\n- `centered` (`boolean`): 波纹是否居中\n- `attached` (`boolean`): 波纹是否附着在子元素上\n\n**CSS 变量:**\n\n- `--ripple-color`: 波纹颜色\n- `--ripple-opacity`: 波纹透明度",
+      "description": "**波纹 Ripple**\n\n波纹是一个容器，它本身没有任何样式，波纹的颜色继承文本颜色，并带有一定的不透明度。\n\n```html\n<s-ripple style=\"padding: 16px 48px\">test</s-ripple>\n```\n\n如果你希望单独修改波纹颜色，那你应当使用 CSS 变量。\n\n设置 `attached` 来启用依附模式，它依附在容器中呈现，事件从容器上触发，某些情况下可能有妙用。\n\n由于使用定位确定位置，所以容器的 `position` 必须设置为 `relative`、`absolute`、`sticky`、`fixed` 其中之一。\n\n**属性:**\n\n- `centered` (`boolean`): 波纹是否居中\n- `attached` (`boolean`): 是否设置为依附模式\n\n**CSS 变量:**\n\n- `--ripple-color`: 波纹颜色\n- `--ripple-opacity`: 波纹颜色不透明度",
       "attributes": [
         {
           "name": "centered",
@@ -724,6 +724,10 @@
         {
           "name": "文档",
           "url": "https://soberjs.com/component/ripple"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/ripple.ts"
         }
       ]
     },
