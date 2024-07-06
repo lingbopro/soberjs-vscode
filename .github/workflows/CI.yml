@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
             name: ${{ github.ref_name }}
-            path: ./out/soberjs-vscode-${{ github.ref_name }}.vsix
+            path: /home/runner/work/soberjs-vscode/soberjs-vscode/soberjs-vscode-0.2.0.vsix
 
       - name: Release
         uses: softprops/action-gh-release@v1
@@ -39,4 +39,4 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            ./out/soberjs-vscode-${{ github.ref_name }}.vsix
+            /home/runner/work/soberjs-vscode/soberjs-vscode/soberjs-vscode-0.2.0.vsix
