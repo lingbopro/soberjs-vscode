@@ -17,8 +17,7 @@ jobs:
         
       - name: Create folder
         run: |
-          mkdir -p out && cp -R dist out
-          ls out
+          mkdir -p out
       
       - name: Package VS Code extension
         id: package
