@@ -15,11 +15,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Create out directory
-        shell: bash
+      - name: Create folder
         run: |
-          if [ ! -d "out/" ]; then mkdir out; fi
-           vsce package --out ./out/soberjs-vscode-${{ github.ref_name }}.vsix
+          mkdir -p out && cp -R dist out
+          ls out
       
       - name: Package VS Code extension
         id: package
