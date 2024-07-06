@@ -612,7 +612,79 @@
           "url": "https://github.com/apprat/sober/blob/main/src/divider.ts"
         }
       ]
-    }
+    },
+    {
+      "name": "s-page",
+      "description": "A root container component for the page, with global CSS variables to control styles of all descendant components. Use it as `<s-page></s-page>`.",
+      "attributes": [
+        {
+          "name": "theme",
+          "description": "Sets the theme for the page. Supports three themes: light (default), dark, and auto (follows the system theme).",
+          "values": [
+            { "name": "light", "description": "Light theme (default)." },
+            { "name": "dark", "description": "Dark theme." },
+            { "name": "auto", "description": "Follows the system theme." }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://soberjs.com/component/page"
+        }
+      ]
+    },
+    {
+      "name": "s-drawer",
+      "description": "**Drawer 组件**\n\n当容器的宽度小于 fold 的值时，抽屉会切换为折叠模式。通常适用于移动端，以便于腾出更多空间。\n\n```html\n<s-drawer>\n  <div slot=\"start\">Start</div>\n  <div>Main</div>\n  <div slot=\"end\">End</div>\n</s-drawer>\n```\n\n**属性:**\n\n- `fold` (`number`): 抽屉折叠模式的阈值宽度，单位为像素。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽",
+      "attributes": [
+        {
+          "name": "fold",
+          "description": "抽屉折叠模式的阈值宽度，单位为像素。"
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://soberjs.com/component/drawer"
+        }
+      ]
+    },    
+    {
+      "name": "s-scroll-view",
+      "description": "Provides a styled scrollbar for the container. The scrollbar style is only effective on devices that support mouse input, optimized for touch devices. Use it as `<s-scroll-view></s-scroll-view>`.",
+      "attributes": [],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://soberjs.com/component/scroll-view"
+        }
+      ]
+    },
+    {
+      "name": "s-card",
+      "description": "**Card 组件**\n\n用于显示内容的卡片组件，支持多种样式，可以作为容器使用。\n\n```html\n<s-card>\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card type=\"filled\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"outlined\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card type=\"outlined\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card clickable=\"true\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card style=\"display: block; padding: 24px\">\n  Card\n</s-card>\n```\n\n**属性:**\n\n- `type` (`elevated`, `filled`, `outlined`): 卡片样式，默认为 `elevated`\n- `clickable` (`boolean`): 是否启用可点击，默认为 `false`\n- `selectable` (`boolean`): 是否启用选中，默认为 `false`\n\n**插槽:**\n- `image`: 图片\n- `headline`: 标题\n- `subhead`: 副标题\n- `text`: 卡片文本\n- `action`: 操作按钮\n\n**CSS 变量:**\n\n- `--border-radius`: 边框半径\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "卡片样式，可选值为 `elevated`, `filled`, `outlined`。"
+        },
+        {
+          "name": "clickable",
+          "description": "是否启用可点击，布尔值。"
+        },
+        {
+          "name": "selectable",
+          "description": "是否启用选中，布尔值。"
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://soberjs.com/component/card"
+        }
+      ]
+    }    
   ],
   "valueSets": [
     {
