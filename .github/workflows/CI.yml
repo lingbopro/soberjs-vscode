@@ -17,22 +17,22 @@ jobs:
       
       - name: Package VS Code extension
         id: package
-        uses: nhedger/package-vscode-extension@main
+        uses: nhedger/package-vscode-extension@main #放心版本号是和打包是你写的版本号一致 路径都是一样版本号变一下就行
       
       - name: Publish VS Code extension artifact
         uses: actions/upload-artifact@v4
         with:
-            name: 1.0.0
-            path: /home/runner/work/soberjs-vscode/soberjs-vscode/soberjs-vscode-1.0.0.vsix
+            name: 1.0.0 #注意!!!每次更新必须手动更新版本号
+            path: /home/runner/work/soberjs-vscode/soberjs-vscode/soberjs-vscode-1.0.0.vsix #注意!!!每次更新必须手动更新版本号
 
-      - name: Release
+      - name: Release #这里有些问题发布不了，不过你可以从artifact下载
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          tag_name: 1.0.0
-          name: 1.0.0
+          tag_name: 1.0.0 #注意!!!每次更新必须手动更新版本号
+          name: 1.0.0 #注意!!!每次更新必须手动更新版本号
           body_path: CHANGELOG.md
           draft: false
           prerelease: false
-          files: |
+          files: | #注意!!!每次更新必须手动更新版本号
             /home/runner/work/soberjs-vscode/soberjs-vscode/soberjs-vscode-1.0.0.vsix

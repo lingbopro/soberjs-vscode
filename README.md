@@ -44,7 +44,7 @@
 - _~~CSS 变量名和枚举值（尚未完成）~~_
 - 一点 HTML 代码片段
 
-目前已支持 16 个组件（见下表）  
+目前已支持所有0.2.15的所有组件（见下表）  
 
 <details>
   <summary>支持的组件（点击展开）</summary>
@@ -66,27 +66,27 @@
   - [x] 评分 Rate
   - [x] 选择框 Picker
   - [x] 分割线 Divider
-- [ ] 容器
-  - [ ] 页面 Page
-  - [ ] 抽屉 Drawer
-  - [ ] 滚动 Scroll View
-  - [ ] 卡片 Card
-  - [ ] 搜索栏 Search
-  - [ ] 轮播图 Carousel
-- [ ] 导航
-  - [ ] 选项卡 Tab
-  - [ ] 导航栏 Navigation
-  - [ ] 应用栏 Appbar
-- [ ] 部件
-  - [ ] 对话框 Dialog
-  - [ ] 弹出框 Popup
-  - [ ] 弹出式菜单 Popup Menu
-  - [ ] 提示框 Snackbar
-  - [ ] 工具提示 Tooltip
-  - [ ] 徽章 Badge
-  - [ ] 纸片 Chip
-- [ ] 数据
-  - [ ] 表格 Table
+- [x] 容器
+  - [x] 页面 Page
+  - [x] 抽屉 Drawer
+  - [x] 滚动 Scroll View
+  - [x] 卡片 Card
+  - [x] 搜索栏 Search
+  - [x] 轮播图 Carousel
+- [x] 导航
+  - [x] 选项卡 Tab
+  - [x] 导航栏 Navigation
+  - [x] 应用栏 Appbar
+- [x] 部件
+  - [x] 对话框 Dialog
+  - [x] 弹出框 Popup
+  - [x] 弹出式菜单 Popup Menu
+  - [x] 提示框 Snackbar
+  - [x] 工具提示 Tooltip
+  - [x] 徽章 Badge
+  - [x] 纸片 Chip
+- [x] 数据
+  - [x] 表格 Table
 
 </details>
 
@@ -100,7 +100,7 @@
 
 ## To-do
 
-- [ ] 支持更多组件
+- [x] 支持更多组件
 - [ ] 完善悬停提示
 - [ ] 完成 CSS 变量名和枚举值补全
 - [ ] 增加 SVG 图标补全
