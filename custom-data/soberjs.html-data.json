@@ -793,11 +793,11 @@
     },
     {
       "name": "s-dialog",
-      "description": "**Dialog 组件**\n\nDialog 对话框组件用于展示重要的提示信息或者需要用户进行操作的内容。支持自定义布局、全屏模式以及动态调用。\n\n```html\n<s-dialog>\n  <s-button slot=\"trigger\"> dialog </s-button>\n  <div slot=\"headline\"> Title </div>\n  <div slot=\"text\">问人生、头白京国，算来何事消得。不如罨画清溪上，蓑笠扁舟一只。人不识，且笑煮、鲈鱼趁著莼丝碧。无端酸鼻，向岐路消魂，征轮驿骑，断雁西风急。\n    英雄辈，事业东西南北。临风因甚泣。酬知有愿频挥手，零雨凄其此日。休太息，须信道、诸公衮衮皆虚掷。年来踪迹。有多少雄心，几翻恶梦，泪点霜华织。\n  </div>\n  <s-button slot=\"action\" type=\"text\">取消</s-button>\n  <s-button slot=\"action\" type=\"text\">确定</s-button>\n</s-dialog>\n\n<s-dialog size=\"full\">\n  <s-button slot=\"trigger\"> dialog </s-button>\n  <div style=\"padding: 24px\">\n    自定义布局\n  </div>\n  <s-button slot=\"action\" type=\"text\">取消</s-button>\n</s-dialog>\n\n<s-button onclick=\"document.querySelector('#dialog').show()\"> 动态调用 </s-button>\n<s-dialog id=\"dialog\">\n  <div slot=\"headline\"> Title </div>\n  <div slot=\"text\">问人生、头白京国，算来何事消得。不如罨画清溪上，蓑笠扁舟一只。人不识，且笑煮、鲈鱼趁著莼丝碧。无端酸鼻，向岐路消魂，征轮驿骑，断雁西风急。\n    英雄辈，事业东西南北。临风因甚泣。酬知有愿频挥手，零雨凄其此日。休太息，须信道、诸公衮衮皆虚掷。年来踪迹。有多少雄心，几翻恶梦，泪点霜华织。\n  </div>\n  <s-button slot=\"action\" type=\"text\">取消</s-button>\n  <s-button slot=\"action\" type=\"text\">确定</s-button>\n</s-dialog>\n```\n\n**事件:**\n\n- `show`: 对话框开始显示时触发\n- `showed`: 对话框显示后触发（动画结束）\n- `dismiss`: 对话框开始隐藏时触发\n- `dismissed`: 对话框隐藏后触发（动画结束）\n\n**插槽:**\n- `trigger`: 触发器\n- `headline`: 标题\n- `text`: 文本内容\n- `action`: 操作按钮",
+      "description": "**Dialog 组件**\n\nDialog 对话框组件用于显示重要信息或提示。\n\n```html\n<s-dialog>\n  <s-button slot=\"trigger\"> dialog </s-button>\n  <div slot=\"headline\"> Title </div>\n  <div slot=\"text\">问人生、头白京国，算来何事消得。不如罨画清溪上，蓑笠扁舟一只。人不识，且笑煮、鲈鱼趁著莼丝碧。无端酸鼻，向岐路消魂，征轮驿骑，断雁西风急。英雄辈，事业东西南北。临风因甚泣。酬知有愿频挥手，零雨凄其此日。休太息，须信道、诸公衮衮皆虚掷。年来踪迹。有多少雄心，几翻恶梦，泪点霜华织。</div>\n  <s-button slot=\"action\" type=\"text\">取消</s-button>\n  <s-button slot=\"action\" type=\"text\">确定</s-button>\n</s-dialog>\n```\n\n**属性:**\n\n- `size` (`string`): 对话框尺寸，可选值为 `full` (全屏)\n\n**事件:**\n\n- `show`: 对话框开始显示时触发\n- `showed`: 对话框显示后触发（动画结束）\n- `dismiss`: 对话框开始隐藏时触发\n- `dismissed`: 对话框隐藏后触发（动画结束）\n\n**插槽:**\n- `trigger`: 触发器\n- `headline`: 标题\n- `text`: 文本内容\n- `action`: 操作按钮",
       "attributes": [
         {
           "name": "size",
-          "description": "设置对话框大小，可以为 `full` 以启用全屏模式。"
+          "description": "对话框尺寸，可选值为 `full` (全屏)"
         }
       ],
       "references": [
@@ -806,7 +806,7 @@
           "url": "https://soberjs.com/component/dialog"
         }
       ]
-    },
+    },    
     {
       "name": "s-popup",
       "description": "**Popup 组件**\n\nPopup 弹出框组件用于展示临时内容或提示信息。支持通过不同方式触发，并且可以设置默认位置。\n\n```html\n<s-popup>\n  <s-button slot=\"trigger\"> popup </s-button>\n  <div style=\"min-height: 280px\">\n    弹出框\n  </div>\n</s-popup>\n\n<s-popup showalign=\"right\">\n  <s-button slot=\"trigger\"> popup </s-button>\n  <div style=\"min-height: 280px\">\n    弹出框\n  </div>\n</s-popup>\n```\n\n**属性:**\n\n- `showAlign` (`string`): 设置弹出框的默认位置，可选值如 `right`。\n\n**插槽:**\n- `trigger`: 触发器",
@@ -825,29 +825,11 @@
     },
     {
       "name": "s-popup-menu",
-      "description": "**PopupMenu 组件**\n\nPopupMenu 弹出菜单组件用于展示一组操作选项，支持动态调用、子菜单及复杂布局。\n\n```html\n<s-popup-menu>\n  <s-button slot=\"trigger\">菜单</s-button>\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n\n<s-button onclick=\"document.querySelector('#menu').show(this)\"> 动态调用 </s-button>\n<s-popup-menu id=\"menu\">\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n\n<s-popup-menu>\n  <s-button slot=\"trigger\">菜单</s-button>\n  <s-popup-menu-item>播放</s-popup-menu-item>\n  <s-popup-menu-item>播放相似单曲</s-popup-menu-item>\n  <s-popup-menu-item>我喜欢</s-popup-menu-item>\n  <s-popup-menu group=\"start\">\n    <s-popup-menu-item slot=\"trigger\">\n      添加到\n      <s-icon slot=\"end\" type=\"arrow_drop_right\"></s-icon>\n    </s-popup-menu-item>\n    <s-popup-menu-item>试听列表</s-popup-menu-item>\n    <s-popup-menu-item>添加到新歌单</s-popup-menu-item>\n  </s-popup-menu>\n  <s-popup-menu group=\"end\">\n    <s-popup-menu-item slot=\"trigger\">\n      更换音质\n      <s-icon slot=\"end\" type=\"arrow_drop_right\"></s-icon>\n    </s-popup-menu-item>\n    <s-popup-menu-item>标准品质</s-popup-menu-item>\n    <s-popup-menu-item>HQ高品质</s-popup-menu-item>\n    <s-popup-menu-item>SQ无损品质</s-popup-menu-item>\n  </s-popup-menu>\n  <s-popup-menu-item>查看评论(520)</s-popup-menu-item>\n  <s-popup-menu>\n    <s-popup-menu-item slot=\"trigger\">\n      删除\n      <s-icon slot=\"end\" type=\"arrow_drop_right\"></s-icon>\n    </s-popup-menu-item>\n    <s-popup-menu-item>删除</s-popup-menu-item>\n    <s-popup-menu-item>删除(包括文件)</s-popup-menu-item>\n  </s-popup-menu>\n  <s-popup-menu>\n    <s-popup-menu-item slot=\"trigger\">\n      更多操作\n      <s-icon slot=\"end\" type=\"arrow_drop_right\"></s-icon>\n    </s-popup-menu-item>\n    <s-popup-menu-item>复制歌曲信息</s-popup-menu-item>\n    <s-popup-menu-item>查看文件信息</s-popup-menu-item>\n    <s-popup-menu-item>取消匹配歌曲</s-popup-menu-item>\n  </s-popup-menu>\n</s-popup-menu>\n```\n\n**属性:**\n\n- `group` (`string`): 分组属性，可选值 `start` 或 `end`。\n- `show` (`Function`): 显示对话框的方法。\n- `dismiss` (`Function`): 隐藏对话框的方法。\n- `toggle` (`Function`): 切换对话框显示状态的方法。\n\n**插槽:**\n- `trigger`: 触发器\n\n**Menu Item 插槽:**\n- `start`: 开始\n- `end`: 结束",
+      "description": "**PopupMenu 组件**\n\nPopupMenu 弹出菜单组件用于在指定元素位置显示菜单项。支持动态调用和子菜单的复杂布局。\n\n```html\n<s-popup-menu>\n  <s-button slot=\"trigger\">菜单</s-button>\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n\n<!--调用按钮-->\n<s-button onclick=\"document.querySelector('#menu').show(this)\"> 动态调用 </s-button>\n<!--菜单-->\n<s-popup-menu id=\"menu\">\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n```\n\n**属性:**\n\n- `group` (`string`): 分组，值为 `start` 或 `end`\n- `show()` (`Function`, 只读): 显示对话框\n- `dismiss()` (`Function`, 只读): 隐藏对话框\n- `toggle()` (`Function`, 只读): 切换抽屉\n\n**插槽:**\n- `trigger`: 触发器\n- `Menu Item`: 菜单项\n- `start`: 开始\n- `end`: 结束",
       "attributes": [
         {
           "name": "group",
-          "description": "分组属性，可选值 `start` 或 `end`。"
-        },
-        {
-          "name": "show",
-          "description": "显示对话框的方法。",
-          "type": "Function",
-          "readonly": true
-        },
-        {
-          "name": "dismiss",
-          "description": "隐藏对话框的方法。",
-          "type": "Function",
-          "readonly": true
-        },
-        {
-          "name": "toggle",
-          "description": "切换对话框显示状态的方法。",
-          "type": "Function",
-          "readonly": true
+          "description": "分组，值为 `start` 或 `end`"
         }
       ],
       "references": [
@@ -856,7 +838,71 @@
           "url": "https://soberjs.com/component/popup-menu"
         }
       ]
-    }
+    },    
+    {
+      "name": "s-snackbar",
+      "description": "**Snackbar 组件**\n\nSnackbar 提示框组件用于显示临时消息。支持通过触发器显示和关闭，并且可以配置动作按钮。\n\n```html\n<s-snackbar>\n  <s-button slot=\"trigger\"> Snackbar </s-button>\n  Snackbar Message\n  <s-button type=\"text\" slot=\"action\"> 关闭 </s-button>\n</s-snackbar>\n```\n\n**事件:**\n\n- `show`: 提示框显示时触发\n- `showed`: 提示框显示后触发（动画结束）\n- `dismiss`: 提示框开始隐藏时触发\n- `dismissed`: 提示框隐藏后触发（动画结束）\n\n**插槽:**\n- `trigger`: 触发器",
+      "attributes": [],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://soberjs.com/component/snackbar"
+        }
+      ]
+    },
+    {
+      "name": "s-tooltip",
+      "description": "**Tooltip 组件**\n\nTooltip 提示信息组件用于在支持鼠标的设备上通过鼠标悬停触发提示信息，在触屏设备上通过长按触发。\n\n```html\n<s-tooltip>\n  <s-button slot=\"trigger\">Tooltip</s-button>\n  提示信息\n</s-tooltip>\n```\n\n工具提示支持自定义布局，例如放置图片，但请注意，无论你放置什么布局，都无法触发任何事件。\n\n**插槽:**\n- `trigger`: 触发器",
+      "attributes": [],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://soberjs.com/component/tooltip"
+        }
+      ]
+    },
+    {
+      "name": "s-badge",
+      "description": "**Badge 组件**\n\nBadge 徽章组件用于显示数字或状态标识，通常用于其他组件的插槽中。\n\n```html\n<s-badge></s-badge>\n<s-badge>26</s-badge>\n```\n\n**插槽:**\n- `default`: 徽章内容",
+      "attributes": [],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://soberjs.com/component/badge"
+        }
+      ]
+    },
+    {
+      "name": "s-chip",
+      "description": "**Chip 组件**\n\nChip 组件用于显示标签或可交互的元素。\n\n```html\n<s-chip>Chip1</s-chip>\n<s-chip type=\"filled-tonal\">Chip2</s-chip>\n<s-chip type=\"elevated\">\n  Chip3\n  <!--操作按钮-->\n  <s-icon-button slot=\"action\">\n    <s-icon type=\"close\"></s-icon>\n  </s-icon-button>\n</s-chip>\n```\n\n**属性:**\n\n- `type` (`string`): 纸片样式，可选值为 `outlined`, `elevated`, `filled-tonal`\n- `selectable` (`boolean`): 是否启用选中，默认值为 `false`\n\n**插槽:**\n- `start`: 开始\n- `end`: 结束\n- `action`: 操作",
+      "attributes": [
+        {
+          "name": "type",
+          "description": "纸片样式，可选值为 `outlined`, `elevated`, `filled-tonal`"
+        },
+        {
+          "name": "selectable",
+          "description": "是否启用选中，默认值为 `false`"
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://soberjs.com/component/chip"
+        }
+      ]
+    },
+    {
+      "name": "s-table",
+      "description": "**Table 组件**\n\nTable 表格组件用于显示结构化的数据。\n\n```html\n<s-table>\n  <s-thead>\n    <s-tr>\n      <s-th>title1</s-th>\n      <s-th>title2</s-th>\n      <s-th>title3</s-th>\n      <s-th>title4</s-th>\n      <s-th>title5</s-th>\n    </s-tr>\n  </s-thead>\n  <s-tbody>\n    <s-tr>\n      <s-td>item1</s-td>\n      <s-td>item2</s-td>\n      <s-td>item3</s-td>\n      <s-td>item4</s-td>\n      <s-td>item5</s-td>\n    </s-tr>\n    <s-tr>\n      <s-td>item1</s-td>\n      <s-td>item2</s-td>\n      <s-td>item3</s-td>\n      <s-td>item4</s-td>\n      <s-td>item5</s-td>\n    </s-tr>\n    <s-tr>\n      <s-td>item1</s-td>\n      <s-td>item2</s-td>\n      <s-td>item3</s-td>\n      <s-td>item4</s-td>\n      <s-td>item5</s-td>\n    </s-tr>\n  </s-tbody>\n</s-table>\n```\n\n**插槽:**\n- `thead`: 表头\n- `tbody`: 表身\n- `tr`: 表格行\n- `th`: 表格头\n- `td`: 表格数据",
+      "attributes": [],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://soberjs.com/component/table"
+        }
+      ]
+    }    
   ],
   "valueSets": [
     {
