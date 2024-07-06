@@ -32,6 +32,7 @@ jobs:
       - name: Build
         shell: bash
         run: |
+          if [ ! -d "out/" ]; then mkdir out; fi
           vsce package --out ./out/soberjs-vscode-${{ github.ref_name }}.vsix
       - name: Login to VSCE
         shell: bash

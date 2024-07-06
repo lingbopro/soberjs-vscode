@@ -44,7 +44,7 @@
 - _~~CSS 变量名和枚举值（尚未完成）~~_
 - 一点 HTML 代码片段
 
-目前已支持 15 个组件（见下表）  
+目前已支持 16 个组件（见下表）  
 
 <details>
   <summary>支持的组件（点击展开）</summary>
@@ -64,6 +64,7 @@
   - [x] 开关 Switch
   - [x] 文本框 Text Field
   - [x] 评分 Rate
+  - [x] 选择框 Picker
   - [x] 分割线 Divider
 - [ ] 容器
   - [ ] 页面 Page
@@ -75,11 +76,11 @@
 - [ ] 导航
   - [ ] 选项卡 Tab
   - [ ] 导航栏 Navigation
-  - [ ] 顶部应用栏 Top App Bar
+  - [ ] 应用栏 Appbar
 - [ ] 部件
   - [ ] 对话框 Dialog
-  - [ ] 下拉框 Dropdown
-  - [ ] 菜单 Menu
+  - [ ] 弹出框 Popup
+  - [ ] 弹出式菜单 Popup Menu
   - [ ] 提示框 Snackbar
   - [ ] 工具提示 Tooltip
   - [ ] 徽章 Badge

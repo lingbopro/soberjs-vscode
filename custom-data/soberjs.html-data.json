@@ -3,7 +3,7 @@
   "tags": [
     {
       "name": "s-button",
-      "description": "**按钮 Button**\n\n基础按钮，适用于简单的点击操作。\n\n```html\n<s-button>button</s-button>\n```\n\n**属性:**\n\n- `type`: 按钮样式\n- `disabled` (`boolean`): 是否禁用\n\n**插槽:**\n\n- `start`: 开始\n- `end`: 结束",
+      "description": "**按钮 Button**\n\n基础按钮，适用于简单的点击操作。\n\n```html\n<s-button>button</s-button>\n```\n\n> 如果你只需要一个拥有触摸反馈的容器，那么 [Ripple](https://soberjs.com/component/ripple) 组件可能更适合。\n\n**属性:**\n\n- `type`: 按钮样式\n- `disabled` (`boolean`): 是否禁用\n\n**插槽:**\n\n- `start`: 开始\n- `end`: 结束",
       "attributes": [
         {
           "name": "type",
@@ -153,7 +153,7 @@
     },
     {
       "name": "s-fab",
-      "description": "**浮动操作按钮 Floating Action Button**\n\n```html\n<s-fab>\n  <s-icon type=\"add\"></s-icon>\n</s-fab>\n```\n\n设置 `size` 来设置不同样的尺寸。\n\n设置 `extended` 来开启扩展浮动按钮。\n\n**属性:**\n\n- `size`: 按钮大小\n- `extended` (`boolean`): 是否为扩展按钮\n\n**插槽:**\n\n- `start`: 开始\n- `end`: 结束",
+      "description": "**浮动操作按钮 Floating Action Button**\n\n```html\n<s-fab>\n  <s-icon type=\"add\"></s-icon>\n</s-fab>\n```\n\n设置 `extended` 来开启扩展浮动按钮。\n\n**属性:**\n\n- `size`: 按钮大小\n- `extended` (`boolean`): 是否为扩展按钮\n\n**插槽:**\n\n- `start`: 开始\n- `end`: 结束",
       "attributes": [
         {
           "name": "size",
@@ -269,7 +269,7 @@
     },
     {
       "name": "s-checkbox",
-      "description": "**复选框 Checkbox**\n\n```html\n<s-checkbox></s-checkbox>\n<s-checkbox checked=\"true\"></s-checkbox>\n<s-checkbox indeterminate=\"true\"></s-checkbox>\n```\n\n设置 disabled 来禁用复选框。\n\n自定义颜色\n\n```html\n<s-checkbox style=\"color: #009688\"></s-checkbox>\n<s-checkbox style=\"color: #b54e4e\" checked=\"true\"></s-checkbox>\n<s-checkbox style=\"color: #2ca325\" indeterminate=\"true\"></s-checkbox>\n```\n\n**属性:**\n\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n- `indeterminate` (`boolean`): 是否未知\n\n**事件:**\n- `change`: 选中变化后触发",
+      "description": "**复选框 Checkbox**\n\n```html\n<s-checkbox></s-checkbox>\n<s-checkbox checked=\"true\"></s-checkbox>\n<s-checkbox indeterminate=\"true\"></s-checkbox>\n```\n\n设置 disabled 来禁用复选框。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n- `indeterminate` (`boolean`): 是否未知\n\n**事件:**\n- `change`: 选中变化后触发",
       "attributes": [
         {
           "name": "checked",
@@ -304,7 +304,7 @@
     },
     {
       "name": "s-radio-button",
-      "description": "**单选按钮 Radio Button**\n\n单选按钮需要设置一个唯一的 `name` 作为分组才能执行单选。\n\n```html\n<s-radio-button name=\"group\"></s-radio-button>\n<s-radio-button name=\"group\"></s-radio-button>\n<s-radio-button name=\"group\" disabled=\"true\"></s-radio-button>\n```\n\n设置 `disabled` 来禁用复选框。\n\n自定义颜色\n\n```html\n<s-radio-button style=\"color: #009688\" name=\"group\"></s-radio-button>\n<s-radio-button style=\"color: #b54e4e\" name=\"group\"></s-radio-button>\n<s-radio-button style=\"color: #2ca325\" name=\"group\"></s-radio-button>\n```\n\n**属性:**\n\n- `name` (`string`): 名称\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n\n**事件:**\n- `change`: 选中变化后触发",
+      "description": "**单选按钮 Radio Button**\n\n单选按钮需要设置一个唯一的 `name` 作为分组才能执行单选。\n\n```html\n<s-radio-button name=\"group\"></s-radio-button>\n<s-radio-button name=\"group\"></s-radio-button>\n<s-radio-button name=\"group\" disabled=\"true\"></s-radio-button>\n```\n\n设置 `disabled` 来禁用复选框。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `name` (`string`): 名称\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n\n**事件:**\n- `change`: 选中变化后触发",
       "attributes": [
         {
           "name": "name",
@@ -338,7 +338,7 @@
     },
     {
       "name": "s-slider",
-      "description": "**滑块 Slider**\n\n```html\n<s-slider></s-slider>\n```\n\n设置 `labeled` 开启文本标签。\n\n设置 `disabled` 来禁用滑块。\n\n自定义颜色\n\n```html\n<s-slider style=\"color: #009688\"></s-slider>\n```\n\n**属性:**\n\n- `labeled` (`boolean`): 是否启用文本标签\n- `disabled` (`boolean`): 是否禁用\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发",
+      "description": "**滑块 Slider**\n\n```html\n<s-slider></s-slider>\n```\n\n设置 `labeled` 开启文本标签。\n\n设置 `disabled` 来禁用滑块。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `labeled` (`boolean`): 是否启用文本标签\n- `disabled` (`boolean`): 是否禁用\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发",
       "attributes": [
         {
           "name": "labeled",
@@ -384,11 +384,16 @@
     },
     {
       "name": "s-linear-progress",
-      "description": "**线性进度 Linear Progress**\n\n```html\n<s-linear-progress value=\"50\"></s-linear-progress>\n```\n\n设置 `indeterminate` 来启用未知进度。```html\n<s-linear-progress indeterminate=\"true\"></s-linear-progress>\n```\n\n自定义颜色\n\n```html\n<s-linear-progress style=\"color: #009688\" value=\"50\"></s-linear-progress>\n<s-linear-progress style=\"color: #8d711b\" indeterminate=\"true\"></s-linear-progress>\n```\n\n**属性:**\n\n- `indeterminate` (`boolean`): 是否未知\n- `max` (`number`): 最大值\n- `value` (`number`): 当前值",
+      "description": "**线性进度 Linear Progress**\n\n```html\n<s-linear-progress value=\"50\"></s-linear-progress>\n```\n\n设置 `indeterminate` 来启用未知进度。```html\n<s-linear-progress indeterminate=\"true\"></s-linear-progress>\n```\n\n设置 `animated` 来启用变更过渡动画。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `indeterminate` (`boolean`): 是否未知\n- `animated` (`boolean`): 是否启用变更时过渡动画\n- `max` (`number`): 最大值\n- `value` (`number`): 当前值",
       "attributes": [
         {
           "name": "indeterminate",
           "description": "是否未知",
+          "valueSet": "boolean"
+        },
+        {
+          "name": "animated",
+          "description": "是否启用变更时过渡动画",
           "valueSet": "boolean"
         },
         {
@@ -417,11 +422,16 @@
     },
     {
       "name": "s-circular-progress",
-      "description": "**圆形进度 Circular Progress**\n\n```html\n<s-circular-progress value=\"50\"></s-circular-progress>\n```\n\n设置 `indeterminate` 来启用未知进度。```html\n<s-circular-progress indeterminate=\"true\"></s-circular-progress>\n```\n\n自定义颜色\n\n```html\n<s-circular-progress style=\"color: #009688\" value=\"50\"></s-circular-progress>\n<s-circular-progress style=\"color: #8d711b\" indeterminate=\"true\"></s-circular-progress>\n```\n\n**属性:**\n\n- `indeterminate` (`boolean`): 是否未知\n- `max` (`number`): 最大值\n- `value` (`number`): 当前值",
+      "description": "**圆形进度 Circular Progress**\n\n```html\n<s-circular-progress value=\"50\"></s-circular-progress>\n```\n\n设置 `indeterminate` 来启用未知进度。```html\n<s-circular-progress indeterminate=\"true\"></s-circular-progress>\n```\n\n设置 `animated` 来启用变更过渡动画。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `indeterminate` (`boolean`): 是否未知\n- `animated` (`boolean`): 是否启用变更时过渡动画\n- `max` (`number`): 最大值\n- `value` (`number`): 当前值",
       "attributes": [
         {
           "name": "indeterminate",
           "description": "是否未知",
+          "valueSet": "boolean"
+        },
+        {
+          "name": "animated",
+          "description": "是否启用变更时过渡动画",
           "valueSet": "boolean"
         },
         {
@@ -450,7 +460,7 @@
     },
     {
       "name": "s-switch",
-      "description": "**开关 Switch**\n\n```html\n<s-switch></s-switch>\n<s-switch checked=\"true\"></s-switch>\n```\n\n设置 `disabled` 来禁用开关。\n\n自定义颜色\n\n```html\n<s-switch style=\"color: #009688\"></s-switch>\n<s-switch style=\"color: #b54e4e\" checked=\"true\"></s-switch>\n```\n\n> 如果你希望自定义大小，那么请使用 `font-size` 来设置，该组件需要保持宽高比例，单独设置 width 和 height 可能会导致变形。\n\n**属性:**\n\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n\n**事件:**\n- `change`: 选中变化后触发",
+      "description": "**开关 Switch**\n\n```html\n<s-switch></s-switch>\n<s-switch checked=\"true\"></s-switch>\n```\n\n设置 `disabled` 来禁用开关。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n\n**事件:**\n- `change`: 选中变化后触发",
       "attributes": [
         {
           "name": "checked",
@@ -480,7 +490,7 @@
     },
     {
       "name": "s-text-field",
-      "description": "**文本框 Text Field**\n\n文本框是一个容器，它可以在内部放置 **input:text** 和 **textarea**，推荐使用 label 来替代 placeholder\n\n```html\n<s-text-field>\n  <input type=\"text\" placeholder=\"请输入名称\">\n  <s-icon slot=\"end\" type=\"favorite\"></s-icon>\n</s-text-field>\n\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon-button slot=\"end\">\n    <s-icon slot=\"end\" type=\"star\"></s-icon>\n  </s-icon-button>\n</s-text-field>\n```\n\n在使用 **textarea** 时，它的高度将会自适应\n\n你也可以设置一个最小值或最大值来定义文本框的高度\n\n```html\n<s-text-field label=\"请输入名称\">\n  <textarea style=\"min-height: 112px\"></textarea>\n</s-text-field>\n```\n\n设置 **display: block** 来作为块元素占满一行\n\n```html\n<s-text-field style=\"display: block\" label=\"请输入名称\">\n  <input type=\"text\">\n</s-text-field>\n```\n\n**属性:**\n\n- `label` (`string`): 标签文本\n\n**插槽:**\n- `end`: 结束",
+      "description": "**文本框 Text Field**\n\n文本框是一个容器，它可以在内部放置 **input** 和 **textarea**，推荐使用 label 来替代 placeholder\n\n```html\n<s-text-field>\n  <input type=\"text\" placeholder=\"请输入名称\">\n  <s-icon slot=\"end\" type=\"favorite\"></s-icon>\n</s-text-field>\n\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon-button slot=\"end\">\n    <s-icon slot=\"end\" type=\"star\"></s-icon>\n  </s-icon-button>\n</s-text-field>\n```\n\n在使用 **textarea** 时，它的高度将会自适应\n\n你也可以设置一个最小值或最大值来定义文本框的高度\n\n```html\n<s-text-field label=\"请输入名称\">\n  <textarea style=\"min-height: 112px\"></textarea>\n</s-text-field>\n```\n\n设置 **display: grid** 来作为块元素占满一行\n\n由于内部封装性较高，定义样式变得很复杂，因此我们开放了一些CSS变量来允许你定义一些样式\n\n**属性:**\n\n- `label` (`string`): 标签文本\n\n**插槽:**\n- `end`: 结束\n\n**CSS 变量:**\n\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
       "attributes": [
         {
           "name": "label",
@@ -540,6 +550,51 @@
         {
           "name": "源代码",
           "url": "https://github.com/apprat/sober/blob/main/src/rate.ts"
+        }
+      ]
+    },
+    {
+      "name": "s-picker",
+      "description": "**选择框 Picker**\n\n通常用于单选数据，它的目标是替代 `select`。\n\n```html\n<s-picker label=\"选择地区\">\n  <s-picker-item>贵阳</s-picker-item>\n  <s-picker-item>北京</s-picker-item>\n  <s-picker-item>上海</s-picker-item>\n  <s-picker-item>深圳</s-picker-item>\n</s-picker>```\n\n由于内部封装性较高，定义样式变得很复杂，因此我们开放了一些CSS变量来允许你定义一些样式\n\n**属性:**\n\n- `label` (`string`): 标签文本\n- `options` _[只读]_ (`Item[]`): 子项目\n- `selectedIndex` (`number`): 当前选中下标\n\n**插槽:**\n- `trigger`: 触发\n\n**事件:**\n- `change`: 选中变化后触发\n\n**CSS 变量:**\n\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "标签文本"
+        },
+        {
+          "name": "onchange",
+          "description": "选中变化后触发"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/picker"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/picker.ts"
+        }
+      ]
+    },
+    {
+      "name": "s-picker-item",
+      "description": "**选择框项目 Picker Item**\n\n作为 `s-picker` 的子项使用。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中。",
+      "attributes": [
+        {
+          "name": "selected",
+          "description": "是否选中",
+          "valueSet": "boolean"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/picker"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/picker.ts"
         }
       ]
     },
