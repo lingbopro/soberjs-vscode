@@ -1,5 +1,26 @@
 # 版本记录
 
+## v1.0.0
+
+- 增加了 Page 组件
+- 增加了 Drawer 组件
+- 增加了 Scroll View 组件
+- 增加了 Card 组件
+- 增加了 Search 组件
+- 增加了 Carousel 组件
+- 增加了 Tab 组件
+- 增加了 Navigation 组件
+- 增加了 Appbar 组件
+- 增加了 Dialog 组件
+- 增加了 Popup 组件
+- 增加了 Popup Menu 组件
+- 增加了 Snackbar 组件
+- 增加了 Tooltip 组件
+- 增加了 Badge 组件
+- 增加了 Chip 组件
+- 增加了 Table 组件
+- 修正了工作流无法打包的问题
+
 ## v0.2.0
 
 - 根据更新 `v0.2.15` 后的文档修改了一些提示内容和属性
