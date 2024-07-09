@@ -652,7 +652,7 @@
     },    
     {
       "name": "s-scroll-view",
-      "description": "Provides a styled scrollbar for the container. The scrollbar style is only effective on devices that support mouse input, optimized for touch devices. Use it as `<s-scroll-view></s-scroll-view>`.",
+      "description": "为容器提供样式的滚动条。滚动条样式仅对支持鼠标输入的设备有效，并针对触摸设备进行了优化。将其用作 `<s-scroll-view></s-scroll-view>`.",
       "attributes": [],
       "references": [
         {
@@ -667,7 +667,12 @@
       "attributes": [
         {
           "name": "type",
-          "description": "卡片样式，可选值为 `elevated`, `filled`, `outlined`。"
+          "description": "卡片样式，可选值为 `elevated`, `filled`, `outlined`。",
+          "values": [
+            { "name": "elevated", "description": "elevated (default)." },
+            { "name": "filled", "description": "filled." },
+            { "name": "outlined", "description": "outlined." }
+          ]
         },
         {
           "name": "clickable",
