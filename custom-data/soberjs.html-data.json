@@ -629,7 +629,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/page"
         }
       ]
@@ -645,7 +645,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/drawer"
         }
       ]
@@ -656,7 +656,7 @@
       "attributes": [],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/scroll-view"
         }
       ]
@@ -685,7 +685,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/card"
         }
       ]
@@ -701,7 +701,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/search"
         }
       ]
@@ -717,7 +717,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/carousel"
         }
       ]
@@ -733,7 +733,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/tab"
         }
       ]
@@ -749,7 +749,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/tab-item"
         }
       ]
@@ -765,7 +765,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/navigation"
         }
       ]
@@ -781,7 +781,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/navigation"
         }
       ]
@@ -791,7 +791,7 @@
       "description": "**Appbar 组件**\n\nAppbar 是一个容器组件，在屏幕宽度小于 840px 时，高度会变为 56px。支持导航、标题和操作按钮的插槽。可以嵌套使用，内部的 appbar 会居中并设置一个最大宽度，默认为 1280px。\n\n```html\n<s-appbar>\n  <!--左侧菜单按钮-->\n  <s-icon-button slot=\"navigation\">\n    <s-icon type=\"menu\"></s-icon>\n  </s-icon-button>\n  <!--标题-->\n  <div slot=\"headline\"> Title </div>\n  <!--右侧操作按钮-->\n  <s-icon-button slot=\"action\">\n    <s-icon type=\"search\"></s-icon>\n  </s-icon-button>\n</s-appbar>\n\n<s-appbar>\n  <s-appbar>\n    <!--左侧菜单按钮-->\n    <s-icon-button slot=\"navigation\">\n      <s-icon type=\"menu\"></s-icon>\n    </s-icon-button>\n    <!--标题-->\n    <div slot=\"headline\"> Title </div>\n    <!--右侧操作按钮-->\n    <s-icon-button slot=\"action\">\n      <s-icon type=\"search\"></s-icon>\n    </s-icon-button>\n  </s-appbar>\n</s-appbar>\n```\n\n**插槽:**\n- `navigation`: 导航\n- `headline`: 标题\n- `action`: 操作",
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/appbar"
         }
       ]
@@ -807,7 +807,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/dialog"
         }
       ]
@@ -823,7 +823,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/popup"
         }
       ]
@@ -839,7 +839,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/popup-menu"
         }
       ]
@@ -850,7 +850,7 @@
       "attributes": [],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/snackbar"
         }
       ]
@@ -861,7 +861,7 @@
       "attributes": [],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/tooltip"
         }
       ]
@@ -872,7 +872,7 @@
       "attributes": [],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/badge"
         }
       ]
@@ -892,7 +892,7 @@
       ],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/chip"
         }
       ]
@@ -903,7 +903,7 @@
       "attributes": [],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/table"
         }
       ]
