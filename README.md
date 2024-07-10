@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/github/v/release/lingbopro/soberjs-vscode.svg?style=for-the-badge" alt="Release"/>
   </a>
   <a href="https://github.com/lingbopro/soberjs-vscode/actions?query=workflow:CI" target="_blank">
-    <img src="https://img.shields.io/github/actions/workflow/status/lingbopro/soberjs-vscode/CI.yaml?style=for-the-badge" alt="Build status"/>
+    <img src="https://img.shields.io/github/actions/workflow/status/lingbopro/soberjs-vscode/CI.yml?style=for-the-badge" alt="Build Status"/>
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=lingbopro.soberjs-vscode" target="_blank">
     <img src="https://img.shields.io/visual-studio-marketplace/i/lingbopro.soberjs-vscode?style=for-the-badge&logo=visualstudiocode&label=Installs" alt="Visual Studio Marketplace Installs" />
@@ -44,7 +44,7 @@
 - _~~CSS 变量名和枚举值（尚未完成）~~_
 - 一点 HTML 代码片段
 
-目前已支持所有 0.2.15 的所有组件（见下表）  
+目前已支持 Sober.js 0.2.15 的所有组件（见下表）  
 
 <details>
   <summary>支持的组件（点击展开）</summary>

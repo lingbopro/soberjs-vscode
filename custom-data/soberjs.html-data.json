@@ -615,15 +615,24 @@
     },
     {
       "name": "s-page",
-      "description": "A root container component for the page, with global CSS variables to control styles of all descendant components. Use it as `<s-page></s-page>`.",
+      "description": "**页面 Page**\n\n建议作为页面根容器的组件，它拥有全局的 CSS 变量，用于控制所有后代组件的样式。\n\n```html\n<s-page></s-page>\n```\n\n设置 `theme` 来使用其他主题。\n\n**属性:**\n\n- `theme`: 主题",
       "attributes": [
         {
           "name": "theme",
-          "description": "Sets the theme for the page. Supports three themes: light (default), dark, and auto (follows the system theme).",
+          "description": "主题，可选值为 `light`, `dark`, `auto`。",
           "values": [
-            { "name": "light", "description": "Light theme (default)." },
-            { "name": "dark", "description": "Dark theme." },
-            { "name": "auto", "description": "Follows the system theme." }
+            {
+              "name": "light",
+              "description": "亮色主题（默认）"
+            },
+            {
+              "name": "dark",
+              "description": "暗色主题"
+            },
+            {
+              "name": "auto",
+              "description": "跟随系统"
+            }
           ]
         }
       ],
@@ -631,12 +640,16 @@
         {
           "name": "文档",
           "url": "https://soberjs.com/component/page"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/page.ts"
         }
       ]
     },
     {
       "name": "s-drawer",
-      "description": "**Drawer 组件**\n\n当容器的宽度小于 fold 的值时，抽屉会切换为折叠模式。通常适用于移动端，以便于腾出更多空间。\n\n```html\n<s-drawer>\n  <div slot=\"start\">Start</div>\n  <div>Main</div>\n  <div slot=\"end\">End</div>\n</s-drawer>\n```\n\n**属性:**\n\n- `fold` (`number`): 抽屉折叠模式的阈值宽度，单位为像素。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽",
+      "description": "**抽屉 Drawer**\n\n当容器的宽度小于 `fold` 的值时，抽屉会切换为折叠模式。通常适用于移动端，以便于腾出更多空间。\n\n```html\n<s-drawer>\n  <div slot=\"start\">Start</div>\n  <div>Main</div>\n  <div slot=\"end\">End</div>\n</s-drawer>\n```\n\n**属性:**\n\n- `fold` (`number`): 抽屉折叠模式的阈值宽度，单位为像素。\n- `mode` _[只读]_: 模式\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽",
       "attributes": [
         {
           "name": "fold",
@@ -647,62 +660,103 @@
         {
           "name": "文档",
           "url": "https://soberjs.com/component/drawer"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/drawer.ts"
         }
       ]
     },    
     {
       "name": "s-scroll-view",
-      "description": "为容器提供样式的滚动条。滚动条样式仅对支持鼠标输入的设备有效，并针对触摸设备进行了优化。将其用作 `<s-scroll-view></s-scroll-view>`.",
+      "description": "**滚动 Scroll View**\n\n滚动为容器提供了滚动条样式，出于触屏设备优化，滚动条样式仅在支持鼠标的设备上有效。\n\n```html\n<s-scroll-view>\n  <div style=\"height: 1080px;width: 2200px\"></div>\n</s-scroll-view>\n```",
       "attributes": [],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/scroll-view"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/scroll-view.ts"
         }
       ]
     },
     {
       "name": "s-card",
-      "description": "**Card 组件**\n\n用于显示内容的卡片组件，支持多种样式，可以作为容器使用。\n\n```html\n<s-card>\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card type=\"filled\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"outlined\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card type=\"outlined\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card clickable=\"true\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card style=\"display: block; padding: 24px\">\n  Card\n</s-card>\n```\n\n**属性:**\n\n- `type` (`elevated`, `filled`, `outlined`): 卡片样式，默认为 `elevated`\n- `clickable` (`boolean`): 是否启用可点击，默认为 `false`\n- `selectable` (`boolean`): 是否启用选中，默认为 `false`\n\n**插槽:**\n- `image`: 图片\n- `headline`: 标题\n- `subhead`: 副标题\n- `text`: 卡片文本\n- `action`: 操作按钮\n\n**CSS 变量:**\n\n- `--border-radius`: 边框半径\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
+      "description": "**卡片 Card**\n\n用于显示内容的卡片组件，支持多种样式，可以作为容器使用。\n\n```html\n<s-card>\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card type=\"filled\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"outlined\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card type=\"outlined\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card clickable=\"true\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card style=\"display: block; padding: 24px\">\n  Card\n</s-card>\n```\n\n**属性:**\n\n- `type` (`elevated`, `filled`, `outlined`): 卡片样式，默认为 `elevated`\n- `clickable` (`boolean`): 是否启用可点击，默认为 `false`\n- `selectable` (`boolean`): 是否启用选中，默认为 `false`\n\n**插槽:**\n- `image`: 图片\n- `headline`: 标题\n- `subhead`: 副标题\n- `text`: 卡片文本\n- `action`: 操作按钮\n\n**CSS 变量:**\n\n- `--border-radius`: 边框半径\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
       "attributes": [
         {
           "name": "type",
           "description": "卡片样式，可选值为 `elevated`, `filled`, `outlined`。",
           "values": [
-            { "name": "elevated", "description": "elevated (default)." },
-            { "name": "filled", "description": "filled." },
-            { "name": "outlined", "description": "outlined." }
+            {
+              "name": "elevated",
+              "description": "带有阴影的卡片"
+            },
+            {
+              "name": "filled",
+              "description": "带有背景色的卡片"
+            },
+            {
+              "name": "outlined",
+              "description": "带有边框的卡片"
+            }
           ]
         },
         {
           "name": "clickable",
-          "description": "是否启用可点击，布尔值。"
+          "description": "是否启用可点击",
+          "valueSet": "boolean"
         },
         {
           "name": "selectable",
-          "description": "是否启用选中，布尔值。"
+          "description": "是否启用选中",
+          "valueSet": "boolean"
         }
       ],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/card"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/card.ts"
         }
       ]
     },
     {
       "name": "s-search",
-      "description": "**Search 组件**\n\n搜索组件支持不同尺寸和插槽。可以使用图标按钮、设置不同的尺寸以及自定义下拉插槽。\n\n```html\n<s-search>\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n\n<s-search>\n  <s-icon-button slot=\"start\">\n    <s-icon type=\"search\"></s-icon>\n  </s-icon-button>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon-button slot=\"end\">\n    <s-icon type=\"close\"></s-icon>\n  </s-icon-button>\n</s-search>\n\n<s-search size=\"small\">\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n<s-search>\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n<s-search size=\"large\">\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n\n<s-search>\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n  <div slot=\"dropdown\" style=\"height: 128px\">\n    hello\n  </div>\n</s-search>\n```\n\n**属性:**\n\n- `size` (`string`): 按钮大小，可选值为 `medium`, `small`, `large`，默认值为 `medium`。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽\n- `dropdown`: 下拉插槽",
+      "description": "**搜索栏 Search**\n\n搜索组件支持不同尺寸和插槽。可以使用图标按钮、设置不同的尺寸以及自定义下拉插槽。\n\n```html\n<s-search>\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n\n<s-search>\n  <s-icon-button slot=\"start\">\n    <s-icon type=\"search\"></s-icon>\n  </s-icon-button>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon-button slot=\"end\">\n    <s-icon type=\"close\"></s-icon>\n  </s-icon-button>\n</s-search>\n\n<s-search size=\"small\">\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n<s-search>\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n<s-search size=\"large\">\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n\n<s-search>\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n  <div slot=\"dropdown\" style=\"height: 128px\">\n    hello\n  </div>\n</s-search>\n```\n\n**属性:**\n\n- `size` (`string`): 按钮大小，可选值为 `medium`, `small`, `large`，默认值为 `medium`。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽\n- `dropdown`: 下拉插槽",
       "attributes": [
         {
           "name": "size",
-          "description": "按钮大小，可选值为 `medium`, `small`, `large`，默认值为 `medium`。"
+          "description": "按钮大小，可选值为 `medium`, `small`, `large`，默认值为 `medium`。",
+          "values": [
+            {
+              "name": "medium",
+              "description": "默认值。中等大小"
+            },
+            {
+              "name": "small",
+              "description": "大小较小"
+            },
+            {
+              "name": "large",
+              "description": "大小较大"
+            }
+          ]
         }
       ],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/search"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/search.ts"
         }
       ]
     },
@@ -719,181 +773,309 @@
         {
           "name": "文档",
           "url": "https://soberjs.com/component/carousel"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/carousel.ts"
         }
       ]
     },
     {
       "name": "s-tab",
-      "description": "**Tab 组件**\n\n选项卡组件用于在同一个区域内切换不同的内容。支持徽章、左右对齐以及固定模式。\n\n```html\n<s-tab>\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n  </s-tab-item>\n</s-tab>\n\n<s-tab>\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n    <s-badge slot=\"badge\"></s-badge>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n    <s-badge slot=\"badge\">99</s-badge>\n  </s-tab-item>\n</s-tab>\n\n<s-tab style=\"justify-content: flex-start\">\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n  </s-tab-item>\n</s-tab>\n\n<s-tab mode=\"fixed\">\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n  </s-tab-item>\n</s-tab>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置固定模式，使 item 均分占据宽度，不再支持滚动。\n\n**插槽:**\n- 无特定插槽。\n\n**事件:**\n- `change`: 选中变化后触发。",
+      "description": "**选项卡 Tab**\n\n选项卡组件用于在同一个区域内切换不同的内容。支持徽章、左右对齐以及固定模式。\n\n```html\n<s-tab>\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n  </s-tab-item>\n</s-tab>\n\n<s-tab>\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n    <s-badge slot=\"badge\"></s-badge>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n    <s-badge slot=\"badge\">99</s-badge>\n  </s-tab-item>\n</s-tab>\n\n<s-tab style=\"justify-content: flex-start\">\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n  </s-tab-item>\n</s-tab>\n\n<s-tab mode=\"fixed\">\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n  </s-tab-item>\n</s-tab>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置固定模式，使 item 均分占据宽度，不再支持滚动。\n\n**事件:**\n- `change`: 选中变化后触发。",
       "attributes": [
         {
           "name": "mode",
-          "description": "设置固定模式，使 item 均分占据宽度，不再支持滚动。"
+          "description": "设置固定模式，使 item 均分占据宽度，不再支持滚动。",
+          "values": [
+            {
+              "name": "scrollable",
+              "description": "可滚动模式"
+            },
+            {
+              "name": "fixed",
+              "description": "固定模式"
+            }
+          ]
         }
       ],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/tab"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/tab.ts"
         }
       ]
     },
     {
       "name": "s-tab-item",
-      "description": "**Tab Item 组件**\n\n选项卡项组件，作为 s-tab 组件的子组件。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中，默认值为 `false`。\n\n**插槽:**\n- `icon`: 图标\n- `text`: 文本\n- `badge`: 徽章",
+      "description": "**选项卡项目 Tab Item**\n\n选项卡项组件，作为 `s-tab` 组件的子组件。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中，默认值为 `false`。\n\n**插槽:**\n- `icon`: 图标\n- `text`: 文本\n- `badge`: 徽章",
       "attributes": [
         {
           "name": "selected",
-          "description": "是否选中，默认值为 `false`。"
+          "description": "是否选中，默认值为 `false`。",
+          "valueSet": "boolean"
         }
       ],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/tab-item"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/tab.ts"
         }
       ]
     },
     {
       "name": "s-navigation",
-      "description": "**Navigation 组件**\n\n导航组件用于在应用中进行页面切换或执行其他操作。支持图标、文本、徽章插槽，以及导轨模式。\n\n```html\n<s-navigation>\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n  </s-navigation-item>\n</s-navigation>\n\n<s-navigation>\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n    <s-badge slot=\"badge\"></s-badge>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n    <s-badge slot=\"badge\">99</s-badge>\n  </s-navigation-item>\n</s-navigation>\n\n<s-navigation mode=\"rail\">\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2\"></div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3\"></div>\n  </s-navigation-item>\n</s-navigation>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置导轨模式。\n\n**事件:**\n- `change`: 选中变化后触发。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽",
+      "description": "**导航栏 Navigation**\n\n导航组件用于在应用中进行页面切换或执行其他操作。支持图标、文本、徽章插槽，以及导轨模式。\n\n```html\n<s-navigation>\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n  </s-navigation-item>\n</s-navigation>\n\n<s-navigation>\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n    <s-badge slot=\"badge\"></s-badge>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n    <s-badge slot=\"badge\">99</s-badge>\n  </s-navigation-item>\n</s-navigation>\n\n<s-navigation mode=\"rail\">\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2\"></div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3\"></div>\n  </s-navigation-item>\n</s-navigation>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置导轨模式。\n\n**事件:**\n- `change`: 选中变化后触发。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽",
       "attributes": [
         {
           "name": "mode",
-          "description": "设置导轨模式。"
+          "description": "设置导轨模式。",
+          "values": [
+            {
+              "name": "bottom",
+              "description": "底栏模式"
+            },
+            {
+              "name": "rail",
+              "description": "导轨模式"
+            }
+          ]
         }
       ],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/navigation"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/navigation.ts"
         }
       ]
     },
     {
       "name": "s-navigation-item",
-      "description": "**Navigation Item 组件**\n\n导航项组件，作为 s-navigation 组件的子组件。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中，默认值为 `false`。\n\n**插槽:**\n- `icon`: 图标\n- `text`: 文本\n- `badge`: 徽章",
+      "description": "**导航栏子项 Navigation Item**\n\n导航项组件，作为 `s-navigation` 组件的子组件。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中，默认值为 `false`。\n\n**插槽:**\n- `icon`: 图标\n- `text`: 文本\n- `badge`: 徽章",
       "attributes": [
         {
           "name": "selected",
-          "description": "是否选中，默认值为 `false`。"
+          "description": "是否选中，默认值为 `false`。",
+          "valueSet": "boolean"
         }
       ],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/navigation"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/navigation.ts"
         }
       ]
     },
     {
       "name": "s-appbar",
-      "description": "**Appbar 组件**\n\nAppbar 是一个容器组件，在屏幕宽度小于 840px 时，高度会变为 56px。支持导航、标题和操作按钮的插槽。可以嵌套使用，内部的 appbar 会居中并设置一个最大宽度，默认为 1280px。\n\n```html\n<s-appbar>\n  <!--左侧菜单按钮-->\n  <s-icon-button slot=\"navigation\">\n    <s-icon type=\"menu\"></s-icon>\n  </s-icon-button>\n  <!--标题-->\n  <div slot=\"headline\"> Title </div>\n  <!--右侧操作按钮-->\n  <s-icon-button slot=\"action\">\n    <s-icon type=\"search\"></s-icon>\n  </s-icon-button>\n</s-appbar>\n\n<s-appbar>\n  <s-appbar>\n    <!--左侧菜单按钮-->\n    <s-icon-button slot=\"navigation\">\n      <s-icon type=\"menu\"></s-icon>\n    </s-icon-button>\n    <!--标题-->\n    <div slot=\"headline\"> Title </div>\n    <!--右侧操作按钮-->\n    <s-icon-button slot=\"action\">\n      <s-icon type=\"search\"></s-icon>\n    </s-icon-button>\n  </s-appbar>\n</s-appbar>\n```\n\n**插槽:**\n- `navigation`: 导航\n- `headline`: 标题\n- `action`: 操作",
+      "description": "**应用栏 Appbar**\n\nAppbar 的表现更像一个容器，它没有事件和行为。\n\n在屏幕宽度小于 **840px** 时，它的高度会变为 **56px**。\n\n支持导航、标题和操作按钮的插槽。\n\n你可以嵌套该组件，内部的 appbar 会居中并且设置一个最大宽度，默认为 **1280px**。\n\n```html\n<s-appbar>\n  <!--左侧菜单按钮-->\n  <s-icon-button slot=\"navigation\">\n    <s-icon type=\"menu\"></s-icon>\n  </s-icon-button>\n  <!--标题-->\n  <div slot=\"headline\"> Title </div>\n  <!--右侧操作按钮-->\n  <s-icon-button slot=\"action\">\n    <s-icon type=\"search\"></s-icon>\n  </s-icon-button>\n</s-appbar>\n\n<s-appbar>\n  <s-appbar>\n    <!--左侧菜单按钮-->\n    <s-icon-button slot=\"navigation\">\n      <s-icon type=\"menu\"></s-icon>\n    </s-icon-button>\n    <!--标题-->\n    <div slot=\"headline\"> Title </div>\n    <!--右侧操作按钮-->\n    <s-icon-button slot=\"action\">\n      <s-icon type=\"search\"></s-icon>\n    </s-icon-button>\n  </s-appbar>\n</s-appbar>\n```\n\n**插槽:**\n- `navigation`: 导航\n- `headline`: 标题\n- `action`: 操作",
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/appbar"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/appbar.ts"
         }
       ]
     },
     {
       "name": "s-dialog",
-      "description": "**Dialog 组件**\n\nDialog 对话框组件用于显示重要信息或提示。\n\n```html\n<s-dialog>\n  <s-button slot=\"trigger\"> dialog </s-button>\n  <div slot=\"headline\"> Title </div>\n  <div slot=\"text\">问人生、头白京国，算来何事消得。不如罨画清溪上，蓑笠扁舟一只。人不识，且笑煮、鲈鱼趁著莼丝碧。无端酸鼻，向岐路消魂，征轮驿骑，断雁西风急。英雄辈，事业东西南北。临风因甚泣。酬知有愿频挥手，零雨凄其此日。休太息，须信道、诸公衮衮皆虚掷。年来踪迹。有多少雄心，几翻恶梦，泪点霜华织。</div>\n  <s-button slot=\"action\" type=\"text\">取消</s-button>\n  <s-button slot=\"action\" type=\"text\">确定</s-button>\n</s-dialog>\n```\n\n**属性:**\n\n- `size` (`string`): 对话框尺寸，可选值为 `full` (全屏)\n\n**事件:**\n\n- `show`: 对话框开始显示时触发\n- `showed`: 对话框显示后触发（动画结束）\n- `dismiss`: 对话框开始隐藏时触发\n- `dismissed`: 对话框隐藏后触发（动画结束）\n\n**插槽:**\n- `trigger`: 触发器\n- `headline`: 标题\n- `text`: 文本内容\n- `action`: 操作按钮",
+      "description": "**对话框 Dialog**\n\nDialog 对话框组件用于显示重要信息或提示。\n\n```html\n<s-dialog>\n  <s-button slot=\"trigger\"> dialog </s-button>\n  <div slot=\"headline\"> Title </div>\n  <div slot=\"text\">问人生、头白京国，算来何事消得。不如罨画清溪上，蓑笠扁舟一只。人不识，且笑煮、鲈鱼趁著莼丝碧。无端酸鼻，向岐路消魂，征轮驿骑，断雁西风急。英雄辈，事业东西南北。临风因甚泣。酬知有愿频挥手，零雨凄其此日。休太息，须信道、诸公衮衮皆虚掷。年来踪迹。有多少雄心，几翻恶梦，泪点霜华织。</div>\n  <s-button slot=\"action\" type=\"text\">取消</s-button>\n  <s-button slot=\"action\" type=\"text\">确定</s-button>\n</s-dialog>\n```\n\n**属性:**\n\n- `size` (`string`): 对话框尺寸，可选值为 `basic` (普通), `full` (全屏)\n\n**事件:**\n\n- `show`: 对话框开始显示时触发\n- `showed`: 对话框显示后触发（动画结束）\n- `dismiss`: 对话框开始隐藏时触发\n- `dismissed`: 对话框隐藏后触发（动画结束）\n\n**插槽:**\n- `trigger`: 触发器\n- `headline`: 标题\n- `text`: 文本内容\n- `action`: 操作按钮",
       "attributes": [
         {
           "name": "size",
-          "description": "对话框尺寸，可选值为 `full` (全屏)"
+          "description": "对话框尺寸，可选值为 `basic` (普通), `full` (全屏)",
+          "values": [
+            {
+              "name": "basic",
+              "description": "普通"
+            },
+            {
+              "name": "full",
+              "description": "全屏"
+            }
+          ]
         }
       ],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/dialog"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/dialog.ts"
         }
       ]
     },    
     {
       "name": "s-popup",
-      "description": "**Popup 组件**\n\nPopup 弹出框组件用于展示临时内容或提示信息。支持通过不同方式触发，并且可以设置默认位置。\n\n```html\n<s-popup>\n  <s-button slot=\"trigger\"> popup </s-button>\n  <div style=\"min-height: 280px\">\n    弹出框\n  </div>\n</s-popup>\n\n<s-popup showalign=\"right\">\n  <s-button slot=\"trigger\"> popup </s-button>\n  <div style=\"min-height: 280px\">\n    弹出框\n  </div>\n</s-popup>\n```\n\n**属性:**\n\n- `showAlign` (`string`): 设置弹出框的默认位置，可选值如 `right`。\n\n**插槽:**\n- `trigger`: 触发器",
+      "description": "**弹出框 Popup**\n\nPopup 弹出框组件用于展示临时内容或提示信息。支持通过不同方式触发，并且可以设置默认位置。\n\n```html\n<s-popup>\n  <s-button slot=\"trigger\"> popup </s-button>\n  <div style=\"min-height: 280px\">\n    弹出框\n  </div>\n</s-popup>\n\n<s-popup showalign=\"right\">\n  <s-button slot=\"trigger\"> popup </s-button>\n  <div style=\"min-height: 280px\">\n    弹出框\n  </div>\n</s-popup>\n```\n\n**属性:**\n\n- `showAlign` (`string`): 设置弹出框的默认位置，可选值为 `center`, `left`, `right`。\n\n**插槽:**\n- `trigger`: 触发器",
       "attributes": [
         {
           "name": "showAlign",
-          "description": "设置弹出框的默认位置，可选值如 `right`"
+          "description": "设置弹出框的默认位置，可选值为 `center`, `left`, `right`",
+          "values": [
+            {
+              "name": "center",
+              "description": "居中"
+            },
+            {
+              "name": "left",
+              "description": "居左"
+            },
+            {
+              "name": "right",
+              "description": "居右"
+            }
+          ]
         }
       ],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/popup"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/popup.ts"
         }
       ]
     },
     {
       "name": "s-popup-menu",
-      "description": "**PopupMenu 组件**\n\nPopupMenu 弹出菜单组件用于在指定元素位置显示菜单项。支持动态调用和子菜单的复杂布局。\n\n```html\n<s-popup-menu>\n  <s-button slot=\"trigger\">菜单</s-button>\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n\n<!--调用按钮-->\n<s-button onclick=\"document.querySelector('#menu').show(this)\"> 动态调用 </s-button>\n<!--菜单-->\n<s-popup-menu id=\"menu\">\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n```\n\n**属性:**\n\n- `group` (`string`): 分组，值为 `start` 或 `end`\n- `show()` (`Function`, 只读): 显示对话框\n- `dismiss()` (`Function`, 只读): 隐藏对话框\n- `toggle()` (`Function`, 只读): 切换抽屉\n\n**插槽:**\n- `trigger`: 触发器\n- `Menu Item`: 菜单项\n- `start`: 开始\n- `end`: 结束",
+      "description": "**弹出式菜单 Popup Menu**\n\nPopupMenu 弹出菜单组件用于在指定元素位置显示菜单项。支持动态调用和子菜单的复杂布局。\n\n```html\n<s-popup-menu>\n  <s-button slot=\"trigger\">菜单</s-button>\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n\n<!--调用按钮-->\n<s-button onclick=\"document.querySelector('#menu').show(this)\"> 动态调用 </s-button>\n<!--菜单-->\n<s-popup-menu id=\"menu\">\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n```\n\n**属性:**\n\n- `group` (`string`): 分组，值为 `start` 或 `end`\n- `show()` (`Function`, 只读): 显示对话框\n- `dismiss()` (`Function`, 只读): 隐藏对话框\n- `toggle()` (`Function`, 只读): 切换抽屉\n\n**插槽:**\n- `trigger`: 触发器\n- `Menu Item`: 菜单项\n- `start`: 开始\n- `end`: 结束",
       "attributes": [
         {
           "name": "group",
-          "description": "分组，值为 `start` 或 `end`"
+          "description": "分组，值为 `start` 或 `end`",
+          "values": [
+            {
+              "name": "start",
+              "description": "开始"
+            },
+            {
+              "name": "end",
+              "description": "结束"
+            }
+          ]
         }
       ],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/popup-menu"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/popup-menu.ts"
         }
       ]
     },    
     {
       "name": "s-snackbar",
-      "description": "**Snackbar 组件**\n\nSnackbar 提示框组件用于显示临时消息。支持通过触发器显示和关闭，并且可以配置动作按钮。\n\n```html\n<s-snackbar>\n  <s-button slot=\"trigger\"> Snackbar </s-button>\n  Snackbar Message\n  <s-button type=\"text\" slot=\"action\"> 关闭 </s-button>\n</s-snackbar>\n```\n\n**事件:**\n\n- `show`: 提示框显示时触发\n- `showed`: 提示框显示后触发（动画结束）\n- `dismiss`: 提示框开始隐藏时触发\n- `dismissed`: 提示框隐藏后触发（动画结束）\n\n**插槽:**\n- `trigger`: 触发器",
-      "attributes": [],
+      "description": "**提示框 Snackbar**\n\nSnackbar 提示框组件用于显示临时消息。支持通过触发器显示和关闭，并且可以配置动作按钮。\n\n```html\n<s-snackbar>\n  <s-button slot=\"trigger\"> Snackbar </s-button>\n  Snackbar Message\n  <s-button type=\"text\" slot=\"action\"> 关闭 </s-button>\n</s-snackbar>\n```\n\n**属性:**\n\n- `action` (`string`): 操作按钮文本\n\n**事件:**\n\n- `show`: 提示框显示时触发\n- `showed`: 提示框显示后触发（动画结束）\n- `dismiss`: 提示框开始隐藏时触发\n- `dismissed`: 提示框隐藏后触发（动画结束）\n\n**插槽:**\n- `trigger`: 触发器",
+      "attributes": [
+        {
+          "name": "action",
+          "description": "操作按钮文本"
+        }
+      ],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/snackbar"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/snackbar.ts"
         }
       ]
     },
     {
       "name": "s-tooltip",
-      "description": "**Tooltip 组件**\n\nTooltip 提示信息组件用于在支持鼠标的设备上通过鼠标悬停触发提示信息，在触屏设备上通过长按触发。\n\n```html\n<s-tooltip>\n  <s-button slot=\"trigger\">Tooltip</s-button>\n  提示信息\n</s-tooltip>\n```\n\n工具提示支持自定义布局，例如放置图片，但请注意，无论你放置什么布局，都无法触发任何事件。\n\n**插槽:**\n- `trigger`: 触发器",
+      "description": "**工具提示 Tooltip**\n\nTooltip 提示信息组件用于在支持鼠标的设备上通过鼠标悬停触发提示信息，在触屏设备上通过长按触发。\n\n```html\n<s-tooltip>\n  <s-button slot=\"trigger\">Tooltip</s-button>\n  提示信息\n</s-tooltip>\n```\n\n工具提示支持自定义布局，例如放置图片，但请注意，无论你放置什么布局，都无法触发任何事件。\n\n**插槽:**\n- `trigger`: 触发器",
       "attributes": [],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/tooltip"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/tooltip.ts"
         }
       ]
     },
     {
       "name": "s-badge",
-      "description": "**Badge 组件**\n\nBadge 徽章组件用于显示数字或状态标识，通常用于其他组件的插槽中。\n\n```html\n<s-badge></s-badge>\n<s-badge>26</s-badge>\n```\n\n**插槽:**\n- `default`: 徽章内容",
+      "description": "**徽章 Badge**\n\nBadge 徽章组件用于显示数字或状态标识，通常用于其他组件的插槽中。\n\n```html\n<s-badge></s-badge>\n<s-badge>26</s-badge>\n```\n\n**插槽:**\n- `default`: 徽章内容",
       "attributes": [],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/badge"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/badge.ts"
         }
       ]
     },
     {
       "name": "s-chip",
-      "description": "**Chip 组件**\n\nChip 组件用于显示标签或可交互的元素。\n\n```html\n<s-chip>Chip1</s-chip>\n<s-chip type=\"filled-tonal\">Chip2</s-chip>\n<s-chip type=\"elevated\">\n  Chip3\n  <!--操作按钮-->\n  <s-icon-button slot=\"action\">\n    <s-icon type=\"close\"></s-icon>\n  </s-icon-button>\n</s-chip>\n```\n\n**属性:**\n\n- `type` (`string`): 纸片样式，可选值为 `outlined`, `elevated`, `filled-tonal`\n- `selectable` (`boolean`): 是否启用选中，默认值为 `false`\n\n**插槽:**\n- `start`: 开始\n- `end`: 结束\n- `action`: 操作",
+      "description": "**纸片 Chip**\n\nChip 组件用于显示标签或可交互的元素。\n\n```html\n<s-chip>Chip1</s-chip>\n<s-chip type=\"filled-tonal\">Chip2</s-chip>\n<s-chip type=\"elevated\">\n  Chip3\n  <!--操作按钮-->\n  <s-icon-button slot=\"action\">\n    <s-icon type=\"close\"></s-icon>\n  </s-icon-button>\n</s-chip>\n```\n\n**属性:**\n\n- `type` (`string`): 纸片样式，可选值为 `outlined`, `elevated`, `filled-tonal`\n- `selectable` (`boolean`): 是否启用选中，默认值为 `false`\n\n**插槽:**\n- `start`: 开始\n- `end`: 结束\n- `action`: 操作",
       "attributes": [
         {
           "name": "type",
-          "description": "纸片样式，可选值为 `outlined`, `elevated`, `filled-tonal`"
+          "description": "纸片样式，可选值为 `outlined`, `elevated`, `filled-tonal`，默认值为 `outlined`",
+          "values": [
+            {
+              "name": "outlined",
+              "description": "带有边框的纸片"
+            },
+            {
+              "name": "elevated",
+              "description": "带有阴影的纸片"
+            },
+            {
+              "name": "filled-tonal",
+              "description": "带有背景色的纸片"
+            }
+          ]
         },
         {
           "name": "selectable",
-          "description": "是否启用选中，默认值为 `false`"
+          "description": "是否启用选中，默认值为 `false`",
+          "valueSet": "boolean"
         }
       ],
       "references": [
         {
           "name": "文档",
           "url": "https://soberjs.com/component/chip"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/chip.ts"
         }
       ]
     },
@@ -905,6 +1087,10 @@
         {
           "name": "文档",
           "url": "https://soberjs.com/component/table"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/table.ts"
         }
       ]
     }    

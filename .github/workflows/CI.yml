@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - master
+    - dev
 
 jobs:
   build:
@@ -14,25 +15,38 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Get Extension Version
+        shell: bash
+        run: |
+          echo "extensionVersion=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
       
       - name: Package VS Code extension
         id: package
         uses: nhedger/package-vscode-extension@main #放心版本号是和打包是你写的版本号一致 路径都是一样版本号变一下就行
       
-      - name: Publish VS Code extension artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-            name: 0.3.0 #注意!!!每次更新必须手动更新版本号
-            path: /home/runner/work/soberjs-vscode/soberjs-vscode/soberjs-vscode-0.3.0.vsix #注意!!!每次更新必须手动更新版本号
+            name: soberjs-vscode-${{ env.extensionVersion }}.vsix
+            path: /home/runner/work/soberjs-vscode/soberjs-vscode/soberjs-vscode-${{ env.extensionVersion }}.vsix
+            compression-level: 0
+            if-no-files-found: error
 
-      - name: Release #这里有些问题发布不了，不过你可以从artifact下载
-        uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          tag_name: 0.3.0 #注意!!!每次更新必须手动更新版本号
-          name: 0.3.0 #注意!!!每次更新必须手动更新版本号
-          body_path: CHANGELOG.md
-          draft: false
-          prerelease: false
-          files: | #注意!!!每次更新必须手动更新版本号
-            /home/runner/work/soberjs-vscode/soberjs-vscode/soberjs-vscode-0.3.0.vsix
+      # 既然发布不了就别发布了
+      # - name: Release #这里有些问题发布不了，不过你可以从artifact下载
+      #   uses: softprops/action-gh-release@v2
+      #   if: startsWith(github.ref, 'refs/tags/')
+      #   with:
+      #     tag_name: ${{ env.extensionVersion }}
+      #     name: ${{ env.extensionVersion }}
+      #     body_path: CHANGELOG.md
+      #     draft: false
+      #     prerelease: false
+      #     files: | #注意!!!每次更新必须手动更新版本号
+      #       /home/runner/work/soberjs-vscode/soberjs-vscode/soberjs-vscode-${{ env.extensionVersion }}.vsix

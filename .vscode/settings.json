@@ -3,8 +3,12 @@
         "Appbar",
         "apprat",
         "horiz",
+        "onclick",
         "oninput",
+        "showalign",
         "soberjs",
+        "tbody",
+        "thead",
         "VSIX"
     ],
     "editor.wordWrap": "on",
