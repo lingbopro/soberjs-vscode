@@ -3,8 +3,12 @@
         "Appbar",
         "apprat",
         "horiz",
+        "onclick",
         "oninput",
+        "showalign",
         "soberjs",
+        "tbody",
+        "thead",
         "VSIX"
     ],
     "editor.wordWrap": "on",
@@ -23,7 +27,7 @@
     },
     "files.eol": "\n",
     "files.autoGuessEncoding": true,
-    "[yaml]": {
+    "[yml]": {
         "editor.tabSize": 2,
         "prettier.tabWidth": 2
     }

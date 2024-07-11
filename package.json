@@ -2,7 +2,7 @@
   "name": "soberjs-vscode",
   "displayName": "Sober.js",
   "description": "为 Sober.js 组件库提供自动完成、悬停提示、代码片段等功能",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "lingbopro",
   "author": {
     "name": "lingbopro",
@@ -46,7 +46,11 @@
         "path": "./snippets/html.code-snippets"
       },
       {
-        "language": "javascript,typescript",
+        "language": "javascript",
+        "path": "./snippets/js-ts.code-snippets"
+      },
+      {
+        "language": "typescript",
         "path": "./snippets/js-ts.code-snippets"
       }
     ],
