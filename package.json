@@ -46,7 +46,11 @@
         "path": "./snippets/html.code-snippets"
       },
       {
-        "language": "javascript,typescript",
+        "language": "javascript",
+        "path": "./snippets/js-ts.code-snippets"
+      },
+      {
+        "language": "typescript",
         "path": "./snippets/js-ts.code-snippets"
       }
     ],
