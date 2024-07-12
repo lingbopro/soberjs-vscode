@@ -1,5 +1,11 @@
 # 版本记录
 
+## v0.4.0
+- 增加了组件的 CSS 变量补全
+- 增加了 CSS 全局变量（颜色变量）补全
+- 将 `custom-data/soberjs.html-data.json` 重命名为 [`custom-data/components.html-data.json`](https://github.com/lingbopro/soberjs-vscode/blob/master/custom-data/components.html-data.json)
+- 增加了 [开发指南文档](https://github.com/lingbopro/soberjs-vscode/blob/master/docs/dev-guide.md)
+
 ## v0.3.0
 
 - 优化了组件的悬停提示
