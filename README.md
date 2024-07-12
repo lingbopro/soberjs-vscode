@@ -41,7 +41,7 @@
 
 - HTML 标签名
 - HTML 标签属性名称和枚举值
-- _~~CSS 变量名和枚举值（尚未完成）~~_
+- CSS 变量名和枚举值
 - 一点 HTML 代码片段
 
 目前已支持 Sober.js 0.2.15 的所有组件（见下表）  
@@ -88,6 +88,95 @@
 - [x] 数据
   - [x] 表格 Table
 
+</details>
+<details>
+  <summary>支持的 CSS 变量</summary>
+
+- [x] 组件变量
+  - [x] 波纹 Ripple
+    - [x] `--ripple-color`
+    - [x] `-ripple-opacity`
+  - [x] 文本框 Text Field / 选择框 Picker
+    - [x] `--border-radius`
+    - [x] `--border-width`
+    - [x] `--border-color`
+    - [x] `--padding`
+- [ ] 全局变量
+
+  <details>
+  <summary>点击展开（共 63 个）</summary>
+
+  - [ ] `--s-color-primary`
+  - [ ] `--s-color-on-primary`
+  - [ ] `--s-color-primary-container`
+  - [ ] `--s-color-on-primary-container`
+  - [ ] `--s-color-secondary`
+  - [ ] `--s-color-on-secondary`
+  - [ ] `--s-color-secondary-container`
+  - [ ] `--s-color-on-secondary-container`
+  - [ ] `--s-color-tertiary`
+  - [ ] `--s-color-on-tertiary`
+  - [ ] `--s-color-tertiary-container`
+  - [ ] `--s-color-on-tertiary-container`
+  - [ ] `--s-color-error`
+  - [ ] `--s-color-on-error`
+  - [ ] `--s-color-error-container`
+  - [ ] `--s-color-on-error-container`
+  - [ ] `--s-color-background`
+  - [ ] `--s-color-on-background`
+  - [ ] `--s-color-outline`
+  - [ ] `--s-color-outline-variant`
+  - [ ] `--s-color-surface`
+  - [ ] `--s-color-on-surface`
+  - [ ] `--s-color-surface-variant`
+  - [ ] `--s-color-on-surface-variant`
+  - [ ] `--s-color-inverse-surface`
+  - [ ] `--s-color-inverse-on-surface`
+  - [ ] `--s-color-inverse-primary`
+  - [ ] `--s-color-surface-container`
+  - [ ] `--s-color-surface-container-high`
+  - [ ] `--s-color-surface-container-highest`
+  - [ ] `--s-color-surface-container-low`
+  - [ ] `--s-color-surface-container-lowest`
+  - [ ] `--s-color-dark-primary`
+  - [ ] `--s-color-dark-on-primary`
+  - [ ] `--s-color-dark-primary-container`
+  - [ ] `--s-color-dark-on-primary-container`
+  - [ ] `--s-color-dark-secondary`
+  - [ ] `--s-color-dark-on-secondary`
+  - [ ] `--s-color-dark-secondary-container`
+  - [ ] `--s-color-dark-on-secondary-container`
+  - [ ] `--s-color-dark-tertiary`
+  - [ ] `--s-color-dark-on-tertiary`
+  - [ ] `--s-color-dark-tertiary-container`
+  - [ ] `--s-color-dark-on-tertiary-container`
+  - [ ] `--s-color-dark-error`
+  - [ ] `--s-color-dark-on-error`
+  - [ ] `--s-color-dark-error-container`
+  - [ ] `--s-color-dark-on-error-container`
+  - [ ] `--s-color-dark-background`
+  - [ ] `--s-color-dark-on-background`
+  - [ ] `--s-color-dark-outline`
+  - [ ] `--s-color-dark-outline-variant`
+  - [ ] `--s-color-dark-surface`
+  - [ ] `--s-color-dark-on-surface`
+  - [ ] `--s-color-dark-surface-variant`
+  - [ ] `--s-color-dark-on-surface-variant`
+  - [ ] `--s-color-dark-inverse-surface`
+  - [ ] `--s-color-dark-inverse-on-surface`
+  - [ ] `--s-color-dark-inverse-primary`
+  - [ ] `--s-color-dark-surface-container`
+  - [ ] `--s-color-dark-surface-container-high`
+  - [ ] `--s-color-dark-surface-container-highest`
+  - [ ] `--s-color-dark-surface-container-low`
+  - [ ] `--s-color-dark-surface-container-lowest`
+  - [ ] `--s-elevation-level1`
+  - [ ] `--s-elevation-level2`
+  - [ ] `--s-elevation-level3`
+  - [ ] `--s-elevation-level4`
+  - [ ] `--s-elevation-level5`
+
+  </details>
 </details>
 
 ### 功能展示

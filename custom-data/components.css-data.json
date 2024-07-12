@@ -1,0 +1,99 @@
+{
+  "version": 1.1,
+  "properties": [
+    {
+      "name": "--ripple-color",
+      "description": {
+        "kind": "markdown",
+        "value": "波纹颜色\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple"
+      },
+      "references": [
+        {
+          "name": "文档: 波纹 Ripple",
+          "url": "https://soberjs.com/component/ripple"
+        }
+      ]
+    },
+    {
+      "name": "--ripple-opacity",
+      "description": {
+        "kind": "markdown",
+        "value": "波纹不透明度\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple"
+      },
+      "references": [
+        {
+          "name": "文档: 波纹 Ripple",
+          "url": "https://soberjs.com/component/ripple"
+        }
+      ]
+    },
+    {
+      "name": "--border-radius",
+      "description": {
+        "kind": "markdown",
+        "value": "边框圆角\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
+      },
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
+        },
+        {
+          "name": "文档: 选择框 Picker",
+          "url": "https://soberjs.com/component/picker"
+        }
+      ]
+    },
+    {
+      "name": "--border-width",
+      "description": {
+        "kind": "markdown",
+        "value": "边框宽度\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
+      },
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
+        },
+        {
+          "name": "文档: 选择框 Picker",
+          "url": "https://soberjs.com/component/picker"
+        }
+      ]
+    },
+    {
+      "name": "--border-color",
+      "description": {
+        "kind": "markdown",
+        "value": "边框颜色\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
+      },
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
+        },
+        {
+          "name": "文档: 选择框 Picker",
+          "url": "https://soberjs.com/component/picker"
+        }
+      ]
+    },
+    {
+      "name": "--padding",
+      "description": {
+        "kind": "markdown",
+        "value": "边框内边距\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
+      },
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
+        },
+        {
+          "name": "文档: 选择框 Picker",
+          "url": "https://soberjs.com/component/picker"
+        }
+      ]
+    }
+  ]
+}

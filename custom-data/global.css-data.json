@@ -1,0 +1,584 @@
+{
+  "version": 1.1,
+  "properties": [
+    {
+      "name": "--s-color-primary",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 首要颜色\n\n**默认值:** 亮色 `#5256a9` 暗色 `#c0c1ff`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-on-primary",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 首要颜色 (前景)\n\n**默认值:** 亮色 `#ffffff` 暗色 `#222578`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-primary-container",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 首要颜色 (容器)\n\n**默认值:** 亮色 `#e1e0ff` 暗色 `#3a3d8f`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-on-primary-container",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 首要颜色 (容器前景)\n\n**默认值:** 亮色 `#090760` 暗色 `#e1e0ff`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-secondary",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 次要颜色\n\n**默认值:** 亮色 `#5d5d72` 暗色 `#c5c4dd`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-on-secondary",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 次要颜色 (前景)\n\n**默认值:** 亮色 `#ffffff` 暗色 `#2e2f42`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-secondary-container",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 次要颜色 (容器)\n\n**默认值:** 亮色 `#e2e0f9` 暗色 `#454559`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-on-secondary-container",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 次要颜色 (容器前景)\n\n**默认值:** 亮色 `#191a2c` 暗色 `#e2e0f9`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-tertiary",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 第三颜色\n\n**默认值:** 亮色 `#79536a` 暗色 `#e8b9d4`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-on-tertiary",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 第三颜色 (前景)\n\n**默认值:** 亮色 `#ffffff` 暗色 `#46263b`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-tertiary-container",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 第三颜色 (容器)\n\n**默认值:** 亮色 `#ffd8ed` 暗色 `#5f3c52`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-on-tertiary-container",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 第三颜色 (容器前景)\n\n**默认值:** 亮色 `#2e1125` 暗色 `#ffd8ed`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-error",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 错误颜色\n\n**默认值:** 亮色 `#ba1a1a` 暗色 `#ffb4ab`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-on-error",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 错误颜色 (前景)\n\n**默认值:** 亮色 `#ffffff` 暗色 `#690005`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-error-container",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 错误颜色 (容器)\n\n**默认值:** 亮色 `#ffdad6` 暗色 `#93000a`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-on-error-container",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 错误颜色 (容器前景)\n\n**默认值:** 亮色 `#410002` 暗色 `#ffb4ab`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-background",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 背景颜色\n\n**默认值:** 亮色 `#fffbff` 暗色 `#1c1b1f`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-on-background",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 背景颜色 (前景)\n\n**默认值:** 亮色 `#1c1b1f` 暗色 `#e5e1e6`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-outline",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 边框颜色\n\n**默认值:** 亮色 `#777680` 暗色 `#918f9a`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-outline-variant",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 边框颜色 (变体)\n\n**默认值:** 亮色 `#c7c5d0` 暗色 `#46464f`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-surface",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 表面颜色\n\n**默认值:** 亮色 `#fffbff` 暗色 `#1c1b1f`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-on-surface",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 表面颜色 (前景)\n\n**默认值:** 亮色 `#1c1b1f` 暗色 `#e5e1e6`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-surface-variant",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 表面颜色 (变体)\n\n**默认值:** 亮色 `#e4e1ec` 暗色 `#46464f`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-on-surface-variant",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 表面颜色 (变体前景)\n\n**默认值:** 亮色 `#46464f` 暗色 `#c7c5d0`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-inverse-surface",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 反转表面颜色\n\n**默认值:** 亮色 `#313034` 暗色 `#e5e1e6`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-inverse-on-surface",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 反转表面颜色 (前景)\n\n**默认值:** 亮色 `#f3eff4` 暗色 `#313034`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-inverse-primary",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 反转首要颜色\n\n**默认值:** 亮色 `#c0c1ff` 暗色 `#5256a9`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-surface-container",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 表面颜色 (容器)\n\n**默认值:** 亮色 `#f0edf1` 暗色 `#201f23`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-surface-container-high",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 表面颜色 (容器 高)\n\n**默认值:** 亮色 `#eae7ec` 暗色 `#2a292d`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-surface-container-highest",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 表面颜色 (容器 最高)\n\n**默认值:** 亮色 `#e5e1e6` 暗色 `#353438`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-surface-container-low",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 表面颜色 (容器 低)\n\n**默认值:** 亮色 `#f6f2f7` 暗色 `#1c1b1f`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-color-surface-container-lowest",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 表面颜色 (容器 最低)\n\n**默认值:** 亮色 `#ffffff` 暗色 `#0e0e11`"
+      },
+      "references": [
+        {
+          "name": "文档: CSS 变量",
+          "url": "https://soberjs.com/style/css-var"
+        },
+        {
+          "name": "色板 (主题定制)",
+          "url": "https://soberjs.com/style/theme-builder"
+        }
+      ]
+    },
+    {
+      "name": "--s-elevation-level1",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 阴影 等级1\n\n**默认值:** `0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12)`"
+      }
+    },
+    {
+      "name": "--s-elevation-level2",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 阴影 等级2\n\n**默认值:** `0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12)`"
+      }
+    },
+    {
+      "name": "--s-elevation-level3",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 阴影 等级3\n\n**默认值:** `0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12)`"
+      }
+    },
+    {
+      "name": "--s-elevation-level4",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 阴影 等级4\n\n**默认值:** `0 8px 10px -5px rgba(0, 0, 0, .2), 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12)`"
+      }
+    },
+    {
+      "name": "--s-elevation-level5",
+      "description": {
+        "kind": "markdown",
+        "value": "Sober 阴影 等级5\n\n**默认值:** `0 10px 14px -6px rgba(0, 0, 0, .2), 0 22px 35px 3px rgba(0, 0, 0, .14), 0 8px 42px 7px rgba(0, 0, 0, .12)`"
+      }
+    }
+  ]
+}
