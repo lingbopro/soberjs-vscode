@@ -157,7 +157,7 @@
       "attributes": [
         {
           "name": "size",
-          "description": "按钮大小。\n\n可选值为:\n- `medium`\n- `small`\n- `large`",
+          "description": "按钮大小。\n\n可选值为:\n- `medium`\n- `small`",
           "values": [
             {
               "name": "medium",
@@ -166,10 +166,6 @@
             {
               "name": "small",
               "description": "大小较小"
-            },
-            {
-              "name": "large",
-              "description": "大小较大"
             }
           ]
         },
