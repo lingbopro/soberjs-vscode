@@ -110,11 +110,15 @@
       "attributes": [
         {
           "name": "type",
-          "description": "按钮样式。\n\n可选值为:\n- `filled`\n- `elevated`\n- `filled-tonal`\n- `outlined`\n- `text`",
+          "description": "按钮样式。\n\n可选值为:\n- `text`\n- `filled`\n- `elevated`\n- `filled-tonal`\n- `outlined`",
           "values": [
             {
+              "name": "text",
+              "description": "默认值。只包含文字的按钮，没有其他样式"
+            },
+            {
               "name": "filled",
-              "description": "默认值。带有较明显背景色的按钮"
+              "description": "带有较明显背景色的按钮"
             },
             {
               "name": "elevated",
@@ -127,10 +131,6 @@
             {
               "name": "outlined",
               "description": "带有边框的按钮"
-            },
-            {
-              "name": "text",
-              "description": "只包含文字的按钮，没有其他样式"
             }
           ]
         },
@@ -380,7 +380,7 @@
     },
     {
       "name": "s-linear-progress",
-      "description": "**线性进度 Linear Progress**\n\n```html\n<s-linear-progress value=\"50\"></s-linear-progress>\n```\n\n设置 `indeterminate` 来启用未知进度。```html\n<s-linear-progress indeterminate=\"true\"></s-linear-progress>\n```\n\n设置 `animated` 来启用变更过渡动画。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `indeterminate` (`boolean`): 是否未知\n- `animated` (`boolean`): 是否启用变更时过渡动画\n- `max` (`number`): 最大值\n- `value` (`number`): 当前值",
+      "description": "**线性进度 Linear Progress**\n\n```html\n<s-linear-progress value=\"50\"></s-linear-progress>\n```\n\n设置 `indeterminate` 来启用未知进度。\n```html\n<s-linear-progress indeterminate=\"true\"></s-linear-progress>\n```\n\n设置 `animated` 来启用变更过渡动画。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `indeterminate` (`boolean`): 是否未知\n- `animated` (`boolean`): 是否启用变更时过渡动画\n- `max` (`number`): 最大值\n- `value` (`number`): 当前值",
       "attributes": [
         {
           "name": "indeterminate",
@@ -418,7 +418,7 @@
     },
     {
       "name": "s-circular-progress",
-      "description": "**圆形进度 Circular Progress**\n\n```html\n<s-circular-progress value=\"50\"></s-circular-progress>\n```\n\n设置 `indeterminate` 来启用未知进度。```html\n<s-circular-progress indeterminate=\"true\"></s-circular-progress>\n```\n\n设置 `animated` 来启用变更过渡动画。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `indeterminate` (`boolean`): 是否未知\n- `animated` (`boolean`): 是否启用变更时过渡动画\n- `max` (`number`): 最大值\n- `value` (`number`): 当前值",
+      "description": "**圆形进度 Circular Progress**\n\n```html\n<s-circular-progress value=\"50\"></s-circular-progress>\n```\n\n设置 `indeterminate` 来启用未知进度。\n```html\n<s-circular-progress indeterminate=\"true\"></s-circular-progress>\n```\n\n设置 `animated` 来启用变更过渡动画。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `indeterminate` (`boolean`): 是否未知\n- `animated` (`boolean`): 是否启用变更时过渡动画\n- `max` (`number`): 最大值\n- `value` (`number`): 当前值",
       "attributes": [
         {
           "name": "indeterminate",
@@ -551,7 +551,7 @@
     },
     {
       "name": "s-picker",
-      "description": "**选择框 Picker**\n\n通常用于单选数据，它的目标是替代 `select`。\n\n```html\n<s-picker label=\"选择地区\">\n  <s-picker-item>贵阳</s-picker-item>\n  <s-picker-item>北京</s-picker-item>\n  <s-picker-item>上海</s-picker-item>\n  <s-picker-item>深圳</s-picker-item>\n</s-picker>```\n\n由于内部封装性较高，定义样式变得很复杂，因此我们开放了一些CSS变量来允许你定义一些样式\n\n**属性:**\n\n- `label` (`string`): 标签文本\n- `options` _[只读]_ (`Item[]`): 子项目\n- `selectedIndex` (`number`): 当前选中下标\n\n**插槽:**\n- `trigger`: 触发\n\n**事件:**\n- `change`: 选中变化后触发\n\n**CSS 变量:**\n\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
+      "description": "**选择框 Picker**\n\n通常用于单选数据，它的目标是替代 `select`。\n\n```html\n<s-picker label=\"选择地区\">\n  <s-picker-item>贵阳</s-picker-item>\n  <s-picker-item>北京</s-picker-item>\n  <s-picker-item>上海</s-picker-item>\n  <s-picker-item>深圳</s-picker-item>\n</s-picker>\n```\n\n由于内部封装性较高，定义样式变得很复杂，因此我们开放了一些CSS变量来允许你定义一些样式\n\n**属性:**\n\n- `label` (`string`): 标签文本\n- `options` _[只读]_ (`Item[]`): 子项目\n- `selectedIndex` (`number`): 当前选中下标\n\n**插槽:**\n- `trigger`: 触发\n\n**事件:**\n- `change`: 选中变化后触发\n\n**CSS 变量:**\n\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
       "attributes": [
         {
           "name": "label",
@@ -680,7 +680,7 @@
     },
     {
       "name": "s-card",
-      "description": "**卡片 Card**\n\n用于显示内容的卡片组件，支持多种样式，可以作为容器使用。\n\n```html\n<s-card>\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card type=\"filled\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"outlined\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card type=\"outlined\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card clickable=\"true\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card style=\"display: block; padding: 24px\">\n  Card\n</s-card>\n```\n\n**属性:**\n\n- `type` (`elevated`, `filled`, `outlined`): 卡片样式，默认为 `elevated`\n- `clickable` (`boolean`): 是否启用可点击，默认为 `false`\n- `selectable` (`boolean`): 是否启用选中，默认为 `false`\n\n**插槽:**\n- `image`: 图片\n- `headline`: 标题\n- `subhead`: 副标题\n- `text`: 卡片文本\n- `action`: 操作按钮\n\n**CSS 变量:**\n\n- `--border-radius`: 边框半径\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
+      "description": "**卡片 Card**\n\n用于显示内容的卡片组件，支持多种样式，可以作为容器使用。\n\n```html\n<s-card>\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card clickable=\"true\">\n  <div slot=\"image\"></div>\n  <div slot=\"headline\">Headline</div>\n  <div slot=\"subhead\">Subhead</div>\n  <div slot=\"text\">Cards are often used for grid lists, which provide click effects</div>\n  <s-button slot=\"action\" type=\"filled-tonal\">Action</s-button>\n  <s-button slot=\"action\">Action</s-button>\n</s-card>\n\n<s-card style=\"display: block; padding: 24px\">\n  Card\n</s-card>\n```\n\n**属性:**\n\n- `type` (`elevated`, `filled`, `outlined`): 卡片样式，默认为 `elevated`\n- `clickable` (`boolean`): 是否启用可点击，默认为 `false`\n- `selectable` (`boolean`): 是否启用选中，默认为 `false`\n\n**插槽:**\n- `image`: 图片\n- `headline`: 标题\n- `subhead`: 副标题\n- `text`: 卡片文本\n- `action`: 操作按钮\n\n**CSS 变量:**\n\n- `--border-radius`: 边框半径\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
       "attributes": [
         {
           "name": "type",
@@ -724,7 +724,7 @@
     },
     {
       "name": "s-search",
-      "description": "**搜索栏 Search**\n\n搜索组件支持不同尺寸和插槽。可以使用图标按钮、设置不同的尺寸以及自定义下拉插槽。\n\n```html\n<s-search>\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n\n<s-search>\n  <s-icon-button slot=\"start\">\n    <s-icon type=\"search\"></s-icon>\n  </s-icon-button>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon-button slot=\"end\">\n    <s-icon type=\"close\"></s-icon>\n  </s-icon-button>\n</s-search>\n\n<s-search size=\"small\">\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n<s-search>\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n<s-search size=\"large\">\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n</s-search>\n\n<s-search>\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n  <div slot=\"dropdown\" style=\"height: 128px\">\n    hello\n  </div>\n</s-search>\n```\n\n**属性:**\n\n- `size` (`string`): 按钮大小，可选值为 `medium`, `small`, `large`，默认值为 `medium`。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽\n- `dropdown`: 下拉插槽",
+      "description": "**搜索栏 Search**\n\n搜索组件支持不同尺寸和插槽。可以使用图标按钮、设置不同的尺寸以及自定义下拉插槽。\n\n```html\n<s-search>\n  <s-icon-button slot=\"start\">\n    <s-icon type=\"search\"></s-icon>\n  </s-icon-button>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon-button slot=\"end\">\n    <s-icon type=\"close\"></s-icon>\n  </s-icon-button>\n</s-search>\n\n<s-search>\n  <s-icon type=\"search\" slot=\"start\"></s-icon>\n  <input type=\"text\" placeholder=\"搜索关键字\">\n  <s-icon type=\"close\" slot=\"end\"></s-icon>\n  <div slot=\"dropdown\" style=\"height: 128px\">\n    hello\n  </div>\n</s-search>\n```\n\n**属性:**\n\n- `size` (`string`): 按钮大小，可选值为 `medium`, `small`, `large`，默认值为 `medium`。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽\n- `dropdown`: 下拉插槽",
       "attributes": [
         {
           "name": "size",
@@ -778,7 +778,7 @@
     },
     {
       "name": "s-tab",
-      "description": "**选项卡 Tab**\n\n选项卡组件用于在同一个区域内切换不同的内容。支持徽章、左右对齐以及固定模式。\n\n```html\n<s-tab>\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n  </s-tab-item>\n</s-tab>\n\n<s-tab>\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n    <s-badge slot=\"badge\"></s-badge>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n    <s-badge slot=\"badge\">99</s-badge>\n  </s-tab-item>\n</s-tab>\n\n<s-tab style=\"justify-content: flex-start\">\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n  </s-tab-item>\n</s-tab>\n\n<s-tab mode=\"fixed\">\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n  </s-tab-item>\n</s-tab>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置固定模式，使 item 均分占据宽度，不再支持滚动。\n\n**事件:**\n- `change`: 选中变化后触发。",
+      "description": "**选项卡 Tab**\n\n选项卡组件用于在同一个区域内切换不同的内容。支持徽章、左右对齐以及固定模式。\n\n```html\n<s-tab>\n  <s-tab-item>\n    <div slot=\"text\">Item 1</div>\n  </s-tab-item>\n  <s-tab-item selected=\"true\">\n    <div slot=\"text\">Item 2</div>\n  </s-tab-item>\n  <s-tab-item>\n    <div slot=\"text\">Item 3</div>\n  </s-tab-item>\n</s-tab>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置固定模式，使 item 均分占据宽度，不再支持滚动。\n\n**事件:**\n- `change`: 选中变化后触发。",
       "attributes": [
         {
           "name": "mode",
@@ -829,7 +829,7 @@
     },
     {
       "name": "s-navigation",
-      "description": "**导航栏 Navigation**\n\n导航组件用于在应用中进行页面切换或执行其他操作。支持图标、文本、徽章插槽，以及导轨模式。\n\n```html\n<s-navigation>\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n  </s-navigation-item>\n</s-navigation>\n\n<s-navigation>\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n    <s-badge slot=\"badge\"></s-badge>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n    <s-badge slot=\"badge\">99</s-badge>\n  </s-navigation-item>\n</s-navigation>\n\n<s-navigation mode=\"rail\">\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2\"></div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3\"></div>\n  </s-navigation-item>\n</s-navigation>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置导轨模式。\n\n**事件:**\n- `change`: 选中变化后触发。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽",
+      "description": "**导航栏 Navigation**\n\n导航组件用于在应用中进行页面切换或执行其他操作。支持图标、文本、徽章插槽，以及导轨模式。\n\n```html\n<s-navigation>\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n  </s-navigation-item>\n</s-navigation>\n\n<s-navigation mode=\"rail\">\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2\"></div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3\"></div>\n  </s-navigation-item>\n</s-navigation>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置导轨模式。\n\n**事件:**\n- `change`: 选中变化后触发。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽",
       "attributes": [
         {
           "name": "mode",
@@ -880,7 +880,7 @@
     },
     {
       "name": "s-appbar",
-      "description": "**应用栏 Appbar**\n\nAppbar 的表现更像一个容器，它没有事件和行为。\n\n在屏幕宽度小于 **840px** 时，它的高度会变为 **56px**。\n\n支持导航、标题和操作按钮的插槽。\n\n你可以嵌套该组件，内部的 appbar 会居中并且设置一个最大宽度，默认为 **1280px**。\n\n```html\n<s-appbar>\n  <!--左侧菜单按钮-->\n  <s-icon-button slot=\"navigation\">\n    <s-icon type=\"menu\"></s-icon>\n  </s-icon-button>\n  <!--标题-->\n  <div slot=\"headline\"> Title </div>\n  <!--右侧操作按钮-->\n  <s-icon-button slot=\"action\">\n    <s-icon type=\"search\"></s-icon>\n  </s-icon-button>\n</s-appbar>\n\n<s-appbar>\n  <s-appbar>\n    <!--左侧菜单按钮-->\n    <s-icon-button slot=\"navigation\">\n      <s-icon type=\"menu\"></s-icon>\n    </s-icon-button>\n    <!--标题-->\n    <div slot=\"headline\"> Title </div>\n    <!--右侧操作按钮-->\n    <s-icon-button slot=\"action\">\n      <s-icon type=\"search\"></s-icon>\n    </s-icon-button>\n  </s-appbar>\n</s-appbar>\n```\n\n**插槽:**\n- `navigation`: 导航\n- `headline`: 标题\n- `action`: 操作",
+      "description": "**应用栏 Appbar**\n\nAppbar 的表现更像一个容器，它没有事件和行为。\n\n在屏幕宽度小于 **840px** 时，它的高度会变为 **56px**。\n\n支持导航、标题和操作按钮的插槽。\n\n你可以嵌套该组件，内部的 Appbar 会居中并且设置一个最大宽度，默认为 **1280px**。\n\n```html\n<s-appbar>\n  <!--左侧菜单按钮-->\n  <s-icon-button slot=\"navigation\">\n    <s-icon type=\"menu\"></s-icon>\n  </s-icon-button>\n  <!--标题-->\n  <div slot=\"headline\"> Title </div>\n  <!--右侧操作按钮-->\n  <s-icon-button slot=\"action\">\n    <s-icon type=\"search\"></s-icon>\n  </s-icon-button>\n</s-appbar>\n```\n\n**插槽:**\n- `navigation`: 导航\n- `headline`: 标题\n- `action`: 操作",
       "references": [
         {
           "name": "文档",
@@ -1077,7 +1077,7 @@
     },
     {
       "name": "s-table",
-      "description": "**Table 组件**\n\nTable 表格组件用于显示结构化的数据。\n\n```html\n<s-table>\n  <s-thead>\n    <s-tr>\n      <s-th>title1</s-th>\n      <s-th>title2</s-th>\n      <s-th>title3</s-th>\n      <s-th>title4</s-th>\n      <s-th>title5</s-th>\n    </s-tr>\n  </s-thead>\n  <s-tbody>\n    <s-tr>\n      <s-td>item1</s-td>\n      <s-td>item2</s-td>\n      <s-td>item3</s-td>\n      <s-td>item4</s-td>\n      <s-td>item5</s-td>\n    </s-tr>\n    <s-tr>\n      <s-td>item1</s-td>\n      <s-td>item2</s-td>\n      <s-td>item3</s-td>\n      <s-td>item4</s-td>\n      <s-td>item5</s-td>\n    </s-tr>\n    <s-tr>\n      <s-td>item1</s-td>\n      <s-td>item2</s-td>\n      <s-td>item3</s-td>\n      <s-td>item4</s-td>\n      <s-td>item5</s-td>\n    </s-tr>\n  </s-tbody>\n</s-table>\n```\n\n**插槽:**\n- `thead`: 表头\n- `tbody`: 表身\n- `tr`: 表格行\n- `th`: 表格头\n- `td`: 表格数据",
+      "description": "**Table 组件**\n\nTable 表格组件用于显示结构化的数据。\n\n```html\n<s-table>\n  <s-thead>\n    <s-tr>\n      <s-th>title1</s-th>\n      <s-th>title2</s-th>\n      <s-th>title3</s-th>\n      <s-th>title4</s-th>\n      <s-th>title5</s-th>\n    </s-tr>\n  </s-thead>\n  <s-tbody>\n    <s-tr>\n      <s-td>item1</s-td>\n      <s-td>item2</s-td>\n      <s-td>item3</s-td>\n      <s-td>item4</s-td>\n      <s-td>item5</s-td>\n    </s-tr>\n    </s-tbody>\n</s-table>\n```\n\n**插槽:**\n- `thead`: 表头\n- `tbody`: 表身\n- `tr`: 表格行\n- `th`: 表格头\n- `td`: 表格数据",
       "attributes": [],
       "references": [
         {
