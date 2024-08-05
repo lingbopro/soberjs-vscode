@@ -43,8 +43,9 @@
 - HTML 标签属性名称和枚举值
 - CSS 变量名和枚举值
 - 一点 HTML 代码片段
+- Material 图标 SVG 补全
 
-目前已支持 Sober.js 0.2.15 的所有组件和 CSS 变量（见下表）  
+目前已支持 `Sober.js 0.2.15` 的所有组件、CSS 变量（见下表）和 SVG 图标  
 
 <details>
   <summary>支持的组件（点击展开）</summary>
@@ -102,10 +103,6 @@
     - [x] `--border-color`
     - [x] `--padding`
 - [x] 全局变量
-
-  <details>
-  <summary>点击展开（共 68 个）</summary>
-
   - [x] `--s-color-primary`
   - [x] `--s-color-on-primary`
   - [x] `--s-color-primary-container`
@@ -176,7 +173,6 @@
   - [x] `--s-elevation-level4`
   - [x] `--s-elevation-level5`
 
-  </details>
 </details>
 
 ### 功能展示
@@ -192,5 +188,6 @@
 - [x] 支持更多组件
 - [ ] 完善悬停提示
 - [x] 完成 CSS 变量名和枚举值补全
-- [ ] 增加 SVG 图标补全
+- [x] 增加 SVG 图标补全
+- [ ] 使 SVG 图标补全可以补全填充图标，不仅是线条图标
 

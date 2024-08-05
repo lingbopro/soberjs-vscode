@@ -29,14 +29,10 @@
 
 见 [贡献指南](./../CONTRIBUTING.md)。
 
-<!-- 没做完呢，别动！ -->
-<!--
 
 ## 提示
 
 ### 生成 SVG 代码片段文件
-<details>
-<summary>点击展开</summary>
 
 Sober 图标库中有很多图标，手动编写代码片段非常费时，因此可以使用脚本来生成。
 
@@ -49,14 +45,55 @@ Sober 图标库中有很多图标，手动编写代码片段非常费时，因�
     <summary>点击展开</summary>
 
     ```js
-    下个版本补充，别动这！！！
-    --- @lingbopro, 2024/7/12
+    async function getIcons() {
+        const header = `
+    // 此代码片段由脚本生成，包含了 Sober 图标库中的图标
+    // 如要获知更多信息，请查看开发指南(docs/dev-guide.md)`;
+        function wait(delay) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve();
+                }, delay);
+            });
+        }
+        let elementSnippet = {};
+        let iconSnippet = {};
+        let contentEl = document.querySelector('.detail>pre');
+        let headlineEl = document.querySelector('s-dialog:has(.detail) > [slot="headline"]');
+        let iconsEl = document.querySelectorAll('.group .item');
+        for(const current of iconsEl) {
+            current.click();
+            let content = contentEl.innerText;
+            let name = headlineEl.innerText;
+            let casedName = name.toLowerCase().replaceAll(' ', '-');
+            let lines = content.split('\n');
+            let elementLines = ['<s-icon>'];
+            lines[1] = '\t' + lines[1].substr(2);
+            for(const line of lines) {
+                elementLines.push('\t' + line);
+            }
+            elementLines.push('</s-icon>');
+            let snippetDescription = `Sober Material 图标: ${name}`;
+            iconSnippet[`MD Icon: ${name}`] = {
+                prefix: [`mdi:${casedName}`, `svg:mdi-${casedName}`],
+                body: lines,
+                description: snippetDescription
+            };
+            elementSnippet[`Sober Icon: ${name}`] = {
+                prefix: [`s-icon:${casedName}`],
+                body: elementLines,
+                description: snippetDescription
+            };
+            await wait(2);
+        }
+        console.log('// 代码片段: <s-icon> 元素的 SVG 图标' + header + '\n\n' + JSON.stringify(elementSnippet));
+        console.log('// 代码片段: Sober.js 图标库图标的 SVG' + header + '\n\n' + JSON.stringify(iconSnippet));
+    }
+    getIcons();
     ```
     （脚本由 [@lingbopro](https://github.com/lingbopro) 制作）
 
     </details>
 
-4. 等待 15-30 秒后，控制台会输出两段长文本，将第一段放入 [snippets/s-icon.code-snippets](./../snippets/s-icon.code-snippets) 中，第二段放入 [snippets/svg-icon.code-snippets](./../snippets/svg-icon.code-snippets) 中，并格式化它们
+4. 等待约 20-50 秒后，控制台会输出两段长文本，将第一段放入 [snippets/s-icon.code-snippets](./../snippets/s-icon.code-snippets) 中，第二段放入 [snippets/svg-icon.code-snippets](./../snippets/svg-icon.code-snippets) 中，并格式化它们
 
-</details>
--->
