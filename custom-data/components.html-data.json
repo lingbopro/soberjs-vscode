@@ -992,8 +992,12 @@
       "attributes": [],
       "references": [
         {
-          "name": "Documentation",
+          "name": "文档",
           "url": "https://soberjs.com/component/bottom-sheet"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/bottom-sheet.ts"
         }
       ]
     },    
