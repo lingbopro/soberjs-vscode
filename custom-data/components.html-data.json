@@ -988,7 +988,7 @@
     },
     {
       "name": "s-bottom-sheet",
-      "description": "**Bottom Sheet 组件**\n\nBottom Sheet 组件用于在页面底部显示额外内容，通常作为其他组件的插槽使用。\n\n```html\n<s-bottom-sheet>\n  <s-button slot=\"trigger\"> Bottom Sheet </s-button>\n  <div style=\"height: 280px\">...</div>\n</s-bottom-sheet>\n```\n\n**插槽:**\n- `trigger`: 触发器",
+      "description": "**底部面板 Bottom Sheet**\n\nBottom Sheet 组件用于在页面底部显示额外内容，通常作为其他组件的插槽使用。\n\n```html\n<s-bottom-sheet>\n  <s-button slot=\"trigger\"> Bottom Sheet </s-button>\n  <div style=\"height: 280px\">...</div>\n</s-bottom-sheet>\n```\n\n**插槽:**\n- `trigger`: 触发器",
       "attributes": [],
       "references": [
         {
