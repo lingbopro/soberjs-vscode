@@ -239,7 +239,7 @@
     },
     {
       "name": "s-ripple",
-      "description": "**波纹 Ripple**\n\n波纹是一个容器，它本身没有任何样式，波纹的颜色继承文本颜色，并带有一定的不透明度。\n\n```html\n<s-ripple style=\"padding: 16px 48px\">test</s-ripple>\n```\n\n如果你希望单独修改波纹颜色，那你应当使用 CSS 变量。\n\n设置 `attached` 来启用依附模式，它依附在容器中呈现，事件从容器上触发，某些情况下可能有妙用。\n\n由于使用定位确定位置，所以容器的 `position` 必须设置为 `relative`、`absolute`、`sticky`、`fixed` 其中之一。\n\n**属性:**\n\n- `centered` (`boolean`): 波纹是否居中\n- `attached` (`boolean`): 是否设置为依附模式\n\n**CSS 变量:**\n\n- `--ripple-color`: 波纹颜色\n- `--ripple-opacity`: 波纹颜色不透明度",
+      "description": "**波纹 Ripple**\n\n波纹是一个容器，它本身没有任何样式，波纹的颜色继承文本颜色，并带有一定的不透明度。\n\n```html\n<s-ripple style=\"padding: 16px 48px\">test</s-ripple>\n```\n\n如果你希望单独修改波纹颜色，那你应当使用 CSS 变量。\n\n设置 `attached` 来启用依附模式，它依附在容器中呈现，事件从容器上触发，某些情况下可能有妙用。\n\n由于使用定位确定位置，所以容器的 `position` 必须设置为 `relative`、`absolute`、`sticky`、`fixed` 其中之一。\n\n**属性:**\n\n- `centered` (`boolean`): 波纹是否居中\n- `attached` (`boolean`): 是否设置为依附模式\n- `rippled` _[只读]_ (`boolean`): 在波纹触发时，容器将被设置该属性\n\n**CSS 变量:**\n\n- `--ripple-color`: 波纹颜色\n- `--ripple-opacity`: 波纹颜色不透明度",
       "attributes": [
         {
           "name": "centered",
@@ -265,7 +265,7 @@
     },
     {
       "name": "s-checkbox",
-      "description": "**复选框 Checkbox**\n\n```html\n<s-checkbox></s-checkbox>\n<s-checkbox checked=\"true\"></s-checkbox>\n<s-checkbox indeterminate=\"true\"></s-checkbox>\n```\n\n设置 disabled 来禁用复选框。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n- `indeterminate` (`boolean`): 是否未知\n\n**事件:**\n- `change`: 选中变化后触发",
+      "description": "**复选框 Checkbox**\n\n```html\n<s-checkbox>已阅读用户协议</s-checkbox>\n<s-checkbox checked=\"true\"></s-checkbox>\n<s-checkbox indeterminate=\"true\"></s-checkbox>\n```\n\n设置 disabled 来禁用复选框。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n- `indeterminate` (`boolean`): 是否未知\n\n**事件:**\n- `change`: 选中变化后触发",
       "attributes": [
         {
           "name": "checked",
@@ -300,7 +300,7 @@
     },
     {
       "name": "s-radio-button",
-      "description": "**单选按钮 Radio Button**\n\n单选按钮需要设置一个唯一的 `name` 作为分组才能执行单选。\n\n```html\n<s-radio-button name=\"group\"></s-radio-button>\n<s-radio-button name=\"group\"></s-radio-button>\n<s-radio-button name=\"group\" disabled=\"true\"></s-radio-button>\n```\n\n设置 `disabled` 来禁用复选框。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `name` (`string`): 名称\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n\n**事件:**\n- `change`: 选中变化后触发",
+      "description": "**单选按钮 Radio Button**\n\n单选按钮需要设置一个唯一的 `name` 作为分组才能执行单选。\n\n```html\n<s-radio-button name=\"group\">男</s-radio-button>\n<s-radio-button name=\"group\">女</s-radio-button>\n<s-radio-button name=\"group\" disabled=\"true\">未知</s-radio-button>\n```\n\n设置 `disabled` 来禁用复选框。\n\n使用`color`自定义颜色。\n\n**属性:**\n\n- `name` (`string`): 名称\n- `checked` (`boolean`): 是否选中\n- `disabled` (`boolean`): 是否禁用\n\n**事件:**\n- `change`: 选中变化后触发",
       "attributes": [
         {
           "name": "name",
@@ -506,7 +506,7 @@
     },
     {
       "name": "s-rate",
-      "description": "**评分 Rate**\n\n```html\n<s-rate></s-rate>\n```\n\n设置 `readonly` 启用只读模式。\n\n使用 `unchecked` 和 `checked` 插槽来自定义图标，你可以使用 svg 或者 icon 组件。\n\n```html\n<s-rate>\n  <s-icon slot=\"unchecked\" type=\"favorite\"></s-icon>\n  <s-icon slot=\"checked\" type=\"favorite\"></s-icon>\n</s-rate>\n```\n\n> 如果你希望自定义大小，那么请使用 `font-size` 来设置，该组件需要保持宽高比例，单独设置 width 和 height 可能会导致变形。\n\n**属性:**\n\n- `readonly` (`boolean`): 是否启用只读模式\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发\n- `input`: 值变化时触发\n\n**插槽:**\n- `unchecked`: 未选中\n- `checked`: 已选中",
+      "description": "**评分 Rate**\n\n```html\n<s-rate></s-rate>\n```\n\n设置 `readonly` 启用只读模式。\n\n使用 `track` 和 `indicator` 插槽来自定义图标，你可以使用 svg 或者 icon 组件。\n\n```html\n<s-rate>\n  <s-icon slot=\"track\" type=\"favorite\"></s-icon>\n  <s-icon slot=\"indicator\" type=\"favorite\"></s-icon>\n</s-rate>\n```\n\n> 如果你希望自定义大小，那么请使用 `font-size` 来设置，该组件需要保持宽高比例，单独设置 width 和 height 可能会导致变形。\n\n**属性:**\n\n- `readonly` (`boolean`): 是否启用只读模式\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发\n- `input`: 值变化时触发\n\n**插槽:**\n- `track`: 未选中\n- `indicator`: 已选中",
       "attributes": [
         {
           "name": "readonly",
@@ -645,13 +645,8 @@
     },
     {
       "name": "s-drawer",
-      "description": "**抽屉 Drawer**\n\n当容器的宽度小于 `fold` 的值时，抽屉会切换为折叠模式。通常适用于移动端，以便于腾出更多空间。\n\n```html\n<s-drawer>\n  <div slot=\"start\">Start</div>\n  <div>Main</div>\n  <div slot=\"end\">End</div>\n</s-drawer>\n```\n\n**属性:**\n\n- `fold` (`number`): 抽屉折叠模式的阈值宽度，单位为像素。\n- `mode` _[只读]_: 模式\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽",
-      "attributes": [
-        {
-          "name": "fold",
-          "description": "抽屉折叠模式的阈值宽度，单位为像素。"
-        }
-      ],
+      "description": "**抽屉 Drawer**\n\n当窗口宽度小于 1200px 时，抽屉会切换为折叠模式。通常适用于移动端，以便于腾出更多空间。\n\n```html\n<s-drawer>\n  <div slot=\"start\">Start</div>\n  <div>Main</div>\n  <div slot=\"end\">End</div>\n</s-drawer>\n```\n\n**属性:**\n\n- `mode` _[只读]_: 模式\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽",
+      "attributes": [],
       "references": [
         {
           "name": "文档",
@@ -662,7 +657,7 @@
           "url": "https://github.com/apprat/sober/blob/main/src/drawer.ts"
         }
       ]
-    },    
+    },
     {
       "name": "s-scroll-view",
       "description": "**滚动 Scroll View**\n\n滚动为容器提供了滚动条样式，出于触屏设备优化，滚动条样式仅在支持鼠标的设备上有效。\n\n```html\n<s-scroll-view>\n  <div style=\"height: 1080px;width: 2200px\"></div>\n</s-scroll-view>\n```",
@@ -921,7 +916,7 @@
           "url": "https://github.com/apprat/sober/blob/main/src/dialog.ts"
         }
       ]
-    },    
+    },
     {
       "name": "s-popup",
       "description": "**弹出框 Popup**\n\nPopup 弹出框组件用于展示临时内容或提示信息。支持通过不同方式触发，并且可以设置默认位置。\n\n```html\n<s-popup>\n  <s-button slot=\"trigger\"> popup </s-button>\n  <div style=\"min-height: 280px\">\n    弹出框\n  </div>\n</s-popup>\n\n<s-popup showalign=\"right\">\n  <s-button slot=\"trigger\"> popup </s-button>\n  <div style=\"min-height: 280px\">\n    弹出框\n  </div>\n</s-popup>\n```\n\n**属性:**\n\n- `showAlign` (`string`): 设置弹出框的默认位置，可选值为 `center`, `left`, `right`。\n\n**插槽:**\n- `trigger`: 触发器",
@@ -988,7 +983,7 @@
     },
     {
       "name": "s-bottom-sheet",
-      "description": "**底部面板 Bottom Sheet**\n\nBottom Sheet 组件用于在页面底部显示额外内容，通常作为其他组件的插槽使用。\n\n```html\n<s-bottom-sheet>\n  <s-button slot=\"trigger\"> Bottom Sheet </s-button>\n  <div style=\"height: 280px\">...</div>\n</s-bottom-sheet>\n```\n\n**插槽:**\n- `trigger`: 触发器",
+      "description": "**底部面板 Bottom Sheet**\n\nBottom Sheet 组件用于在页面底部显示额外内容，通常作为其他组件的插槽使用。\n\n```html\n<s-bottom-sheet>\n  <s-button slot=\"trigger\"> Bottom Sheet </s-button>\n  <div style=\"padding: 24px\">...</div>\n</s-bottom-sheet>\n```\n\n**插槽:**\n- `trigger`: 触发器",
       "attributes": [],
       "references": [
         {
@@ -1000,11 +995,25 @@
           "url": "https://github.com/apprat/sober/blob/main/src/bottom-sheet.ts"
         }
       ]
-    },    
+    },
     {
       "name": "s-snackbar",
-      "description": "**提示框 Snackbar**\n\nSnackbar 提示框组件用于显示临时消息。支持通过触发器显示和关闭，并且可以配置动作按钮。\n\n```html\n<s-snackbar>\n  <s-button slot=\"trigger\"> Snackbar </s-button>\n  Snackbar Message\n  <s-button type=\"text\" slot=\"action\"> 关闭 </s-button>\n</s-snackbar>\n```\n\n**属性:**\n\n- `action` (`string`): 操作按钮文本\n\n**事件:**\n\n- `show`: 提示框显示时触发\n- `showed`: 提示框显示后触发（动画结束）\n- `dismiss`: 提示框开始隐藏时触发\n- `dismissed`: 提示框隐藏后触发（动画结束）\n\n**插槽:**\n- `trigger`: 触发器",
+      "description": "**提示框 Snackbar**\n\nSnackbar 提示框组件用于显示临时消息。支持通过触发器显示和关闭，并且可以配置动作按钮。\n\n```html\n<s-snackbar>\n  <s-button slot=\"trigger\"> Snackbar </s-button>\n  Snackbar Message\n  <s-button type=\"text\" slot=\"action\"> 关闭 </s-button>\n</s-snackbar>\n```\n\n**属性:**\n\n- `type`: 样式\n- `action` (`string`): 操作按钮文本\n\n**事件:**\n\n- `show`: 提示框显示时触发\n- `showed`: 提示框显示后触发（动画结束）\n- `dismiss`: 提示框开始隐藏时触发\n- `dismissed`: 提示框隐藏后触发（动画结束）\n\n**插槽:**\n- `trigger`: 触发器",
       "attributes": [
+        {
+          "name": "type",
+          "description": "样式，值为 `basic` 或 `error`",
+          "values": [
+            {
+              "name": "basic",
+              "description": "普通类型"
+            },
+            {
+              "name": "error",
+              "description": "错误类型"
+            }
+          ]
+        },
         {
           "name": "action",
           "description": "操作按钮文本"
@@ -1104,7 +1113,7 @@
           "url": "https://github.com/apprat/sober/blob/main/src/table.ts"
         }
       ]
-    }    
+    }
   ],
   "valueSets": [
     {

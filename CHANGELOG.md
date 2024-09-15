@@ -1,5 +1,18 @@
 # 版本记录
 
+## v0.6.0
+
+- 适配 [Sober `0.3.0` 更新](https://soberjs.com/introduction/update-log)
+- Ripple 新增 `rippled` 只读属性
+- Drawer 移除 `fold` 属性
+- Rate 插槽名称由 `unchecked` 和 `checked` 变更为 `track` 和 `indicator`
+- ~~BottomSheet 默认插槽被移除，新增 view 插槽~~
+  (官方暂未确认，并未修改)
+- Snackbar 新增 `type` 属性
+- Checkbox 增加默认插槽例子
+- RadioButton 增加默认插槽例子
+- 代码部分格式化
+
 ## v0.5.1
 
 - 增加 Bottom Sheet 组件
@@ -9,8 +22,8 @@
 - 增加了 SVG 图标补全
 - 修正了部分组件的 HTML 补全，精简了组件使用示例
 
-
 ## v0.4.0
+
 - 增加了组件的 CSS 变量补全
 - 增加了 CSS 全局变量（颜色变量）补全
 - 将 `custom-data/soberjs.html-data.json` 重命名为 [`custom-data/components.html-data.json`](https://github.com/lingbopro/soberjs-vscode/blob/master/custom-data/components.html-data.json)
