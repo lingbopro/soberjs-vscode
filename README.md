@@ -23,21 +23,20 @@
 
 ## 介绍
 
-一个 [Visual Studio Code](https://code.visualstudio.com) 扩展，为 [Sober.js 组件库](https://soberjs.com) 提供自动完成、悬停提示、代码片段等功能  
+一个 [Visual Studio Code](https://code.visualstudio.com) 扩展，为 [Sober.js 组件库](https://soberjs.com) 提供自动完成、悬停提示、代码片段等功能
 
-（非官方扩展，组件库由 [@apprat](https://gituhb.com/apprat) 创建和维护，此扩展由 [@lingbopro](https://github.com/lingbopro) 制作）  
+（非官方扩展，组件库由 [@apprat](https://gituhb.com/apprat) 创建和维护，此扩展由 [@lingbopro](https://github.com/lingbopro) 制作）
 
 ## 安装
 
 在 Visual Studio Code 的“扩展”页面下，搜索 `Sober.js` 并安装  
-你也可以从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=lingbopro.soberjs-vscode) 安装  
+你也可以从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=lingbopro.soberjs-vscode) 安装
 
-或者，你也可以从 [Release 页面](https://github.com/lingbopro/soberjs-vscode/releases) 下载 VSIX 文件，然后在 Visual Studio Code 中安装。  
-
+或者，你也可以从 [Release 页面](https://github.com/lingbopro/soberjs-vscode/releases) 下载 VSIX 文件，然后在 Visual Studio Code 中安装。
 
 ## 功能
 
-代码自动补全和悬停提示，包括：  
+代码自动补全和悬停提示，包括：
 
 - HTML 标签名
 - HTML 标签属性名称和枚举值
@@ -45,7 +44,7 @@
 - 一点 HTML 代码片段
 - Material 图标 SVG 补全
 
-目前已支持 `Sober.js 0.2.15` 的所有组件、CSS 变量（见下表）和 SVG 图标  
+目前已支持 `Sober.js 0.3.0` 的所有组件、CSS 变量（见下表）和 SVG 图标
 
 <details>
   <summary>支持的组件（点击展开）</summary>
@@ -177,11 +176,11 @@
 
 ### 功能展示
 
-还没弄（（（  
+还没弄（（（
 
 ## Release Notes
 
-见 [版本说明](./CHANGELOG.md)  
+见 [版本说明](./CHANGELOG.md)
 
 ## To-do
 
@@ -190,4 +189,3 @@
 - [x] 完成 CSS 变量名和枚举值补全
 - [x] 增加 SVG 图标补全
 - [ ] 使 SVG 图标补全可以补全填充图标，不仅是线条图标
-
