@@ -1,12 +1,9 @@
 {
   "version": 1.1,
-  "properties": [
+  "cssVariables": [
     {
       "name": "--ripple-color",
-      "description": {
-        "kind": "markdown",
-        "value": "波纹颜色\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple"
-      },
+      "description": "波纹颜色\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple",
       "references": [
         {
           "name": "文档: 波纹 Ripple",
@@ -16,10 +13,7 @@
     },
     {
       "name": "--ripple-opacity",
-      "description": {
-        "kind": "markdown",
-        "value": "波纹不透明度\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple"
-      },
+      "description": "波纹不透明度\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple",
       "references": [
         {
           "name": "文档: 波纹 Ripple",
@@ -29,10 +23,7 @@
     },
     {
       "name": "--border-radius",
-      "description": {
-        "kind": "markdown",
-        "value": "边框圆角\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
-      },
+      "description": "边框圆角\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker",
       "references": [
         {
           "name": "文档: 文本框 Text Field",
@@ -46,10 +37,7 @@
     },
     {
       "name": "--border-width",
-      "description": {
-        "kind": "markdown",
-        "value": "边框宽度\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
-      },
+      "description": "边框宽度\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker",
       "references": [
         {
           "name": "文档: 文本框 Text Field",
@@ -63,10 +51,7 @@
     },
     {
       "name": "--border-color",
-      "description": {
-        "kind": "markdown",
-        "value": "边框颜色\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
-      },
+      "description": "边框颜色\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker",
       "references": [
         {
           "name": "文档: 文本框 Text Field",
@@ -80,10 +65,7 @@
     },
     {
       "name": "--padding",
-      "description": {
-        "kind": "markdown",
-        "value": "边框内边距\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
-      },
+      "description": "边框内边距\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker",
       "references": [
         {
           "name": "文档: 文本框 Text Field",
@@ -97,10 +79,7 @@
     },
     {
       "name": "--field-border-radius",
-      "description": {
-        "kind": "markdown",
-        "value": "圆角\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
-      },
+      "description": "圆角\n\n**组件:**\n\n- `<s-field>` 表单域 Field",
       "default": "4px",
       "references": [
         {
@@ -111,10 +90,7 @@
     },
     {
       "name": "--field-border-width",
-      "description": {
-        "kind": "markdown",
-        "value": "边框宽度\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
-      },
+      "description": "边框宽度\n\n**组件:**\n\n- `<s-field>` 表单域 Field",
       "default": "1px",
       "references": [
         {
@@ -125,10 +101,7 @@
     },
     {
       "name": "--field-border-color",
-      "description": {
-        "kind": "markdown",
-        "value": "边框颜色\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
-      },
+      "description": "边框颜色\n\n**组件:**\n\n- `<s-field>` 表单域 Field",
       "default": "var(--s-color-outline, #777680)",
       "references": [
         {
@@ -139,10 +112,7 @@
     },
     {
       "name": "--field-padding",
-      "description": {
-        "kind": "markdown",
-        "value": "内边距\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
-      },
+      "description": "内边距\n\n**组件:**\n\n- `<s-field>` 表单域 Field",
       "default": "16px",
       "references": [
         {
@@ -153,15 +123,78 @@
     },
     {
       "name": "--field-focused-border-width",
-      "description": {
-        "kind": "markdown",
-        "value": "聚焦边框高度\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
-      },
+      "description": "聚焦边框高度\n\n**组件:**\n\n- `<s-field>` 表单域 Field",
       "default": "2px",
       "references": [
         {
           "name": "文档: 表单域 Field",
           "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "--checkbox-color",
+      "description": "Checkbox 的颜色\n\n**组件:**\n\n- `<s-checkbox>` 复选框 Checkbox",
+      "default": "var(--s-color-primary, #5256a9)",
+      "references": [
+        {
+          "name": "文档: 复选框 Checkbox",
+          "url": "https://soberjs.com/component/checkbox"
+        }
+      ]
+    },
+    {
+      "name": "--radio-button-color",
+      "description": "Radio Button 的颜色\n\n**组件:**\n\n- `<s-radio-button>` 单选按钮 Radio Button",
+      "default": "var(--s-color-primary, #5256a9)",
+      "references": [
+        {
+          "name": "文档: 单选按钮 Radio Button",
+          "url": "https://soberjs.com/component/radio-button"
+        }
+      ]
+    },
+    {
+      "name": "--text-field-border-radius",
+      "description": "Text Field 的圆角\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field",
+      "default": "4px",
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
+        }
+      ]
+    },
+    {
+      "name": "--text-field-border-width",
+      "description": "Text Field 的边框宽度\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field",
+      "default": "1px",
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
+        }
+      ]
+    },
+    {
+      "name": "--text-field-border-color",
+      "description": "Text Field 的边框颜色\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field",
+      "default": "var(--s-color-outline, #777680)",
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
+        }
+      ]
+    },
+    {
+      "name": "--text-field-padding",
+      "description": "Text Field 的内边距\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field",
+      "default": "16px",
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
         }
       ]
     }

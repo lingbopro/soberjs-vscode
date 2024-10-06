@@ -486,11 +486,57 @@
     },
     {
       "name": "s-text-field",
-      "description": "**文本框 Text Field**\n\n文本框是一个容器，它可以在内部放置 **input** 和 **textarea**，推荐使用 label 来替代 placeholder\n\n```html\n<s-text-field>\n  <input type=\"text\" placeholder=\"请输入名称\">\n  <s-icon slot=\"end\" type=\"favorite\"></s-icon>\n</s-text-field>\n\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon-button slot=\"end\">\n    <s-icon slot=\"end\" type=\"star\"></s-icon>\n  </s-icon-button>\n</s-text-field>\n```\n\n在使用 **textarea** 时，它的高度将会自适应\n\n你也可以设置一个最小值或最大值来定义文本框的高度\n\n```html\n<s-text-field label=\"请输入名称\">\n  <textarea style=\"min-height: 112px\"></textarea>\n</s-text-field>\n```\n\n设置 **display: grid** 来作为块元素占满一行\n\n由于内部封装性较高，定义样式变得很复杂，因此我们开放了一些CSS变量来允许你定义一些样式\n\n**属性:**\n\n- `label` (`string`): 标签文本\n\n**插槽:**\n- `end`: 结束\n\n**CSS 变量:**\n\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
+      "description": "**文本框 Text Field**\n\n`Text Field` 是一个容器组件，可以在内部放置 `input` 和 `textarea` 元素。推荐使用 `label` 属性来替代 `placeholder`，从而在表单交互中提升可访问性。\n\n```html\n<s-text-field>\n  <input type=\"text\" placeholder=\"请输入名称\">\n  <s-icon slot=\"end\" type=\"favorite\"></s-icon>\n</s-text-field>\n\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon-button slot=\"end\">\n    <s-icon slot=\"end\" type=\"star\"></s-icon>\n  </s-icon-button>\n</s-text-field>\n```\n\n在使用 `textarea` 时，组件高度将会自适应，你可以通过设置 `min-height` 和 `max-height` 来定义文本框的最小和最大高度。\n\n```html\n<s-text-field label=\"请输入名称\">\n  <textarea style=\"min-height: 112px\"></textarea>\n</s-text-field>\n```\n\n`Text Field` 支持 `display: grid` 样式，从而作为块元素占满一行。\n\n由于组件内部封装性较高，样式自定义变得复杂，因此开放了一些 CSS 变量来允许你自定义样式。\n\n**属性:**\n\n- `label` (`string`): 标签文本，用于替代 `placeholder`。\n- `value` (`string`): 文本框中的初始值。\n- `placeholder` (`string`): 用于显示在文本框中的占位符文本。\n\n**插槽:**\n\n- `start`: 插槽用于放置在文本框开始位置的内容（如图标或按钮）。\n- `end`: 插槽用于放置在文本框结束位置的内容（如图标或按钮）。\n\n**事件:**\n\n- `input`: 文本输入时触发。\n- `change`: 文本框值变化时触发。\n\n**CSS 变量:**\n\n- `--text-field-border-radius`: 文本框的圆角，默认值为 `4px`。\n- `--text-field-border-width`: 文本框的边框宽度，默认值为 `1px`。\n- `--text-field-border-color`: 文本框的边框颜色，默认值为 `var(--s-color-outline, #777680)`。\n- `--text-field-padding`: 文本框的内边距，默认值为 `16px`。\n\n**示例:**\n\n```html\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon slot=\"end\" type=\"search\"></s-icon>\n</s-text-field>\n```\n\n你可以在 `<s-text-field>` 组件中加入 `input`、`textarea` 或其他表单元素，并结合 `slot` 插槽在文本框内放置额外内容（如图标或按钮）。",
       "attributes": [
         {
           "name": "label",
-          "description": "标签文本"
+          "description": "标签文本，用于替代 `placeholder` 来描述文本框内容。",
+          "type": "string",
+          "defaultValue": ""
+        },
+        {
+          "name": "value",
+          "description": "文本框中的初始值。",
+          "type": "string",
+          "defaultValue": ""
+        },
+        {
+          "name": "placeholder",
+          "description": "用于显示在文本框中的占位符文本。",
+          "type": "string",
+          "defaultValue": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "input",
+          "description": "当用户在文本框中输入时触发。"
+        },
+        {
+          "name": "change",
+          "description": "当文本框值发生变化时触发。"
+        }
+      ],
+      "cssVariables": [
+        {
+          "name": "--text-field-border-radius",
+          "description": "文本框的圆角。",
+          "default": "4px"
+        },
+        {
+          "name": "--text-field-border-width",
+          "description": "文本框的边框宽度。",
+          "default": "1px"
+        },
+        {
+          "name": "--text-field-border-color",
+          "description": "文本框的边框颜色。",
+          "default": "var(--s-color-outline, #777680)"
+        },
+        {
+          "name": "--text-field-padding",
+          "description": "文本框的内边距。",
+          "default": "16px"
         }
       ],
       "references": [
@@ -503,7 +549,7 @@
           "url": "https://github.com/apprat/sober/blob/main/src/text-field.ts"
         }
       ]
-    },
+    },      
     {
       "name": "s-rate",
       "description": "**评分 Rate**\n\n```html\n<s-rate></s-rate>\n```\n\n设置 `readonly` 启用只读模式。\n\n使用 `track` 和 `indicator` 插槽来自定义图标，你可以使用 svg 或者 icon 组件。\n\n```html\n<s-rate>\n  <s-icon slot=\"track\" type=\"favorite\"></s-icon>\n  <s-icon slot=\"indicator\" type=\"favorite\"></s-icon>\n</s-rate>\n```\n\n> 如果你希望自定义大小，那么请使用 `font-size` 来设置，该组件需要保持宽高比例，单独设置 width 和 height 可能会导致变形。\n\n**属性:**\n\n- `readonly` (`boolean`): 是否启用只读模式\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发\n- `input`: 值变化时触发\n\n**插槽:**\n- `track`: 未选中\n- `indicator`: 已选中",
@@ -551,15 +597,38 @@
     },
     {
       "name": "s-picker",
-      "description": "**选择框 Picker**\n\n通常用于单选数据，它的目标是替代 `select`。\n\n```html\n<s-picker label=\"选择地区\">\n  <s-picker-item>贵阳</s-picker-item>\n  <s-picker-item>北京</s-picker-item>\n  <s-picker-item>上海</s-picker-item>\n  <s-picker-item>深圳</s-picker-item>\n</s-picker>\n```\n\n由于内部封装性较高，定义样式变得很复杂，因此我们开放了一些CSS变量来允许你定义一些样式\n\n**属性:**\n\n- `label` (`string`): 标签文本\n- `options` _[只读]_ (`Item[]`): 子项目\n- `selectedIndex` (`number`): 当前选中下标\n\n**插槽:**\n- `trigger`: 触发\n\n**事件:**\n- `change`: 选中变化后触发\n\n**CSS 变量:**\n\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
+      "description": "**选择框 Picker**\n\n通常用于单选数据，它的目标是替代 `select` 元素。`s-picker` 组件可以通过定义多个 `s-picker-item` 选项来进行选择，支持标签文本、默认值设置以及自定义触发器。\n\n```html\n<s-picker label=\"选择地区\">\n  <s-picker-item value=\"gui yang\">贵阳</s-picker-item>\n  <s-picker-item value=\"bei jing\">北京</s-picker-item>\n  <s-picker-item value=\"shang hai\">上海</s-picker-item>\n  <s-picker-item value=\"shen zhen\">深圳</s-picker-item>\n  <s-picker-item value=\"cheng du\">成都</s-picker-item>\n  <s-picker-item value=\"wu han\">武汉</s-picker-item>\n  <s-picker-item value=\"nan chang\">南昌</s-picker-item>\n  <s-picker-item value=\"hang zhou\">杭州</s-picker-item>\n</s-picker>\n```\n\n你可以在 `s-picker-item` 上设置 `value` 来定义选项的值，并使用 `s-picker` 的 `value` 属性来设置默认选中的值。\n\n**属性:**\n\n- `label` (`string`): 标签文本，用于显示在选择框的触发按钮上。\n- `value` (`string`): 当前选中值，设置为选项 `s-picker-item` 中的 `value` 属性值。\n- `options` _[只读]_ (`PickerItem[]`): 子项目数组，默认为 `[]`。\n- `selectedIndex` (`number`): 当前选中下标，默认为 `-1`。\n- `show()` (`Function`): 显示选择框。\n- `dismiss()` (`Function`): 隐藏选择框。\n- `toggle()` (`Function`): 切换选择框的显示和隐藏状态。\n\n**事件:**\n\n- `change`: 选中值变化后触发。\n\n**插槽:**\n\n- `trigger`: 自定义触发器插槽。\n\n**CSS 变量:**\n\n- `--picker-border-radius`: 圆角，默认值为 `4px`。\n- `--picker-border-width`: 边框宽度，默认值为 `1px`。\n- `--picker-border-color`: 边框颜色，默认值为 `var(--s-color-outline, #777680)`。\n- `--picker-padding`: 内边距，默认值为 `16px`。\n- `--picker-height`: 高度，默认值为 `48px`。",
       "attributes": [
         {
           "name": "label",
-          "description": "标签文本"
+          "description": "设置选择框的标签文本，用于显示在选择框触发按钮上。",
+          "type": "string"
         },
         {
-          "name": "onchange",
-          "description": "选中变化后触发"
+          "name": "value",
+          "description": "设置选中的值，对应子项 `s-picker-item` 的 `value` 属性。",
+          "type": "string",
+          "defaultValue": ""
+        },
+        {
+          "name": "selectedIndex",
+          "description": "当前选中下标。",
+          "type": "number",
+          "defaultValue": "-1"
+        }
+      ],
+      "methods": [
+        {
+          "name": "show",
+          "description": "显示选择框。"
+        },
+        {
+          "name": "dismiss",
+          "description": "隐藏选择框。"
+        },
+        {
+          "name": "toggle",
+          "description": "切换选择框的显示与隐藏状态。"
         }
       ],
       "references": [
@@ -575,12 +644,19 @@
     },
     {
       "name": "s-picker-item",
-      "description": "**选择框项目 Picker Item**\n\n作为 `s-picker` 的子项使用。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中。",
+      "description": "**选择框项目 Picker Item**\n\n作为 `s-picker` 组件的子组件使用，用于定义每个选择项。每个 `s-picker-item` 需要设置 `value` 属性来代表其选中值。\n\n**属性:**\n\n- `value` (`string`): 项目的值，用于标识该项被选中时的返回值。\n- `selected` (`boolean`): 是否选中该项，默认为 `false`。\n\n**插槽:**\n- `start`: 项目内容开始位置的插槽\n- `end`: 项目内容结束位置的插槽",
       "attributes": [
         {
+          "name": "value",
+          "description": "项目的值，用于标识该项被选中时的返回值。",
+          "type": "string",
+          "defaultValue": ""
+        },
+        {
           "name": "selected",
-          "description": "是否选中",
-          "valueSet": "boolean"
+          "description": "是否选中该项，默认为 `false`。",
+          "type": "boolean",
+          "defaultValue": "false"
         }
       ],
       "references": [
@@ -590,10 +666,10 @@
         },
         {
           "name": "源代码",
-          "url": "https://github.com/apprat/sober/blob/main/src/picker.ts"
+          "url": "https://github.com/apprat/sober/blob/main/src/picker-item.ts"
         }
       ]
-    },
+    },    
     {
       "name": "s-divider",
       "description": "**分割线 Divider**\n\n```html\n<s-divider></s-divider>\n```",
@@ -824,7 +900,7 @@
     },
     {
       "name": "s-navigation",
-      "description": "**导航栏 Navigation**\n\n导航组件用于在应用中进行页面切换或执行其他操作。支持图标、文本、徽章插槽，以及导轨模式。\n\n```html\n<s-navigation>\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n  </s-navigation-item>\n</s-navigation>\n\n<s-navigation mode=\"rail\">\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2\"></div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3\"></div>\n  </s-navigation-item>\n</s-navigation>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置导轨模式。\n\n**事件:**\n- `change`: 选中变化后触发。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽",
+      "description": "**导航栏 Navigation**\n\n导航组件用于在应用中进行页面切换或执行其他操作。支持图标、文本、徽章插槽，以及导轨模式。\n\n```html\n<s-navigation>\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n    <s-badge slot=\"badge\"></s-badge>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n    <s-badge slot=\"badge\">99</s-badge>\n  </s-navigation-item>\n</s-navigation>\n\n<s-navigation mode=\"rail\">\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n  </s-navigation-item>\n</s-navigation>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置导轨模式，支持 `bottom` 和 `rail`。\n- `value` (`string`): 选中值，默认值为 `null`。\n- `options` (`Item[]`): 子项目数组，默认值为 `[]`。\n- `selectedIndex` (`number`): 当前选中下标，默认值为 `-1`。\n\n**事件:**\n\n- `change`: 选中变化后触发。\n\n**插槽:**\n\n- `start`: 开始插槽\n- `end`: 结束插槽",
       "attributes": [
         {
           "name": "mode",
@@ -839,6 +915,24 @@
               "description": "导轨模式"
             }
           ]
+        },
+        {
+          "name": "value",
+          "description": "选中值",
+          "type": "string",
+          "defaultValue": "null"
+        },
+        {
+          "name": "options",
+          "description": "子项目数组",
+          "type": "Item[]",
+          "defaultValue": "[]"
+        },
+        {
+          "name": "selectedIndex",
+          "description": "当前选中下标",
+          "type": "number",
+          "defaultValue": "-1"
         }
       ],
       "references": [
@@ -854,12 +948,17 @@
     },
     {
       "name": "s-navigation-item",
-      "description": "**导航栏子项 Navigation Item**\n\n导航项组件，作为 `s-navigation` 组件的子组件。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中，默认值为 `false`。\n\n**插槽:**\n- `icon`: 图标\n- `text`: 文本\n- `badge`: 徽章",
+      "description": "**导航栏子项 Navigation Item**\n\n导航项组件，作为 `s-navigation` 组件的子组件。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中，默认值为 `false`。\n- `value` (`string`): 选中项的值。\n\n**插槽:**\n\n- `icon`: 图标\n- `text`: 文本\n- `badge`: 徽章\n\n**事件:**\n\n- `click`: 点击后触发。",
       "attributes": [
         {
           "name": "selected",
           "description": "是否选中，默认值为 `false`。",
           "valueSet": "boolean"
+        },
+        {
+          "name": "value",
+          "description": "选中项的值。",
+          "valueSet": "string"
         }
       ],
       "references": [
@@ -869,10 +968,10 @@
         },
         {
           "name": "源代码",
-          "url": "https://github.com/apprat/sober/blob/main/src/navigation.ts"
+          "url": "https://github.com/apprat/sober/blob/main/src/navigation-item.ts"
         }
       ]
-    },
+    },    
     {
       "name": "s-appbar",
       "description": "**应用栏 Appbar**\n\nAppbar 的表现更像一个容器，它没有事件和行为。\n\n在屏幕宽度小于 **840px** 时，它的高度会变为 **56px**。\n\n支持导航、标题和操作按钮的插槽。\n\n你可以嵌套该组件，内部的 Appbar 会居中并且设置一个最大宽度，默认为 **1280px**。\n\n```html\n<s-appbar>\n  <!--左侧菜单按钮-->\n  <s-icon-button slot=\"navigation\">\n    <s-icon type=\"menu\"></s-icon>\n  </s-icon-button>\n  <!--标题-->\n  <div slot=\"headline\"> Title </div>\n  <!--右侧操作按钮-->\n  <s-icon-button slot=\"action\">\n    <s-icon type=\"search\"></s-icon>\n  </s-icon-button>\n</s-appbar>\n```\n\n**插槽:**\n- `navigation`: 导航\n- `headline`: 标题\n- `action`: 操作",
