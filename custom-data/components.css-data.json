@@ -94,6 +94,76 @@
           "url": "https://soberjs.com/component/picker"
         }
       ]
+    },
+    {
+      "name": "--field-border-radius",
+      "description": {
+        "kind": "markdown",
+        "value": "圆角\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
+      "default": "4px",
+      "references": [
+        {
+          "name": "文档: 表单域 Field",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "--field-border-width",
+      "description": {
+        "kind": "markdown",
+        "value": "边框宽度\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
+      "default": "1px",
+      "references": [
+        {
+          "name": "文档: 表单域 Field",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "--field-border-color",
+      "description": {
+        "kind": "markdown",
+        "value": "边框颜色\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
+      "default": "var(--s-color-outline, #777680)",
+      "references": [
+        {
+          "name": "文档: 表单域 Field",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "--field-padding",
+      "description": {
+        "kind": "markdown",
+        "value": "内边距\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
+      "default": "16px",
+      "references": [
+        {
+          "name": "文档: 表单域 Field",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "--field-focused-border-width",
+      "description": {
+        "kind": "markdown",
+        "value": "聚焦边框高度\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
+      "default": "2px",
+      "references": [
+        {
+          "name": "文档: 表单域 Field",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
     }
   ]
 }

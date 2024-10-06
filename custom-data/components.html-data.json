@@ -1113,7 +1113,55 @@
           "url": "https://github.com/apprat/sober/blob/main/src/table.ts"
         }
       ]
-    }
+    },
+    {
+      "name": "s-field",
+      "description": "**Field**\n\n这是一个容器组件，通常用于提供表单输入框的样式包装。它支持多个 CSS 变量和自定义槽位，特别适用于移动端界面。\n\n```html\n<s-field>\n  <div slot=\"label\">请输入</div>\n  <div slot=\"view\">View content here</div>\n</s-field>\n```\n\n**属性:**\n\n- `focused` (`boolean`): 是否聚焦，默认值为 `false`\n- `labelFixed` (`boolean`): 固定Label，默认值为 `true`\n\n**插槽:**\n- `label`: Label 区域\n- `view`: 主视图区域\n\n**CSS 变量:**\n\n- `--field-border-radius`: 圆角 (默认: 4px)\n- `--field-border-width`: 边框宽度 (默认: 1px)\n- `--field-border-color`: 边框颜色 (默认: `var(--s-color-outline, #777680)`)\n- `--field-padding`: 内边距 (默认: 16px)\n- `--field-focused-border-width`: 聚焦时的边框宽度 (默认: 2px)",
+      "attributes": [
+        {
+          "name": "focused",
+          "description": "是否聚焦",
+          "values": [
+            { "name": "true" },
+            { "name": "false" }
+          ]
+        },
+        {
+          "name": "labelFixed",
+          "description": "是否固定标签",
+          "values": [
+            { "name": "true" },
+            { "name": "false" }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "s-menu",
+      "description": "**Menu**\n\n这是一个菜单容器组件，通常用于定义导航栏或侧边栏。支持多个 CSS 变量和自定义插槽，适用于桌面端和移动端界面。\n\n```html\n<s-menu>\n  <div slot=\"label\">控制台</div>\n  <s-menu-item checked=\"true\">\n    <s-icon slot=\"start\" type=\"home\"></s-icon>\n    首页\n  </s-menu-item>\n  <s-menu-item>\n    <s-icon slot=\"start\" type=\"search\"></s-icon>\n    用户\n    <s-icon slot=\"end\" type=\"arrow_drop_right\"></s-icon>\n  </s-menu-item>\n  <s-menu-item>\n    <s-icon slot=\"start\" type=\"light_mode\"></s-icon>\n    管理资源\n  </s-menu-item>\n  <s-menu-item>\n    <s-icon slot=\"start\" type=\"dark_mode\"></s-icon>\n    模式切换\n  </s-menu-item>\n</s-menu>\n```\n\n**属性:**\n\n- `checked` (`boolean`): 菜单项是否选中，默认值为 `false`\n\n**插槽:**\n- `label`: 用于放置菜单标签的区域\n- `start`: 菜单项图标的开始位置\n- `end`: 菜单项图标的结束位置\n\n**CSS 变量:**\n\n- `--menu-bg-color`: 菜单背景色 (默认: `#1e1e1e`)\n- `--menu-item-color`: 菜单项文字颜色 (默认: `#ffffff`)\n- `--menu-item-hover-bg-color`: 菜单项悬停背景色 (默认: `#333`)\n- `--menu-icon-size`: 图标大小 (默认: 24px)\n",
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "是否选中菜单项",
+          "values": [
+            { "name": "true" },
+            { "name": "false" }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/menu"
+        }
+      ]
+    }      
   ],
   "valueSets": [
     {
