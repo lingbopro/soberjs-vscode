@@ -1,9 +1,12 @@
 {
   "version": 1.1,
-  "cssVariables": [
+  "properties": [
     {
       "name": "--ripple-color",
-      "description": "波纹颜色\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple",
+      "description": {
+        "kind": "markdown",
+        "value": "波纹颜色\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple"
+      },
       "references": [
         {
           "name": "文档: 波纹 Ripple",
@@ -13,7 +16,10 @@
     },
     {
       "name": "--ripple-opacity",
-      "description": "波纹不透明度\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple",
+      "description": {
+        "kind": "markdown",
+        "value": "波纹不透明度\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple"
+      },
       "references": [
         {
           "name": "文档: 波纹 Ripple",
@@ -23,7 +29,10 @@
     },
     {
       "name": "--border-radius",
-      "description": "边框圆角\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker",
+      "description": {
+        "kind": "markdown",
+        "value": "边框圆角\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
+      },
       "references": [
         {
           "name": "文档: 文本框 Text Field",
@@ -37,7 +46,10 @@
     },
     {
       "name": "--border-width",
-      "description": "边框宽度\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker",
+      "description": {
+        "kind": "markdown",
+        "value": "边框宽度\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
+      },
       "references": [
         {
           "name": "文档: 文本框 Text Field",
@@ -51,7 +63,10 @@
     },
     {
       "name": "--border-color",
-      "description": "边框颜色\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker",
+      "description": {
+        "kind": "markdown",
+        "value": "边框颜色\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
+      },
       "references": [
         {
           "name": "文档: 文本框 Text Field",
@@ -65,7 +80,10 @@
     },
     {
       "name": "--padding",
-      "description": "边框内边距\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker",
+      "description": {
+        "kind": "markdown",
+        "value": "边框内边距\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field\n- `<s-picker>` 选择框 Picker"
+      },
       "references": [
         {
           "name": "文档: 文本框 Text Field",
@@ -79,7 +97,10 @@
     },
     {
       "name": "--field-border-radius",
-      "description": "圆角\n\n**组件:**\n\n- `<s-field>` 表单域 Field",
+      "description": {
+        "kind": "markdown",
+        "value": "圆角\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
       "default": "4px",
       "references": [
         {
@@ -90,7 +111,10 @@
     },
     {
       "name": "--field-border-width",
-      "description": "边框宽度\n\n**组件:**\n\n- `<s-field>` 表单域 Field",
+      "description": {
+        "kind": "markdown",
+        "value": "边框宽度\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
       "default": "1px",
       "references": [
         {
@@ -101,7 +125,10 @@
     },
     {
       "name": "--field-border-color",
-      "description": "边框颜色\n\n**组件:**\n\n- `<s-field>` 表单域 Field",
+      "description": {
+        "kind": "markdown",
+        "value": "边框颜色\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
       "default": "var(--s-color-outline, #777680)",
       "references": [
         {
@@ -112,7 +139,10 @@
     },
     {
       "name": "--field-padding",
-      "description": "内边距\n\n**组件:**\n\n- `<s-field>` 表单域 Field",
+      "description": {
+        "kind": "markdown",
+        "value": "内边距\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
       "default": "16px",
       "references": [
         {
@@ -123,7 +153,10 @@
     },
     {
       "name": "--field-focused-border-width",
-      "description": "聚焦边框高度\n\n**组件:**\n\n- `<s-field>` 表单域 Field",
+      "description": {
+        "kind": "markdown",
+        "value": "聚焦边框高度\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
       "default": "2px",
       "references": [
         {
@@ -134,7 +167,10 @@
     },
     {
       "name": "--checkbox-color",
-      "description": "Checkbox 的颜色\n\n**组件:**\n\n- `<s-checkbox>` 复选框 Checkbox",
+      "description": {
+        "kind": "markdown",
+        "value": "Checkbox 的颜色\n\n**组件:**\n\n- `<s-checkbox>` 复选框 Checkbox"
+      },
       "default": "var(--s-color-primary, #5256a9)",
       "references": [
         {
@@ -145,7 +181,10 @@
     },
     {
       "name": "--radio-button-color",
-      "description": "Radio Button 的颜色\n\n**组件:**\n\n- `<s-radio-button>` 单选按钮 Radio Button",
+      "description": {
+        "kind": "markdown",
+        "value": "Radio Button 的颜色\n\n**组件:**\n\n- `<s-radio-button>` 单选按钮 Radio Button"
+      },
       "default": "var(--s-color-primary, #5256a9)",
       "references": [
         {
@@ -156,7 +195,10 @@
     },
     {
       "name": "--text-field-border-radius",
-      "description": "Text Field 的圆角\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field",
+      "description": {
+        "kind": "markdown",
+        "value": "Text Field 的圆角\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+      },
       "default": "4px",
       "references": [
         {
@@ -167,7 +209,10 @@
     },
     {
       "name": "--text-field-border-width",
-      "description": "Text Field 的边框宽度\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field",
+      "description": {
+        "kind": "markdown",
+        "value": "Text Field 的边框宽度\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+      },
       "default": "1px",
       "references": [
         {
@@ -178,7 +223,10 @@
     },
     {
       "name": "--text-field-border-color",
-      "description": "Text Field 的边框颜色\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field",
+      "description": {
+        "kind": "markdown",
+        "value": "Text Field 的边框颜色\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+      },
       "default": "var(--s-color-outline, #777680)",
       "references": [
         {
@@ -189,7 +237,10 @@
     },
     {
       "name": "--text-field-padding",
-      "description": "Text Field 的内边距\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field",
+      "description": {
+        "kind": "markdown",
+        "value": "Text Field 的内边距\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+      },
       "default": "16px",
       "references": [
         {
