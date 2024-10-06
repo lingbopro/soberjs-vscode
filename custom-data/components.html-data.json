@@ -486,7 +486,7 @@
     },
     {
       "name": "s-text-field",
-      "description": "**文本框 Text Field**\n\n`Text Field` 是一个容器组件，可以在内部放置 `input` 和 `textarea` 元素。推荐使用 `label` 属性来替代 `placeholder`，从而在表单交互中提升可访问性。\n\n```html\n<s-text-field>\n  <input type=\"text\" placeholder=\"请输入名称\">\n  <s-icon slot=\"end\" type=\"favorite\"></s-icon>\n</s-text-field>\n\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon-button slot=\"end\">\n    <s-icon slot=\"end\" type=\"star\"></s-icon>\n  </s-icon-button>\n</s-text-field>\n```\n\n在使用 `textarea` 时，组件高度将会自适应，你可以通过设置 `min-height` 和 `max-height` 来定义文本框的最小和最大高度。\n\n```html\n<s-text-field label=\"请输入名称\">\n  <textarea style=\"min-height: 112px\"></textarea>\n</s-text-field>\n```\n\n`Text Field` 支持 `display: grid` 样式，从而作为块元素占满一行。\n\n由于组件内部封装性较高，样式自定义变得复杂，因此开放了一些 CSS 变量来允许你自定义样式。\n\n**属性:**\n\n- `label` (`string`): 标签文本，用于替代 `placeholder`。\n- `value` (`string`): 文本框中的初始值。\n- `placeholder` (`string`): 用于显示在文本框中的占位符文本。\n\n**插槽:**\n\n- `start`: 插槽用于放置在文本框开始位置的内容（如图标或按钮）。\n- `end`: 插槽用于放置在文本框结束位置的内容（如图标或按钮）。\n\n**事件:**\n\n- `input`: 文本输入时触发。\n- `change`: 文本框值变化时触发。\n\n**CSS 变量:**\n\n- `--text-field-border-radius`: 文本框的圆角，默认值为 `4px`。\n- `--text-field-border-width`: 文本框的边框宽度，默认值为 `1px`。\n- `--text-field-border-color`: 文本框的边框颜色，默认值为 `var(--s-color-outline, #777680)`。\n- `--text-field-padding`: 文本框的内边距，默认值为 `16px`。\n\n**示例:**\n\n```html\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon slot=\"end\" type=\"search\"></s-icon>\n</s-text-field>\n```\n\n你可以在 `<s-text-field>` 组件中加入 `input`、`textarea` 或其他表单元素，并结合 `slot` 插槽在文本框内放置额外内容（如图标或按钮）。",
+      "description": "**文本框 Text Field**\n\n`Text Field` 是一个容器组件，可以在内部放置 `input` 和 `textarea` 元素。推荐使用 `label` 属性来替代 `placeholder`，从而在表单交互中提升可访问性。\n\n```html\n<s-text-field>\n  <input type=\"text\" placeholder=\"请输入名称\">\n  <s-icon slot=\"end\" type=\"favorite\"></s-icon>\n</s-text-field>\n\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon-button slot=\"end\">\n    <s-icon slot=\"end\" type=\"star\"></s-icon>\n  </s-icon-button>\n</s-text-field>\n```\n\n在使用 `textarea` 时，组件高度将会自适应，你可以通过设置 `min-height` 和 `max-height` 来定义文本框的最小和最大高度。\n\n```html\n<s-text-field label=\"请输入名称\">\n  <textarea style=\"min-height: 112px\"></textarea>\n</s-text-field>\n```\n\n`Text Field` 支持 `display: grid` 样式，从而作为块元素占满一行。\n\n由于组件内部封装性较高，样式自定义变得复杂，因此开放了一些 CSS 变量来允许你自定义样式。\n\n**属性:**\n\n- `label` (`string`): 标签文本，用于替代 `placeholder`。\n- `value` (`string`): 文本框中的初始值。\n- `placeholder` (`string`): 用于显示在文本框中的占位符文本。\n\n**插槽:**\n\n- `start`: 插槽用于放置在文本框开始位置的内容（如图标或按钮）。\n- `end`: 插槽用于放置在文本框结束位置的内容（如图标或按钮）。\n\n**CSS 变量:**\n\n- `--text-field-border-radius`: 文本框的圆角，默认值为 `4px`。\n- `--text-field-border-width`: 文本框的边框宽度，默认值为 `1px`。\n- `--text-field-border-color`: 文本框的边框颜色，默认值为 `var(--s-color-outline, #777680)`。\n- `--text-field-padding`: 文本框的内边距，默认值为 `16px`。\n\n**示例:**\n\n```html\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon slot=\"end\" type=\"search\"></s-icon>\n</s-text-field>\n```\n\n你可以在 `<s-text-field>` 组件中加入 `input`、`textarea` 或其他表单元素，并结合 `slot` 插槽在文本框内放置额外内容（如图标或按钮）。",
       "attributes": [
         {
           "name": "label",
@@ -507,38 +507,6 @@
           "defaultValue": ""
         }
       ],
-      "events": [
-        {
-          "name": "input",
-          "description": "当用户在文本框中输入时触发。"
-        },
-        {
-          "name": "change",
-          "description": "当文本框值发生变化时触发。"
-        }
-      ],
-      "cssVariables": [
-        {
-          "name": "--text-field-border-radius",
-          "description": "文本框的圆角。",
-          "default": "4px"
-        },
-        {
-          "name": "--text-field-border-width",
-          "description": "文本框的边框宽度。",
-          "default": "1px"
-        },
-        {
-          "name": "--text-field-border-color",
-          "description": "文本框的边框颜色。",
-          "default": "var(--s-color-outline, #777680)"
-        },
-        {
-          "name": "--text-field-padding",
-          "description": "文本框的内边距。",
-          "default": "16px"
-        }
-      ],
       "references": [
         {
           "name": "文档",
@@ -549,7 +517,7 @@
           "url": "https://github.com/apprat/sober/blob/main/src/text-field.ts"
         }
       ]
-    },      
+    },    
     {
       "name": "s-rate",
       "description": "**评分 Rate**\n\n```html\n<s-rate></s-rate>\n```\n\n设置 `readonly` 启用只读模式。\n\n使用 `track` 和 `indicator` 插槽来自定义图标，你可以使用 svg 或者 icon 组件。\n\n```html\n<s-rate>\n  <s-icon slot=\"track\" type=\"favorite\"></s-icon>\n  <s-icon slot=\"indicator\" type=\"favorite\"></s-icon>\n</s-rate>\n```\n\n> 如果你希望自定义大小，那么请使用 `font-size` 来设置，该组件需要保持宽高比例，单独设置 width 和 height 可能会导致变形。\n\n**属性:**\n\n- `readonly` (`boolean`): 是否启用只读模式\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发\n- `input`: 值变化时触发\n\n**插槽:**\n- `track`: 未选中\n- `indicator`: 已选中",
@@ -666,7 +634,7 @@
         },
         {
           "name": "源代码",
-          "url": "https://github.com/apprat/sober/blob/main/src/picker-item.ts"
+          "url": "https://github.com/apprat/sober/blob/main/src/picker.ts"
         }
       ]
     },    
