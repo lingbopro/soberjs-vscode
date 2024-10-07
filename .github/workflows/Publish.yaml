@@ -28,10 +28,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: soberjs-vscode-${{ needs.build.outputs.extension-version }}.vsix
+          path: ./
+      - name: Extract Artifact
         shell: bash
         run: |
-          curl -o extension.zip '${{ needs.build.outputs.artifact-url }}'
-          echo
           unzip extension.zip
           echo "extensionFileName=soberjs-vscode-${{ needs.build.outputs.extension-version }}.vsix >> $GITUHB_ENV"
       - name: Publish to Visual Studio Marketplace
