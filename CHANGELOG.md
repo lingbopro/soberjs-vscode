@@ -7,6 +7,7 @@
 - 增加 Menu 组件
 - 补充了 Popup Menu Item 组件
 - 更新工作流
+- 增加了 Field、Text Field、Picker、Checkbox、Radio Button 的 CSS 变量支持
 
 ## v0.6.0
 

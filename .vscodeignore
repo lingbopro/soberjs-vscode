@@ -5,4 +5,5 @@ out/**
 docs/**
 .gitignore
 .gitattributes
+.prettierrc
 CONTRIBUTING.md

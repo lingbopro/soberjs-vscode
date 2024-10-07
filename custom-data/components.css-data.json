@@ -100,7 +100,7 @@
       "name": "--field-border-radius",
       "description": {
         "kind": "markdown",
-        "value": "圆角\n\n默认为 `4px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+        "value": "圆角\n\n**默认值:** `4px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
       },
       "references": [
         {
@@ -113,7 +113,7 @@
       "name": "--field-border-width",
       "description": {
         "kind": "markdown",
-        "value": "边框宽度\n\n默认为 `1px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+        "value": "边框宽度\n\n**默认值:** `1px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
       },
       "references": [
         {
@@ -126,7 +126,7 @@
       "name": "--field-border-color",
       "description": {
         "kind": "markdown",
-        "value": "边框颜色\n\n默认为 `var(--s-color-outline, #777680)`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+        "value": "边框颜色\n\n**默认值:** `var(--s-color-outline, #777680)`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
       },
       "references": [
         {
@@ -139,7 +139,7 @@
       "name": "--field-padding",
       "description": {
         "kind": "markdown",
-        "value": "内边距\n\n默认为 `16px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+        "value": "内边距\n\n**默认值:** `16px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
       },
       "references": [
         {
@@ -152,7 +152,7 @@
       "name": "--field-focused-border-width",
       "description": {
         "kind": "markdown",
-        "value": "聚焦边框高度\n\n默认为 `2px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+        "value": "聚焦边框高度\n\n**默认值:** `2px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
       },
       "references": [
         {
@@ -165,7 +165,7 @@
       "name": "--checkbox-color",
       "description": {
         "kind": "markdown",
-        "value": "Checkbox 的颜色\n\n默认为 `var(--s-color-primary, #5256a9)`\n\n**组件:**\n\n- `<s-checkbox>` 复选框 Checkbox"
+        "value": "Checkbox 的颜色\n\n**默认值:** `var(--s-color-primary, #5256a9)`\n\n**组件:**\n\n- `<s-checkbox>` 复选框 Checkbox"
       },
       "references": [
         {
@@ -178,7 +178,7 @@
       "name": "--radio-button-color",
       "description": {
         "kind": "markdown",
-        "value": "Radio Button 的颜色\n\n默认为 `var(--s-color-primary, #5256a9)`\n\n**组件:**\n\n- `<s-radio-button>` 单选按钮 Radio Button"
+        "value": "Radio Button 的颜色\n\n**默认值:** `var(--s-color-primary, #5256a9)`\n\n**组件:**\n\n- `<s-radio-button>` 单选按钮 Radio Button"
       },
       "references": [
         {
@@ -191,7 +191,7 @@
       "name": "--text-field-border-radius",
       "description": {
         "kind": "markdown",
-        "value": "Text Field 的圆角\n\n默认为 `4px`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+        "value": "Text Field 的圆角\n\n**默认值:** `4px`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
       },
       "references": [
         {
@@ -204,7 +204,7 @@
       "name": "--text-field-border-width",
       "description": {
         "kind": "markdown",
-        "value": "Text Field 的边框宽度\n\n默认为 `1px`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+        "value": "Text Field 的边框宽度\n\n**默认值:** `1px`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
       },
       "references": [
         {
@@ -217,7 +217,7 @@
       "name": "--text-field-border-color",
       "description": {
         "kind": "markdown",
-        "value": "Text Field 的边框颜色\n\n默认为 `var(--s-color-outline, #777680)`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+        "value": "Text Field 的边框颜色\n\n**默认值:** `var(--s-color-outline, #777680)`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
       },
       "references": [
         {
@@ -230,7 +230,7 @@
       "name": "--text-field-padding",
       "description": {
         "kind": "markdown",
-        "value": "Text Field 的内边距\n\n默认为 `16px`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+        "value": "Text Field 的内边距\n\n**默认值:** `16px`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
       },
       "references": [
         {

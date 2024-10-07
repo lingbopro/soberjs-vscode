@@ -36,7 +36,7 @@ jobs:
           echo "extensionFileName=soberjs-vscode-${{ needs.build.outputs.extension-version }}.vsix >> $GITUHB_ENV"
       - name: Publish to Visual Studio Marketplace
         uses: HaaLeo/publish-vscode-extension@v1
-        if: ${{ ! inputs.prerelease}}
+        if: ${{ ! inputs.prerelease }}
         with:
           pat: ${{ secrets.AZURE_TOKEN }}
           registryUrl: https://marketplace.visualstudio.com
