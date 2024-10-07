@@ -35,8 +35,8 @@ jobs:
       - name: Prepare
         shell: bash
         run: |
-          extensionFileName=soberjs-vscode-${{ needs.build.outputs.extension-version }}.vsix
-          echo "extensionFileName=$extensionFileName >> $GITUHB_ENV"
+          extensionFileName="soberjs-vscode-${{ needs.build.outputs.extension-version }}.vsix"
+          echo "extensionFileName=$extensionFileName" >> $GITHUB_ENV
       - name: Publish to Visual Studio Marketplace
         uses: HaaLeo/publish-vscode-extension@v1
         if: ${{ ! inputs.prerelease }}
