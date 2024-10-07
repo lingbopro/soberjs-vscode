@@ -1,6 +1,6 @@
 # 版本记录
 
-## v0.6.1
+## v0.7.0
 
 - 针对 [Sober `0.4.1`](https://soberjs.com/introduction/update-log) 的全面更新
 

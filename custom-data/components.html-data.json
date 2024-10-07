@@ -1188,18 +1188,12 @@
         {
           "name": "focused",
           "description": "是否聚焦",
-          "values": [
-            { "name": "true" },
-            { "name": "false" }
-          ]
+          "valueSet": "boolean"
         },
         {
           "name": "labelFixed",
           "description": "是否固定标签",
-          "values": [
-            { "name": "true" },
-            { "name": "false" }
-          ]
+          "valueSet": "boolean"
         }
       ],
       "references": [
@@ -1216,10 +1210,7 @@
         {
           "name": "checked",
           "description": "是否选中菜单项",
-          "values": [
-            { "name": "true" },
-            { "name": "false" }
-          ]
+          "valueSet": "boolean"
         }
       ],
       "references": [
