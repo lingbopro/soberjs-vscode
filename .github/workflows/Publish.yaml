@@ -35,8 +35,9 @@ jobs:
       - name: Extract Artifact
         shell: bash
         run: |
-          unzip *.zip
-          echo "extensionFileName=soberjs-vscode-${{ needs.build.outputs.extension-version }}.vsix >> $GITUHB_ENV"
+          extensionFileName=soberjs-vscode-${{ needs.build.outputs.extension-version }}.vsix
+          echo "extensionFileName=$extensionFileName >> $GITUHB_ENV"
+          unzip ${extensionFileName}.zip || echo "Fail, but we'll continue!"
       - name: Publish to Visual Studio Marketplace
         uses: HaaLeo/publish-vscode-extension@v1
         if: ${{ ! inputs.prerelease }}
