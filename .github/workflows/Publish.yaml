@@ -37,7 +37,12 @@ jobs:
         run: |
           extensionFileName=soberjs-vscode-${{ needs.build.outputs.extension-version }}.vsix
           echo "extensionFileName=$extensionFileName >> $GITUHB_ENV"
-          unzip "$(ls -1 /home/runner/work/soberjs-vscode/soberjs-vscode/*.zip)" || echo "Fail, but we'll continue!"
+          unzip "$(ls -1 ./*.zip)" || echo "Fail, but we'll continue!"
+          echo "pwd: $(pwd)"
+          echo ==== TREE . ====
+          tree .
+          echo ==== TREE /home ====
+          tree /home
       - name: Publish to Visual Studio Marketplace
         uses: HaaLeo/publish-vscode-extension@v1
         if: ${{ ! inputs.prerelease }}
