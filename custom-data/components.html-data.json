@@ -515,10 +515,10 @@
     },
     {
       "name": "s-rate",
-      "description": "**评分 Rate**\n\n```html\n<s-rate></s-rate>\n```\n\n设置 `readonly` 启用只读模式。\n\n使用 `track` 和 `indicator` 插槽来自定义图标，你可以使用 svg 或者 icon 组件。\n\n```html\n<s-rate>\n  <s-icon slot=\"track\" type=\"favorite\"></s-icon>\n  <s-icon slot=\"indicator\" type=\"favorite\"></s-icon>\n</s-rate>\n```\n\n> 如果你希望自定义大小，那么请使用 `font-size` 来设置，该组件需要保持宽高比例，单独设置 width 和 height 可能会导致变形。\n\n**属性:**\n\n- `readonly` (`boolean`): 是否启用只读模式\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发\n- `input`: 值变化时触发\n\n**插槽:**\n- `track`: 未选中\n- `indicator`: 已选中",
+      "description": "**评分 Rate**\n\n```html\n<s-rate></s-rate>\n```\n\n设置 `readOnly` 启用只读模式。\n\n使用 `track` 和 `indicator` 插槽来自定义图标，你可以使用 svg 或者 icon 组件。\n\n```html\n<s-rate>\n  <s-icon slot=\"track\" type=\"favorite\"></s-icon>\n  <s-icon slot=\"indicator\" type=\"favorite\"></s-icon>\n</s-rate>\n```\n\n> 如果你希望自定义大小，那么请使用 `font-size` 来设置，该组件需要保持宽高比例，单独设置 width 和 height 可能会导致变形。\n\n**属性:**\n\n- `readOnly` (`boolean`): 是否启用只读模式\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发\n- `input`: 值变化时触发\n\n**插槽:**\n- `track`: 未选中\n- `indicator`: 已选中",
       "attributes": [
         {
-          "name": "readonly",
+          "name": "readOnly",
           "description": "是否启用只读模式",
           "valueSet": "boolean"
         },
