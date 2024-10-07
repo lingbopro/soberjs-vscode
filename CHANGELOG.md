@@ -6,6 +6,7 @@
 - 增加 Field 组件
 - 增加 Menu 组件
 - 补充了 Popup Menu Item 组件
+- 更新工作流
 
 ## v0.6.0
 
