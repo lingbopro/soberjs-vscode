@@ -43,7 +43,7 @@ jobs:
         with:
           pat: ${{ secrets.AZURE_TOKEN }}
           registryUrl: https://marketplace.visualstudio.com
-          extensionFile: ./${{ env.extensionFileName }}
+          extensionFile: ${{ env.extensionFileName }}
           dryRun: ${{ inputs.dry_run_marketplace }}
       - name: Publish to GitHub Releases
         uses: softprops/action-gh-release@v2
