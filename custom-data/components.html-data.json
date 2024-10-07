@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/microsoft/vscode-html-languageservice/refs/heads/main/docs/customData.schema.json",
   "version": 1.1,
   "tags": [
     {
@@ -486,11 +487,19 @@
     },
     {
       "name": "s-text-field",
-      "description": "**文本框 Text Field**\n\n文本框是一个容器，它可以在内部放置 **input** 和 **textarea**，推荐使用 label 来替代 placeholder\n\n```html\n<s-text-field>\n  <input type=\"text\" placeholder=\"请输入名称\">\n  <s-icon slot=\"end\" type=\"favorite\"></s-icon>\n</s-text-field>\n\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon-button slot=\"end\">\n    <s-icon slot=\"end\" type=\"star\"></s-icon>\n  </s-icon-button>\n</s-text-field>\n```\n\n在使用 **textarea** 时，它的高度将会自适应\n\n你也可以设置一个最小值或最大值来定义文本框的高度\n\n```html\n<s-text-field label=\"请输入名称\">\n  <textarea style=\"min-height: 112px\"></textarea>\n</s-text-field>\n```\n\n设置 **display: grid** 来作为块元素占满一行\n\n由于内部封装性较高，定义样式变得很复杂，因此我们开放了一些CSS变量来允许你定义一些样式\n\n**属性:**\n\n- `label` (`string`): 标签文本\n\n**插槽:**\n- `end`: 结束\n\n**CSS 变量:**\n\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
+      "description": "**文本框 Text Field**\n\n`Text Field` 是一个容器组件，可以在内部放置 `input` 和 `textarea` 元素。推荐使用 `label` 属性来替代 `placeholder`，从而在表单交互中提升可访问性。\n\n```html\n<s-text-field>\n  <input type=\"text\" placeholder=\"请输入名称\">\n  <s-icon slot=\"end\" type=\"favorite\"></s-icon>\n</s-text-field>\n\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon-button slot=\"end\">\n    <s-icon slot=\"end\" type=\"star\"></s-icon>\n  </s-icon-button>\n</s-text-field>\n```\n\n在使用 `textarea` 时，组件高度将会自适应，你可以通过设置 `min-height` 和 `max-height` 来定义文本框的最小和最大高度。\n\n```html\n<s-text-field label=\"请输入名称\">\n  <textarea style=\"min-height: 112px\"></textarea>\n</s-text-field>\n```\n\n`Text Field` 支持 `display: grid` 样式，从而作为块元素占满一行。\n\n由于组件内部封装性较高，样式自定义变得复杂，因此开放了一些 CSS 变量来允许你自定义样式。\n\n**属性:**\n\n- `label` (`string`): 标签文本，用于替代 `placeholder`。\n- `value` (`string`): 文本框中的初始值。\n- `placeholder` (`string`): 用于显示在文本框中的占位符文本。\n\n**插槽:**\n\n- `start`: 插槽用于放置在文本框开始位置的内容（如图标或按钮）。\n- `end`: 插槽用于放置在文本框结束位置的内容（如图标或按钮）。\n\n**CSS 变量:**\n\n- `--text-field-border-radius`: 文本框的圆角，默认值为 `4px`。\n- `--text-field-border-width`: 文本框的边框宽度，默认值为 `1px`。\n- `--text-field-border-color`: 文本框的边框颜色，默认值为 `var(--s-color-outline, #777680)`。\n- `--text-field-padding`: 文本框的内边距，默认值为 `16px`。\n\n**示例:**\n\n```html\n<s-text-field label=\"请输入名称\">\n  <input type=\"text\">\n  <s-icon slot=\"end\" type=\"search\"></s-icon>\n</s-text-field>\n```\n\n你可以在 `<s-text-field>` 组件中加入 `input`、`textarea` 或其他表单元素，并结合 `slot` 插槽在文本框内放置额外内容（如图标或按钮）。",
       "attributes": [
         {
           "name": "label",
-          "description": "标签文本"
+          "description": "标签文本，用于替代 `placeholder` 来描述文本框内容。"
+        },
+        {
+          "name": "value",
+          "description": "文本框中的初始值。"
+        },
+        {
+          "name": "placeholder",
+          "description": "用于显示在文本框中的占位符文本。"
         }
       ],
       "references": [
@@ -506,10 +515,10 @@
     },
     {
       "name": "s-rate",
-      "description": "**评分 Rate**\n\n```html\n<s-rate></s-rate>\n```\n\n设置 `readonly` 启用只读模式。\n\n使用 `track` 和 `indicator` 插槽来自定义图标，你可以使用 svg 或者 icon 组件。\n\n```html\n<s-rate>\n  <s-icon slot=\"track\" type=\"favorite\"></s-icon>\n  <s-icon slot=\"indicator\" type=\"favorite\"></s-icon>\n</s-rate>\n```\n\n> 如果你希望自定义大小，那么请使用 `font-size` 来设置，该组件需要保持宽高比例，单独设置 width 和 height 可能会导致变形。\n\n**属性:**\n\n- `readonly` (`boolean`): 是否启用只读模式\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发\n- `input`: 值变化时触发\n\n**插槽:**\n- `track`: 未选中\n- `indicator`: 已选中",
+      "description": "**评分 Rate**\n\n```html\n<s-rate></s-rate>\n```\n\n设置 `readOnly` 启用只读模式。\n\n使用 `track` 和 `indicator` 插槽来自定义图标，你可以使用 svg 或者 icon 组件。\n\n```html\n<s-rate>\n  <s-icon slot=\"track\" type=\"favorite\"></s-icon>\n  <s-icon slot=\"indicator\" type=\"favorite\"></s-icon>\n</s-rate>\n```\n\n> 如果你希望自定义大小，那么请使用 `font-size` 来设置，该组件需要保持宽高比例，单独设置 width 和 height 可能会导致变形。\n\n**属性:**\n\n- `readOnly` (`boolean`): 是否启用只读模式\n- `max` (`number`): 最大值\n- `min` (`number`): 最小值\n- `step` (`number`): 步进值\n- `value` (`number`): 当前值\n\n**事件:**\n- `change`: 值变化后触发\n- `input`: 值变化时触发\n\n**插槽:**\n- `track`: 未选中\n- `indicator`: 已选中",
       "attributes": [
         {
-          "name": "readonly",
+          "name": "readOnly",
           "description": "是否启用只读模式",
           "valueSet": "boolean"
         },
@@ -551,15 +560,38 @@
     },
     {
       "name": "s-picker",
-      "description": "**选择框 Picker**\n\n通常用于单选数据，它的目标是替代 `select`。\n\n```html\n<s-picker label=\"选择地区\">\n  <s-picker-item>贵阳</s-picker-item>\n  <s-picker-item>北京</s-picker-item>\n  <s-picker-item>上海</s-picker-item>\n  <s-picker-item>深圳</s-picker-item>\n</s-picker>\n```\n\n由于内部封装性较高，定义样式变得很复杂，因此我们开放了一些CSS变量来允许你定义一些样式\n\n**属性:**\n\n- `label` (`string`): 标签文本\n- `options` _[只读]_ (`Item[]`): 子项目\n- `selectedIndex` (`number`): 当前选中下标\n\n**插槽:**\n- `trigger`: 触发\n\n**事件:**\n- `change`: 选中变化后触发\n\n**CSS 变量:**\n\n- `--border-width`: 边框宽度\n- `--border-color`: 边框颜色\n- `--padding`: 内边距",
+      "description": "**选择框 Picker**\n\n通常用于单选数据，它的目标是替代 `select` 元素。`s-picker` 组件可以通过定义多个 `s-picker-item` 选项来进行选择，支持标签文本、默认值设置以及自定义触发器。\n\n```html\n<s-picker label=\"选择地区\">\n  <s-picker-item value=\"gui yang\">贵阳</s-picker-item>\n  <s-picker-item value=\"bei jing\">北京</s-picker-item>\n  <s-picker-item value=\"shang hai\">上海</s-picker-item>\n  <s-picker-item value=\"shen zhen\">深圳</s-picker-item>\n  <s-picker-item value=\"cheng du\">成都</s-picker-item>\n  <s-picker-item value=\"wu han\">武汉</s-picker-item>\n  <s-picker-item value=\"nan chang\">南昌</s-picker-item>\n  <s-picker-item value=\"hang zhou\">杭州</s-picker-item>\n</s-picker>\n```\n\n你可以在 `s-picker-item` 上设置 `value` 来定义选项的值，并使用 `s-picker` 的 `value` 属性来设置默认选中的值。\n\n**属性:**\n\n- `label` (`string`): 标签文本，用于显示在选择框的触发按钮上。\n- `value` (`string`): 当前选中值，设置为选项 `s-picker-item` 中的 `value` 属性值。\n- `options` _[只读]_ (`PickerItem[]`): 子项目数组，默认为 `[]`。\n- `selectedIndex` (`number`): 当前选中下标，默认为 `-1`。\n- `show()` (`Function`): 显示选择框。\n- `dismiss()` (`Function`): 隐藏选择框。\n- `toggle()` (`Function`): 切换选择框的显示和隐藏状态。\n\n**事件:**\n\n- `change`: 选中值变化后触发。\n\n**插槽:**\n\n- `trigger`: 自定义触发器插槽。\n\n**CSS 变量:**\n\n- `--picker-border-radius`: 圆角，默认值为 `4px`。\n- `--picker-border-width`: 边框宽度，默认值为 `1px`。\n- `--picker-border-color`: 边框颜色，默认值为 `var(--s-color-outline, #777680)`。\n- `--picker-padding`: 内边距，默认值为 `16px`。\n- `--picker-height`: 高度，默认值为 `48px`。",
       "attributes": [
         {
           "name": "label",
-          "description": "标签文本"
+          "description": "设置选择框的标签文本，用于显示在选择框触发按钮上。",
+          "type": "string"
         },
         {
-          "name": "onchange",
-          "description": "选中变化后触发"
+          "name": "value",
+          "description": "设置选中的值，对应子项 `s-picker-item` 的 `value` 属性。",
+          "type": "string",
+          "defaultValue": ""
+        },
+        {
+          "name": "selectedIndex",
+          "description": "当前选中下标。",
+          "type": "number",
+          "defaultValue": "-1"
+        }
+      ],
+      "methods": [
+        {
+          "name": "show",
+          "description": "显示选择框。"
+        },
+        {
+          "name": "dismiss",
+          "description": "隐藏选择框。"
+        },
+        {
+          "name": "toggle",
+          "description": "切换选择框的显示与隐藏状态。"
         }
       ],
       "references": [
@@ -575,11 +607,15 @@
     },
     {
       "name": "s-picker-item",
-      "description": "**选择框项目 Picker Item**\n\n作为 `s-picker` 的子项使用。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中。",
+      "description": "**选择框项目 Picker Item**\n\n作为 `s-picker` 组件的子组件使用，用于定义每个选择项。每个 `s-picker-item` 需要设置 `value` 属性来代表其选中值。\n\n**属性:**\n\n- `value` (`string`): 项目的值，用于标识该项被选中时的返回值。\n- `selected` (`boolean`): 是否选中该项，默认为 `false`。\n\n**插槽:**\n- `start`: 项目内容开始位置的插槽\n- `end`: 项目内容结束位置的插槽",
       "attributes": [
         {
+          "name": "value",
+          "description": "项目的值，用于标识该项被选中时的返回值。"
+        },
+        {
           "name": "selected",
-          "description": "是否选中",
+          "description": "是否选中该项，默认为 `false`。",
           "valueSet": "boolean"
         }
       ],
@@ -753,7 +789,7 @@
     },
     {
       "name": "s-carousel",
-      "description": "**Carousel 组件**\n\n轮播组件用于展示一组内容，并可以自动轮播。可以通过设置持续时长来自定义每张幻灯片显示的时间。\n\n```html\n<s-carousel>\n  <div style=\"background: #936d6d\"></div>\n  <div style=\"background: #6d936f\"></div>\n  <div style=\"background: #856d93\"></div>\n</s-carousel>\n```\n\n**属性:**\n\n- `duration` (`number`): 每张幻灯片显示的持续时长，单位为毫秒，默认值为 `4000`。\n\n**插槽:**\n- 无特定插槽。",
+      "description": "**轮播图 Carousel**\n\n轮播组件用于展示一组内容，并可以自动轮播。可以通过设置持续时长来自定义每张幻灯片显示的时间。\n\n```html\n<s-carousel>\n  <div style=\"background: #936d6d\"></div>\n  <div style=\"background: #6d936f\"></div>\n  <div style=\"background: #856d93\"></div>\n</s-carousel>\n```\n\n**属性:**\n\n- `duration` (`number`): 每张幻灯片显示的持续时长，单位为毫秒，默认值为 `4000`。\n\n**插槽:**\n- 无特定插槽。",
       "attributes": [
         {
           "name": "duration",
@@ -824,7 +860,7 @@
     },
     {
       "name": "s-navigation",
-      "description": "**导航栏 Navigation**\n\n导航组件用于在应用中进行页面切换或执行其他操作。支持图标、文本、徽章插槽，以及导轨模式。\n\n```html\n<s-navigation>\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n  </s-navigation-item>\n</s-navigation>\n\n<s-navigation mode=\"rail\">\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2\"></div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3\"></div>\n  </s-navigation-item>\n</s-navigation>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置导轨模式。\n\n**事件:**\n- `change`: 选中变化后触发。\n\n**插槽:**\n- `start`: 开始插槽\n- `end`: 结束插槽",
+      "description": "**导航栏 Navigation**\n\n导航组件用于在应用中进行页面切换或执行其他操作。支持图标、文本、徽章插槽，以及导轨模式。\n\n```html\n<s-navigation>\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n    <s-badge slot=\"badge\"></s-badge>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n    <s-badge slot=\"badge\">99</s-badge>\n  </s-navigation-item>\n</s-navigation>\n\n<s-navigation mode=\"rail\">\n  <s-navigation-item selected=\"true\">\n    <s-icon type=\"add\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 1</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"search\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 2</div>\n  </s-navigation-item>\n  <s-navigation-item>\n    <s-icon type=\"dark_mode\" slot=\"icon\"></s-icon>\n    <div slot=\"text\">Item 3</div>\n  </s-navigation-item>\n</s-navigation>\n```\n\n**属性:**\n\n- `mode` (`string`): 设置导轨模式，支持 `bottom` 和 `rail`。\n- `value` (`string`): 选中值，默认值为 `null`。\n- `options` _[只读]_ (`Item[]`): 子项目数组，默认值为 `[]`。\n- `selectedIndex` _[只读]_ (`number`): 当前选中下标，默认值为 `-1`。\n\n**事件:**\n\n- `change`: 选中变化后触发。\n\n**插槽:**\n\n- `start`: 开始插槽\n- `end`: 结束插槽",
       "attributes": [
         {
           "name": "mode",
@@ -839,6 +875,10 @@
               "description": "导轨模式"
             }
           ]
+        },
+        {
+          "name": "value",
+          "description": "选中值"
         }
       ],
       "references": [
@@ -854,12 +894,17 @@
     },
     {
       "name": "s-navigation-item",
-      "description": "**导航栏子项 Navigation Item**\n\n导航项组件，作为 `s-navigation` 组件的子组件。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中，默认值为 `false`。\n\n**插槽:**\n- `icon`: 图标\n- `text`: 文本\n- `badge`: 徽章",
+      "description": "**导航栏子项 Navigation Item**\n\n导航项组件，作为 `s-navigation` 组件的子组件。\n\n**属性:**\n\n- `selected` (`boolean`): 是否选中，默认值为 `false`。\n- `value` (`string`): 选中项的值。\n\n**插槽:**\n\n- `icon`: 图标\n- `text`: 文本\n- `badge`: 徽章\n\n**事件:**\n\n- `click`: 点击后触发。",
       "attributes": [
         {
           "name": "selected",
           "description": "是否选中，默认值为 `false`。",
           "valueSet": "boolean"
+        },
+        {
+          "name": "value",
+          "description": "选中项的值。",
+          "valueSet": "string"
         }
       ],
       "references": [
@@ -869,7 +914,7 @@
         },
         {
           "name": "源代码",
-          "url": "https://github.com/apprat/sober/blob/main/src/navigation.ts"
+          "url": "https://github.com/apprat/sober/blob/main/src/navigation-item.ts"
         }
       ]
     },
@@ -953,7 +998,7 @@
     },
     {
       "name": "s-popup-menu",
-      "description": "**弹出式菜单 Popup Menu**\n\nPopupMenu 弹出菜单组件用于在指定元素位置显示菜单项。支持动态调用和子菜单的复杂布局。\n\n```html\n<s-popup-menu>\n  <s-button slot=\"trigger\">菜单</s-button>\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n\n<!--调用按钮-->\n<s-button onclick=\"document.querySelector('#menu').show(this)\"> 动态调用 </s-button>\n<!--菜单-->\n<s-popup-menu id=\"menu\">\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n```\n\n**属性:**\n\n- `group` (`string`): 分组，值为 `start` 或 `end`\n- `show()` (`Function`, 只读): 显示对话框\n- `dismiss()` (`Function`, 只读): 隐藏对话框\n- `toggle()` (`Function`, 只读): 切换抽屉\n\n**插槽:**\n- `trigger`: 触发器\n- `Menu Item`: 菜单项\n- `start`: 开始\n- `end`: 结束",
+      "description": "**弹出式菜单 Popup Menu**\n\nPopupMenu 弹出菜单组件用于在指定元素位置显示菜单项。支持动态调用和子菜单的复杂布局。\n\n```html\n<s-popup-menu>\n  <s-button slot=\"trigger\">菜单</s-button>\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n\n<!--调用按钮-->\n<s-button onclick=\"document.querySelector('#menu').show(this)\"> 动态调用 </s-button>\n<!--菜单-->\n<s-popup-menu id=\"menu\">\n  <s-popup-menu-item>选项1</s-popup-menu-item>\n  <s-popup-menu-item>选项2</s-popup-menu-item>\n  <s-popup-menu-item>选项3</s-popup-menu-item>\n  <s-popup-menu-item>选项4</s-popup-menu-item>\n  <s-popup-menu-item>选项5</s-popup-menu-item>\n</s-popup-menu>\n```\n\n**属性:**\n\n- `group` (`string`): 分组，值为 `start` 或 `end`\n- `show()` _[只读]_ (`Function`): 显示对话框\n- `dismiss()` _[只读]_ (`Function`): 隐藏对话框\n- `toggle()` _[只读]_ (`Function`): 切换抽屉\n\n**插槽:**\n- `trigger`: 触发器",
       "attributes": [
         {
           "name": "group",
@@ -970,6 +1015,21 @@
           ]
         }
       ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/popup-menu"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/popup-menu.ts"
+        }
+      ]
+    },
+    {
+      "name": "s-popup-menu-item",
+      "description": "**弹出式菜单子项 Popup Menu Item**\n\n作为 Popup Menu 的子项使用。\n\n**插槽:**\n\n- `start`: 开始\n- `end`: 结束",
+      "attributes": [],
       "references": [
         {
           "name": "文档",
@@ -1047,7 +1107,7 @@
     },
     {
       "name": "s-badge",
-      "description": "**徽章 Badge**\n\nBadge 徽章组件用于显示数字或状态标识，通常用于其他组件的插槽中。\n\n```html\n<s-badge></s-badge>\n<s-badge>26</s-badge>\n```\n\n**插槽:**\n- `default`: 徽章内容",
+      "description": "**徽章 Badge**\n\nBadge 徽章组件用于显示数字或状态标识，通常用于其他组件的插槽中。\n\n```html\n<s-badge></s-badge>\n<s-badge>26</s-badge>\n```",
       "attributes": [],
       "references": [
         {
@@ -1101,7 +1161,7 @@
     },
     {
       "name": "s-table",
-      "description": "**Table 组件**\n\nTable 表格组件用于显示结构化的数据。\n\n```html\n<s-table>\n  <s-thead>\n    <s-tr>\n      <s-th>title1</s-th>\n      <s-th>title2</s-th>\n      <s-th>title3</s-th>\n      <s-th>title4</s-th>\n      <s-th>title5</s-th>\n    </s-tr>\n  </s-thead>\n  <s-tbody>\n    <s-tr>\n      <s-td>item1</s-td>\n      <s-td>item2</s-td>\n      <s-td>item3</s-td>\n      <s-td>item4</s-td>\n      <s-td>item5</s-td>\n    </s-tr>\n    </s-tbody>\n</s-table>\n```\n\n**插槽:**\n- `thead`: 表头\n- `tbody`: 表身\n- `tr`: 表格行\n- `th`: 表格头\n- `td`: 表格数据",
+      "description": "**表格 Table**\n\nTable 表格组件用于显示结构化的数据。\n\n```html\n<s-table>\n  <s-thead>\n    <s-tr>\n      <s-th>title1</s-th>\n      <s-th>title2</s-th>\n      <s-th>title3</s-th>\n      <s-th>title4</s-th>\n      <s-th>title5</s-th>\n    </s-tr>\n  </s-thead>\n  <s-tbody>\n    <s-tr>\n      <s-td>item1</s-td>\n      <s-td>item2</s-td>\n      <s-td>item3</s-td>\n      <s-td>item4</s-td>\n      <s-td>item5</s-td>\n    </s-tr>\n    </s-tbody>\n</s-table>\n```\n\n**插槽:**\n- `thead`: 表头\n- `tbody`: 表身\n- `tr`: 表格行\n- `th`: 表格头\n- `td`: 表格数据",
       "attributes": [],
       "references": [
         {
@@ -1111,6 +1171,66 @@
         {
           "name": "源代码",
           "url": "https://github.com/apprat/sober/blob/main/src/table.ts"
+        }
+      ]
+    },
+    {
+      "name": "s-field",
+      "description": "**字段框 Field**\n\n这是一个容器组件，通常用于提供表单输入框的样式包装。它支持多个 CSS 变量和自定义槽位，特别适用于移动端界面。\n\n```html\n<s-field>\n  <div slot=\"label\">请输入</div>\n  <div slot=\"view\">View content here</div>\n</s-field>\n```\n\n**属性:**\n\n- `focused` (`boolean`): 是否聚焦，默认值为 `false`\n- `labelFixed` (`boolean`): 固定Label，默认值为 `true`\n\n**插槽:**\n- `label`: Label 区域\n- `view`: 主视图区域\n\n**CSS 变量:**\n\n- `--field-border-radius`: 圆角 (默认: 4px)\n- `--field-border-width`: 边框宽度 (默认: `1px`)\n- `--field-border-color`: 边框颜色 (默认: `var(--s-color-outline, #777680)`)\n- `--field-padding`: 内边距 (默认: `16px`)\n- `--field-focused-border-width`: 聚焦时的边框宽度 (默认: `2px`)",
+      "attributes": [
+        {
+          "name": "focused",
+          "description": "是否聚焦",
+          "valueSet": "boolean"
+        },
+        {
+          "name": "labelFixed",
+          "description": "是否固定标签",
+          "valueSet": "boolean"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "s-menu",
+      "description": "**菜单 Menu**\n\n这是一个菜单容器组件，通常用于定义导航栏或侧边栏。支持多个 CSS 变量和自定义插槽，适用于桌面端和移动端界面。\n\n```html\n<s-menu>\n  <div slot=\"label\">控制台</div>\n  <s-menu-item checked=\"true\">\n    <s-icon slot=\"start\" type=\"home\"></s-icon>\n    首页\n  </s-menu-item>\n  <s-menu-item>\n    <s-icon slot=\"start\" type=\"search\"></s-icon>\n    用户\n    <s-icon slot=\"end\" type=\"arrow_drop_right\"></s-icon>\n  </s-menu-item>\n  <s-menu-item>\n    <s-icon slot=\"start\" type=\"light_mode\"></s-icon>\n    管理资源\n  </s-menu-item>\n  <s-menu-item>\n    <s-icon slot=\"start\" type=\"dark_mode\"></s-icon>\n    模式切换\n  </s-menu-item>\n</s-menu>\n```\n\n**插槽:**\n- `label`: 用于放置菜单标签的区域\n\n**CSS 变量:**\n\n- `--menu-bg-color`: 菜单背景色 (默认: `#1e1e1e`)\n- `--menu-item-color`: 菜单项文字颜色 (默认: `#ffffff`)\n- `--menu-item-hover-bg-color`: 菜单项悬停背景色 (默认: `#333`)\n- `--menu-icon-size`: 图标大小 (默认: `24px`)\n",
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "是否选中菜单项",
+          "valueSet": "boolean"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/menu"
+        }
+      ]
+    },
+    {
+      "name": "s-menu-item",
+      "description": "**菜单子项 Menu Item**\n\n作为 Menu 的子项使用。\n\n**属性:**\n\n- `selected` (`boolean`): 菜单项是否选中，默认值为 `false`\n\n**插槽:**\n\n- `start`: 开始位置（用于放置图标）\n- `end`: 结束位置（用于放置图标）",
+      "attributes": [
+        {
+          "name": "selected",
+          "description": "是否选中菜单项，默认值为 `false`",
+          "valueSet": "boolean"
+        }
+      ],
+      "references": [
+        {
+          "name": "文档",
+          "url": "https://soberjs.com/component/popup-menu"
+        },
+        {
+          "name": "源代码",
+          "url": "https://github.com/apprat/sober/blob/main/src/popup-menu.ts"
         }
       ]
     }

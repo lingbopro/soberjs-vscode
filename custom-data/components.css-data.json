@@ -1,11 +1,12 @@
 {
+  "$schema": "https://raw.githubusercontent.com/microsoft/vscode-css-languageservice/refs/heads/main/docs/customData.schema.json",
   "version": 1.1,
   "properties": [
     {
       "name": "--ripple-color",
       "description": {
         "kind": "markdown",
-        "value": "波纹颜色\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple"
+        "value": "波纹颜色\n\n默认跟随文本颜色\n\n**组件:**\n\n- `<s-ripple>` 波纹 Ripple"
       },
       "references": [
         {
@@ -92,6 +93,149 @@
         {
           "name": "文档: 选择框 Picker",
           "url": "https://soberjs.com/component/picker"
+        }
+      ]
+    },
+    {
+      "name": "--field-border-radius",
+      "description": {
+        "kind": "markdown",
+        "value": "圆角\n\n**默认值:** `4px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
+      "references": [
+        {
+          "name": "文档: 表单域 Field",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "--field-border-width",
+      "description": {
+        "kind": "markdown",
+        "value": "边框宽度\n\n**默认值:** `1px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
+      "references": [
+        {
+          "name": "文档: 表单域 Field",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "--field-border-color",
+      "description": {
+        "kind": "markdown",
+        "value": "边框颜色\n\n**默认值:** `var(--s-color-outline, #777680)`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
+      "references": [
+        {
+          "name": "文档: 表单域 Field",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "--field-padding",
+      "description": {
+        "kind": "markdown",
+        "value": "内边距\n\n**默认值:** `16px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
+      "references": [
+        {
+          "name": "文档: 表单域 Field",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "--field-focused-border-width",
+      "description": {
+        "kind": "markdown",
+        "value": "聚焦边框高度\n\n**默认值:** `2px`\n\n**组件:**\n\n- `<s-field>` 表单域 Field"
+      },
+      "references": [
+        {
+          "name": "文档: 表单域 Field",
+          "url": "https://soberjs.com/component/field"
+        }
+      ]
+    },
+    {
+      "name": "--checkbox-color",
+      "description": {
+        "kind": "markdown",
+        "value": "Checkbox 的颜色\n\n**默认值:** `var(--s-color-primary, #5256a9)`\n\n**组件:**\n\n- `<s-checkbox>` 复选框 Checkbox"
+      },
+      "references": [
+        {
+          "name": "文档: 复选框 Checkbox",
+          "url": "https://soberjs.com/component/checkbox"
+        }
+      ]
+    },
+    {
+      "name": "--radio-button-color",
+      "description": {
+        "kind": "markdown",
+        "value": "Radio Button 的颜色\n\n**默认值:** `var(--s-color-primary, #5256a9)`\n\n**组件:**\n\n- `<s-radio-button>` 单选按钮 Radio Button"
+      },
+      "references": [
+        {
+          "name": "文档: 单选按钮 Radio Button",
+          "url": "https://soberjs.com/component/radio-button"
+        }
+      ]
+    },
+    {
+      "name": "--text-field-border-radius",
+      "description": {
+        "kind": "markdown",
+        "value": "Text Field 的圆角\n\n**默认值:** `4px`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+      },
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
+        }
+      ]
+    },
+    {
+      "name": "--text-field-border-width",
+      "description": {
+        "kind": "markdown",
+        "value": "Text Field 的边框宽度\n\n**默认值:** `1px`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+      },
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
+        }
+      ]
+    },
+    {
+      "name": "--text-field-border-color",
+      "description": {
+        "kind": "markdown",
+        "value": "Text Field 的边框颜色\n\n**默认值:** `var(--s-color-outline, #777680)`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+      },
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
+        }
+      ]
+    },
+    {
+      "name": "--text-field-padding",
+      "description": {
+        "kind": "markdown",
+        "value": "Text Field 的内边距\n\n**默认值:** `16px`\n\n**组件:**\n\n- `<s-text-field>` 文本框 Text Field"
+      },
+      "references": [
+        {
+          "name": "文档: 文本框 Text Field",
+          "url": "https://soberjs.com/component/text-field"
         }
       ]
     }

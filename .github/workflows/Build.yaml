@@ -1,0 +1,45 @@
+name: Build
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['22.x']
+    outputs:
+      artifact-url: ${{ steps.upload-artifact.outputs.artifact-url }}
+      commit-hash: ${{ steps.get-version.outputs.commitHash }}
+      extension-version: ${{ steps.get-version.outputs.extensionVersion }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Get Extension Version
+        id: get-version
+        shell: bash
+        run: |
+          extensionVersion=$(node -p "require('./package.json').version")
+          echo "extensionVersion=$extensionVersion" >> $GITHUB_ENV
+          echo "extensionVersion=$extensionVersion" >> $GITHUB_OUTPUT
+          echo "commitHash=$(git log --format="%H" | head -n 1)" >> $GITHUB_OUTPUT
+
+      - name: Package VS Code extension
+        id: package
+        uses: nhedger/package-vscode-extension@main
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        id: upload-artifact
+        with:
+          name: soberjs-vscode-${{ env.extensionVersion }}.vsix
+          path: /home/runner/work/soberjs-vscode/soberjs-vscode/soberjs-vscode-${{ env.extensionVersion }}.vsix
+          compression-level: 0
+          if-no-files-found: error

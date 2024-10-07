@@ -1,0 +1,52 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      prerelease:
+        description: 'Pre-release'
+        type: boolean
+        required: false
+        default: false
+      dry_run_marketplace:
+        description: 'Dry Run (Marketplace) (Do not publish)'
+        type: boolean
+        required: false
+        default: false
+      dry_run_gh_releases:
+        description: 'Dry Run (GitHub Releases) (Do not publish)'
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  build:
+    name: Build
+    uses: ./.github/workflows/Build.yaml
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Artifact
+        shell: bash
+        run: |
+          curl -o extension.zip '${{ needs.build.outputs.artifact-url }}'
+          echo
+          unzip extension.zip
+          echo "extensionFileName=soberjs-vscode-${{ needs.build.outputs.extension-version }}.vsix >> $GITUHB_ENV"
+      - name: Publish to Visual Studio Marketplace
+        uses: HaaLeo/publish-vscode-extension@v1
+        if: ${{ ! inputs.prerelease }}
+        with:
+          pat: ${{ secrets.AZURE_TOKEN }}
+          registryUrl: https://marketplace.visualstudio.com
+          extensionFile: ./${{ env.extensionFileName }}
+          dryRun: ${{ inputs.dry_run_marketplace }}
+      - name: Publish to GitHub Releases
+        uses: softprops/action-gh-release@v2
+        if: ${{ ! inputs.dry_run_gh_releases }}
+        with:
+          files: ./${{ env.extensionFileName }}
+          tag_name: v${{ needs.build.outputs.extension-version }}
+          prerelease: ${{ inputs.prerelease }}
+          target_commitish: ${{ needs.build.outputs.commit-hash }}

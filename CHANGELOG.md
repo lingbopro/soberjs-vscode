@@ -1,5 +1,14 @@
 # 版本记录
 
+## v0.7.0
+
+- 针对 [Sober `0.4.1`](https://soberjs.com/introduction/update-log) 的全面更新
+- 增加 Field 组件
+- 增加 Menu 组件
+- 补充了 Popup Menu Item 组件
+- 更新工作流
+- 增加了 Field、Text Field、Picker、Checkbox、Radio Button 的 CSS 变量支持
+
 ## v0.6.0
 
 - 适配 [Sober `0.3.0` 更新](https://soberjs.com/introduction/update-log)
