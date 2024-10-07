@@ -1,0 +1,10 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: Build
+    uses: ./.github/workflows/Build.yaml

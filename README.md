@@ -12,8 +12,11 @@
   <a href="https://github.com/lingbopro/soberjs-vscode/releases" target="_blank">
     <img src="https://img.shields.io/github/v/release/lingbopro/soberjs-vscode.svg?style=for-the-badge" alt="Release"/>
   </a>
-  <a href="https://github.com/lingbopro/soberjs-vscode/actions?query=workflow:CI" target="_blank">
-    <img src="https://img.shields.io/github/actions/workflow/status/lingbopro/soberjs-vscode/CI.yml?style=for-the-badge" alt="Build Status"/>
+  <a href="https://github.com/lingbopro/soberjs-vscode/actions/workflows/CI.yaml" target="_blank">
+    <img src="https://img.shields.io/github/actions/workflow/status/lingbopro/soberjs-vscode/CI.yaml?style=for-the-badge" alt="Build Status"/>
+  </a>
+  <a href="https://github.com/lingbopro/soberjs-vscode/actions/workflows/Publish.yaml" target="_blank">
+    <img src="https://img.shields.io/github/actions/workflow/status/lingbopro/soberjs-vscode/Publish.yaml?label=publish&style=for-the-badge" alt="Publish Status"/>
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=lingbopro.soberjs-vscode" target="_blank">
     <img src="https://img.shields.io/visual-studio-marketplace/i/lingbopro.soberjs-vscode?style=for-the-badge&logo=visualstudiocode&label=Installs" alt="Visual Studio Marketplace Installs" />
@@ -38,141 +41,141 @@
 
 代码自动补全和悬停提示，包括：
 
-- HTML 标签名
-- HTML 标签属性名称和枚举值
-- CSS 变量名和枚举值
-- 一点 HTML 代码片段
-- Material 图标 SVG 补全
+-   HTML 标签名
+-   HTML 标签属性名称和枚举值
+-   CSS 变量名和枚举值
+-   一点 HTML 代码片段
+-   Material 图标 SVG 补全
 
 目前已支持 `Sober.js 0.4.1` 的所有组件、CSS 变量（见下表）和 SVG 图标
 
 <details>
   <summary>支持的组件（点击展开）</summary>
 
-- [x] 基础组件
-  - [x] 按钮 Button
-  - [x] 图标 Icon
-  - [x] 图标按钮 Icon Button
-  - [x] 浮动操作按钮 FAB
-  - [x] 分组按钮 Segmented Button
-  - [x] 波纹 Ripple
-  - [x] 复选框 Checkbox
-  - [x] 单选按钮 Radio Button
-  - [x] 滑块 Slider
-  - [x] 线性进度 Linear Progress
-  - [x] 圆形进度 Circular Progress
-  - [x] 开关 Switch
-  - [x] 文本框 Text Field
-  - [x] 评分 Rate
-  - [x] 选择框 Picker
-  - [x] 字段框 Field
-  - [x] 分割线 Divider
-- [x] 容器
-  - [x] 页面 Page
-  - [x] 抽屉 Drawer
-  - [x] 滚动 Scroll View
-  - [x] 卡片 Card
-  - [x] 搜索栏 Search
-  - [x] 轮播图 Carousel
-- [x] 导航
-  - [x] 选项卡 Tab
-  - [x] 导航栏 Navigation
-  - [x] 应用栏 Appbar
-  - [x] 菜单 Menu
-- [x] 部件
-  - [x] 对话框 Dialog
-  - [x] 弹出框 Popup
-  - [x] 弹出式菜单 Popup Menu
-  - [x] 提示框 Snackbar
-  - [x] 工具提示 Tooltip
-  - [x] 徽章 Badge
-  - [x] 纸片 Chip
-- [x] 数据
-  - [x] 表格 Table
+-   [x] 基础组件
+    -   [x] 按钮 Button
+    -   [x] 图标 Icon
+    -   [x] 图标按钮 Icon Button
+    -   [x] 浮动操作按钮 FAB
+    -   [x] 分组按钮 Segmented Button
+    -   [x] 波纹 Ripple
+    -   [x] 复选框 Checkbox
+    -   [x] 单选按钮 Radio Button
+    -   [x] 滑块 Slider
+    -   [x] 线性进度 Linear Progress
+    -   [x] 圆形进度 Circular Progress
+    -   [x] 开关 Switch
+    -   [x] 文本框 Text Field
+    -   [x] 评分 Rate
+    -   [x] 选择框 Picker
+    -   [x] 字段框 Field
+    -   [x] 分割线 Divider
+-   [x] 容器
+    -   [x] 页面 Page
+    -   [x] 抽屉 Drawer
+    -   [x] 滚动 Scroll View
+    -   [x] 卡片 Card
+    -   [x] 搜索栏 Search
+    -   [x] 轮播图 Carousel
+-   [x] 导航
+    -   [x] 选项卡 Tab
+    -   [x] 导航栏 Navigation
+    -   [x] 应用栏 Appbar
+    -   [x] 菜单 Menu
+-   [x] 部件
+    -   [x] 对话框 Dialog
+    -   [x] 弹出框 Popup
+    -   [x] 弹出式菜单 Popup Menu
+    -   [x] 提示框 Snackbar
+    -   [x] 工具提示 Tooltip
+    -   [x] 徽章 Badge
+    -   [x] 纸片 Chip
+-   [x] 数据
+    -   [x] 表格 Table
 
 </details>
 <details>
   <summary>支持的 CSS 变量</summary>
 
-- [x] 组件变量
-  - [x] 波纹 Ripple
-    - [x] `--ripple-color`
-    - [x] `-ripple-opacity`
-  - [x] 文本框 Text Field / 选择框 Picker
-    - [x] `--border-radius`
-    - [x] `--border-width`
-    - [x] `--border-color`
-    - [x] `--padding`
-- [x] 全局变量
-  - [x] `--s-color-primary`
-  - [x] `--s-color-on-primary`
-  - [x] `--s-color-primary-container`
-  - [x] `--s-color-on-primary-container`
-  - [x] `--s-color-secondary`
-  - [x] `--s-color-on-secondary`
-  - [x] `--s-color-secondary-container`
-  - [x] `--s-color-on-secondary-container`
-  - [x] `--s-color-tertiary`
-  - [x] `--s-color-on-tertiary`
-  - [x] `--s-color-tertiary-container`
-  - [x] `--s-color-on-tertiary-container`
-  - [x] `--s-color-error`
-  - [x] `--s-color-on-error`
-  - [x] `--s-color-error-container`
-  - [x] `--s-color-on-error-container`
-  - [x] `--s-color-background`
-  - [x] `--s-color-on-background`
-  - [x] `--s-color-outline`
-  - [x] `--s-color-outline-variant`
-  - [x] `--s-color-surface`
-  - [x] `--s-color-on-surface`
-  - [x] `--s-color-surface-variant`
-  - [x] `--s-color-on-surface-variant`
-  - [x] `--s-color-inverse-surface`
-  - [x] `--s-color-inverse-on-surface`
-  - [x] `--s-color-inverse-primary`
-  - [x] `--s-color-surface-container`
-  - [x] `--s-color-surface-container-high`
-  - [x] `--s-color-surface-container-highest`
-  - [x] `--s-color-surface-container-low`
-  - [x] `--s-color-surface-container-lowest`
-  - [x] `--s-color-dark-primary`
-  - [x] `--s-color-dark-on-primary`
-  - [x] `--s-color-dark-primary-container`
-  - [x] `--s-color-dark-on-primary-container`
-  - [x] `--s-color-dark-secondary`
-  - [x] `--s-color-dark-on-secondary`
-  - [x] `--s-color-dark-secondary-container`
-  - [x] `--s-color-dark-on-secondary-container`
-  - [x] `--s-color-dark-tertiary`
-  - [x] `--s-color-dark-on-tertiary`
-  - [x] `--s-color-dark-tertiary-container`
-  - [x] `--s-color-dark-on-tertiary-container`
-  - [x] `--s-color-dark-error`
-  - [x] `--s-color-dark-on-error`
-  - [x] `--s-color-dark-error-container`
-  - [x] `--s-color-dark-on-error-container`
-  - [x] `--s-color-dark-background`
-  - [x] `--s-color-dark-on-background`
-  - [x] `--s-color-dark-outline`
-  - [x] `--s-color-dark-outline-variant`
-  - [x] `--s-color-dark-surface`
-  - [x] `--s-color-dark-on-surface`
-  - [x] `--s-color-dark-surface-variant`
-  - [x] `--s-color-dark-on-surface-variant`
-  - [x] `--s-color-dark-inverse-surface`
-  - [x] `--s-color-dark-inverse-on-surface`
-  - [x] `--s-color-dark-inverse-primary`
-  - [x] `--s-color-dark-surface-container`
-  - [x] `--s-color-dark-surface-container-high`
-  - [x] `--s-color-dark-surface-container-highest`
-  - [x] `--s-color-dark-surface-container-low`
-  - [x] `--s-color-dark-surface-container-lowest`
-  - [x] `--s-elevation-level1`
-  - [x] `--s-elevation-level2`
-  - [x] `--s-elevation-level3`
-  - [x] `--s-elevation-level4`
-  - [x] `--s-elevation-level5`
+-   [x] 组件变量
+    -   [x] 波纹 Ripple
+        -   [x] `--ripple-color`
+        -   [x] `-ripple-opacity`
+    -   [x] 文本框 Text Field / 选择框 Picker
+        -   [x] `--border-radius`
+        -   [x] `--border-width`
+        -   [x] `--border-color`
+        -   [x] `--padding`
+-   [x] 全局变量
+    -   [x] `--s-color-primary`
+    -   [x] `--s-color-on-primary`
+    -   [x] `--s-color-primary-container`
+    -   [x] `--s-color-on-primary-container`
+    -   [x] `--s-color-secondary`
+    -   [x] `--s-color-on-secondary`
+    -   [x] `--s-color-secondary-container`
+    -   [x] `--s-color-on-secondary-container`
+    -   [x] `--s-color-tertiary`
+    -   [x] `--s-color-on-tertiary`
+    -   [x] `--s-color-tertiary-container`
+    -   [x] `--s-color-on-tertiary-container`
+    -   [x] `--s-color-error`
+    -   [x] `--s-color-on-error`
+    -   [x] `--s-color-error-container`
+    -   [x] `--s-color-on-error-container`
+    -   [x] `--s-color-background`
+    -   [x] `--s-color-on-background`
+    -   [x] `--s-color-outline`
+    -   [x] `--s-color-outline-variant`
+    -   [x] `--s-color-surface`
+    -   [x] `--s-color-on-surface`
+    -   [x] `--s-color-surface-variant`
+    -   [x] `--s-color-on-surface-variant`
+    -   [x] `--s-color-inverse-surface`
+    -   [x] `--s-color-inverse-on-surface`
+    -   [x] `--s-color-inverse-primary`
+    -   [x] `--s-color-surface-container`
+    -   [x] `--s-color-surface-container-high`
+    -   [x] `--s-color-surface-container-highest`
+    -   [x] `--s-color-surface-container-low`
+    -   [x] `--s-color-surface-container-lowest`
+    -   [x] `--s-color-dark-primary`
+    -   [x] `--s-color-dark-on-primary`
+    -   [x] `--s-color-dark-primary-container`
+    -   [x] `--s-color-dark-on-primary-container`
+    -   [x] `--s-color-dark-secondary`
+    -   [x] `--s-color-dark-on-secondary`
+    -   [x] `--s-color-dark-secondary-container`
+    -   [x] `--s-color-dark-on-secondary-container`
+    -   [x] `--s-color-dark-tertiary`
+    -   [x] `--s-color-dark-on-tertiary`
+    -   [x] `--s-color-dark-tertiary-container`
+    -   [x] `--s-color-dark-on-tertiary-container`
+    -   [x] `--s-color-dark-error`
+    -   [x] `--s-color-dark-on-error`
+    -   [x] `--s-color-dark-error-container`
+    -   [x] `--s-color-dark-on-error-container`
+    -   [x] `--s-color-dark-background`
+    -   [x] `--s-color-dark-on-background`
+    -   [x] `--s-color-dark-outline`
+    -   [x] `--s-color-dark-outline-variant`
+    -   [x] `--s-color-dark-surface`
+    -   [x] `--s-color-dark-on-surface`
+    -   [x] `--s-color-dark-surface-variant`
+    -   [x] `--s-color-dark-on-surface-variant`
+    -   [x] `--s-color-dark-inverse-surface`
+    -   [x] `--s-color-dark-inverse-on-surface`
+    -   [x] `--s-color-dark-inverse-primary`
+    -   [x] `--s-color-dark-surface-container`
+    -   [x] `--s-color-dark-surface-container-high`
+    -   [x] `--s-color-dark-surface-container-highest`
+    -   [x] `--s-color-dark-surface-container-low`
+    -   [x] `--s-color-dark-surface-container-lowest`
+    -   [x] `--s-elevation-level1`
+    -   [x] `--s-elevation-level2`
+    -   [x] `--s-elevation-level3`
+    -   [x] `--s-elevation-level4`
+    -   [x] `--s-elevation-level5`
 
 </details>
 
@@ -186,8 +189,8 @@
 
 ## To-do
 
-- [x] 支持更多组件
-- [ ] 完善悬停提示
-- [x] 完成 CSS 变量名和枚举值补全
-- [x] 增加 SVG 图标补全
-- [ ] 使 SVG 图标补全可以补全填充图标，不仅是线条图标
+-   [x] 支持更多组件
+-   [ ] 完善悬停提示
+-   [x] 完成 CSS 变量名和枚举值补全
+-   [x] 增加 SVG 图标补全
+-   [ ] 使 SVG 图标补全可以补全填充图标，不仅是线条图标
