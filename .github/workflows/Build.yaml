@@ -29,7 +29,7 @@ jobs:
           extensionVersion=$(node -p "require('./package.json').version")
           echo "extensionVersion=$extensionVersion" >> $GITHUB_ENV
           echo "extensionVersion=$extensionVersion" >> $GITHUB_OUTPUT
-          echo "commitHash=$(git log --format="%H" | head -n 1") >> $GITHUB_OUTPUT
+          echo "commitHash=$(git log --format="%H" | head -n 1")" >> $GITHUB_OUTPUT
 
       - name: Package VS Code extension
         id: package
