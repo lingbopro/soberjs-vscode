@@ -3,6 +3,9 @@
 ## v0.7.0
 
 - 针对 [Sober `0.4.1`](https://soberjs.com/introduction/update-log) 的全面更新
+- 增加 Field 组件
+- 增加 Menu 组件
+- 补充了 Popup Menu Item 组件
 
 ## v0.6.0
 

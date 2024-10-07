@@ -25,7 +25,7 @@
 
 一个 [Visual Studio Code](https://code.visualstudio.com) 扩展，为 [Sober.js 组件库](https://soberjs.com) 提供自动完成、悬停提示、代码片段等功能
 
-（非官方扩展，组件库由 [@apprat](https://gituhb.com/apprat) 创建和维护，此扩展由 [@lingbopro](https://github.com/lingbopro) 制作）
+（非官方扩展，组件库由 [@apprat](https://gituhb.com/apprat) 创建和维护，此扩展由 [@lingbopro](https://github.com/lingbopro) 制作并由 [@Minemetero](https://github.com/Minemetero) 协作）
 
 ## 安装
 
@@ -44,7 +44,7 @@
 - 一点 HTML 代码片段
 - Material 图标 SVG 补全
 
-目前已支持 `Sober.js 0.3.0` 的所有组件、CSS 变量（见下表）和 SVG 图标
+目前已支持 `Sober.js 0.4.1` 的所有组件、CSS 变量（见下表）和 SVG 图标
 
 <details>
   <summary>支持的组件（点击展开）</summary>
@@ -54,7 +54,7 @@
   - [x] 图标 Icon
   - [x] 图标按钮 Icon Button
   - [x] 浮动操作按钮 FAB
-  - [x] 分组按钮 Segmented
+  - [x] 分组按钮 Segmented Button
   - [x] 波纹 Ripple
   - [x] 复选框 Checkbox
   - [x] 单选按钮 Radio Button
@@ -65,6 +65,7 @@
   - [x] 文本框 Text Field
   - [x] 评分 Rate
   - [x] 选择框 Picker
+  - [x] 字段框 Field
   - [x] 分割线 Divider
 - [x] 容器
   - [x] 页面 Page
@@ -77,6 +78,7 @@
   - [x] 选项卡 Tab
   - [x] 导航栏 Navigation
   - [x] 应用栏 Appbar
+  - [x] 菜单 Menu
 - [x] 部件
   - [x] 对话框 Dialog
   - [x] 弹出框 Popup
