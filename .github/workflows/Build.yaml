@@ -2,6 +2,13 @@ name: Build
 
 on:
   workflow_call:
+    outputs:
+      artifact-url:
+        value: ${{ jobs.build.outputs.artifact-url }}
+      commit-hash:
+        value: ${{ jobs.build.outputs.commit-hash }}
+      extension-version:
+        value: ${{ jobs.build.outputs.extension-version }}
 
 jobs:
   build:
