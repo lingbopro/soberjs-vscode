@@ -25,6 +25,8 @@ jobs:
     uses: ./.github/workflows/Build.yaml
   publish:
     needs: build
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact
